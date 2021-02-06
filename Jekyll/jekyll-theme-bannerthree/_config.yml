@@ -1,0 +1,60 @@
+permalink: /:year/:month/:day/:title
+markdown: kramdown
+highlighter: rouge
+mathjax: disabled
+sass:
+  style: compressed
+# 作者信息
+author:
+  name: Steven Shen
+  email: ishenweiyan@qq.com
+  link: https://www.bioinit.com
+  github: http://github.com/shenweiyan
+
+# 站点信息
+title: Bio-IT
+description: 一个热爱分享技术的网站
+url: https://www.bioinit.com
+rss_url: /pages/atom.xml
+
+# avatar头像及Favicon
+avatar: /assets/image/logo01.png
+favicon: /assets/image/logo01.png
+logo: /assets/image/logo01.png
+
+# Jekyll Plugin
+# https://help.github.com/articles/adding-jekyll-plugins-to-a-github-pages-site/
+plugins:
+
+
+# 排除文件夹
+exclude: [robot,util,config,tutorials,main.go,install.sh,jekyll.sh,Gemfile,Gemfile.lock,jekyll_run.sh, codebase]
+
+# 谷歌统计ID
+ga_id: UA-107865254-2
+
+# google adsense ID
+gad_id: 123456
+
+webmaster_verifications:
+  google: 123456
+  bing: 123456
+  alexa: 123456
+  yandex: 123456
+  baidu: 123456
+  360: 123456
+
+twitter:
+  username: 123456
+  card: 123456
+
+facebook:
+  app_id: 123456
+  publisher: 123456
+  admins: 123456
+
+social:
+  name: Steven Shen
+  links:
+    - https://yuque.com/shenweiyan
+    - https://github.com/shenweiyan

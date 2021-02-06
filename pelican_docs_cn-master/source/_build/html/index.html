@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pelican 4.1.0 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="快速入门" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Pelican 4.1.0</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pelican-release">
+<h1>Pelican 4.1.0<a class="headerlink" href="#pelican-release" title="永久链接至标题">¶</a></h1>
+<p>Pelican是一种静态网站生成器，使用Python_语言编写。 有以下特点:</p>
+<ul class="simple">
+<li>用你喜欢的文本编辑器，以 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> 格式或者 <a class="reference external" href="https://daringfireball.net/projects/markdown/">Markdown</a> 格式，直接编写你的内容</li>
+<li>包含有一个简单的命令行工具以（重新）生成你的网站内容</li>
+<li>能与版本控制系统和网络接口轻易结合</li>
+<li>静态输出，方便部署</li>
+</ul>
+<p>准备好的话，可以直接转到 <a class="reference internal" href="quickstart.html"><span class="doc">快速入门</span></a> 部分哦。</p>
+<div class="section" id="id1">
+<h2>特点<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>Pelican 4 目前支持:</p>
+<ul class="simple">
+<li>文章页面（例如博客文章）和单独页面（例如“关于”，“项目”，“联系”等页面）。</li>
+<li>评论功能（通过第三方服务Disqus）。如果你不想评论数据放在这些第三方服务上，可以
+选择自托管评论系统。点击这个 <a class="reference external" href="https://github.com/getpelican/pelican-plugins">Pelican Plugins</a> 库可以了解更多。</li>
+<li>自定义主题 （主题模板可以使用 <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a> 创建）</li>
+<li>多种语言发布文章</li>
+<li>Atom/RSS feeds</li>
+<li>代码语法高亮</li>
+<li>从 WordPress, Dotclear, 或者 RSS feeds 中导入数据</li>
+<li>集成第三方工具: Twitter, Google Analytics 等（可选）</li>
+<li>快速重构博客（得益于内容缓存机制和可选输出写入机制）</li>
+</ul>
+</div>
+<div class="section" id="pelican">
+<h2>为什么叫 “Pelican”?<a class="headerlink" href="#pelican" title="永久链接至标题">¶</a></h2>
+<p>“Pelican” 由 <em>calepin</em> 这个单词调乱字母顺序变成, 而calepin在法语里表示notebook（记事本）啊。</p>
+</div>
+<div class="section" id="id2">
+<h2>源代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>你可以在这个地址获取到项目源码: <a class="reference external" href="https://github.com/getpelican/pelican">https://github.com/getpelican/pelican</a></p>
+</div>
+<div class="section" id="id3">
+<h2>寻求帮助，贡献代码或者反馈意见<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>可以查看这里 <a class="reference internal" href="contribute.html"><span class="doc">反馈意见和贡献提交指南</span></a>.</p>
+</div>
+<div class="section" id="id4">
+<h2>文档目录<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id2">安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id3">创建一个项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id5">创建一篇文章</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id6">生成站点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id7">预览站点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#id8">脚注</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#id1">可选模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#id2">依赖项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#id3">升级</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#id4">开始建站</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id2">文章和页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#internal-metadata">文件元数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id5">页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id6">静态内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#ref-linking-to-internal-content">链接到内部内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id13">导入现有站点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id14">翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#internal-pygments-options">语法高亮</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content.html#id16">发布草稿</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="publish.html#site-generation">生成网站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish.html#id4">部署网站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish.html#id5">自动化</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id3">基本设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#url">URL设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id5">时间和日期</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#template-pages">模板页</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id9">元数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#feed">Feed订阅设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id21">分页</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id23">翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id28">整理内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id29">主题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id30">日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#reading-only-modified-content">仅读取已修改的内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#writing-only-selected-content">仅写入选定内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html#id33">设置示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="themes.html#id2">主题框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html#templates-variables">模板和变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html#id8">对象</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html#feeds">Feeds订阅源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html#id14">继承</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#id2">如何使用插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#id3">哪里可以找到插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#id4">如何创建插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#id5">信号列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html#id6">插件示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pelican-themes.html#id1">描述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pelican-themes.html#id4">例子</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="importer.html#id2">说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importer.html#id3">依赖项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importer.html#id4">使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importer.html#id7">例子</a></li>
+<li class="toctree-l2"><a class="reference internal" href="importer.html#id8">测试</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id1">沟通问题，疑问或建议的最佳方式是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id2">我如何提供帮助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#pelican">Pelican设置文件是强制性必需的吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id4">对设置文件的修改不起作用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#pygments">我在创建自己的主题。 如何使用Pygments进行语法高亮显示？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id6">我如何创建自己的主题？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#markdown">我想使用Markdown，但是我收到了一个错误。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id7">我可以在模板中使用任意元数据吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id8">我该如何基于每个页面分配自定义模板？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#url">如何覆盖特定页面或文章的生成URL？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id9">如何使用静态页面作为我的主页？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#feed">如果我想禁用Feed生成怎么弄？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#siteurlfeed">我收到关于在没有正确设置SITEURL的情况下生成Feed的警告</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#pelican-3-x-feed">自从我升级到Pelican 3.x后，我的Feed被乱套了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id10">Pelican只适合博客吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#pelicanhtml">为什么即使启用了内容缓存，Pelican也总是写入所有HTML文件？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id11">如何只处理所有文章的子集？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id12">升级Pelican后，我的标签云就丢失/损坏了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id14">升级Pelican后，我的页面渲染不出来了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id15">如何阻止Pelican尝试将我的静态文件解析为内容？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#id2">自定义404页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#github">发布到GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#youtubevimeo">如何添加YouTube视频或Vimeo视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#ssl">使用SSL在本地开发</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#id2">设置开发环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#id3">构建文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#id4">运行测试套件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#python-2-3">Python 2/3兼容性开发技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contribute.html#id5">记录日志技巧</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="internals.html#id1">整体结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html#id2">如何实现一个新的文件格式读取器?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="internals.html#generator">如何实现一个新的生成器generator?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="report.html#id1">用例</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report.html#id2">设计过程</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report.html#id3">更多细节</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id2">4.1.0 - 2019-07-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id3">4.0.1 (2018-11-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id10">4.0.0 (2018-11-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id13">3.7.1 (2017-01-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id14">3.7.0 (2016-12-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id15">3.6.3 (2015-08-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id16">3.6.2 (2015-08-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id17">3.6.0 (2015-06-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id18">3.5.0 (2014-11-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id19">3.4.0 (2014-07-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id20">3.3.0 (2013-09-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#and-3-2-2">3.2.1 and 3.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id21">3.2 (2013-04-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id22">3.1 (2012-12-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id23">3.0 (2012-08-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id24">2.8 (2012-02-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id25">2.7 (2011-06-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id26">2.6 (2011-03-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id27">2.5 (2010-11-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id28">2.4 (2010-11-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id29">2.3 (2010-10-31)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id30">2.2 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id31">2.1 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id32">2.0 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id33">1.2 (2010-09-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#id34">1.1 (2010-08-19)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="quickstart.html" class="btn btn-neutral float-right" title="快速入门" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

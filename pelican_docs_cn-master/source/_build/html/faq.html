@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>常见问题（FAQ） &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="使用技巧" href="tips.html" />
+    <link rel="prev" title="导入站点" href="importer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">常见问题（FAQ）</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">沟通问题，疑问或建议的最佳方式是什么？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">我如何提供帮助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pelican">Pelican设置文件是强制性必需的吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">对设置文件的修改不起作用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pygments">我在创建自己的主题。 如何使用Pygments进行语法高亮显示？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">我如何创建自己的主题？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#markdown">我想使用Markdown，但是我收到了一个错误。</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">我可以在模板中使用任意元数据吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">我该如何基于每个页面分配自定义模板？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#url">如何覆盖特定页面或文章的生成URL？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">如何使用静态页面作为我的主页？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feed">如果我想禁用Feed生成怎么弄？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#siteurlfeed">我收到关于在没有正确设置SITEURL的情况下生成Feed的警告</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pelican-3-x-feed">自从我升级到Pelican 3.x后，我的Feed被乱套了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">Pelican只适合博客吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pelicanhtml">为什么即使启用了内容缓存，Pelican也总是写入所有HTML文件？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">如何只处理所有文章的子集？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">升级Pelican后，我的标签云就丢失/损坏了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">升级Pelican后，我的页面渲染不出来了</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">如何阻止Pelican尝试将我的静态文件解析为内容？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>常见问题（FAQ）</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/faq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="faq">
+<h1>常见问题（FAQ）<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h1>
+<p>以下是一些关于Pelican的常见问题</p>
+<div class="section" id="id1">
+<h2>沟通问题，疑问或建议的最佳方式是什么？<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>请查阅 <a class="reference internal" href="contribute.html"><span class="doc">反馈指南</span></a>.</p>
+</div>
+<div class="section" id="id2">
+<h2>我如何提供帮助<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>有几种方法可以提供帮助。 首先，你可以通过IRC（首选）
+或 <a class="reference external" href="https://github.com/getpelican/pelican/issues">问题跟踪</a> 报告你的Pelican建议或问题。
+提交问题报告之前，请首先检查现有问题列表（包括正讨论的和已关闭的），以避免提交重复问题。</p>
+<p>如果你想贡献代码，请fork一下这个 <a class="reference external" href="https://github.com/getpelican/pelican/">the git repository</a> ，
+创建一个新的分支，对其进行修改，然后发出一个pull请求。会有人尽快审核你的代码。
+有关更多详细信息，请参阅 <a class="reference internal" href="contribute.html"><span class="doc">如何贡献</span></a> 部分。</p>
+<p>你还可以通过创建主题和改进文档来做出贡献。</p>
+</div>
+<div class="section" id="pelican">
+<h2>Pelican设置文件是强制性必需的吗？<a class="headerlink" href="#pelican" title="永久链接至标题">¶</a></h2>
+<p>配置文件是可选的，其只是配置Pelican的一个简单方法。
+对于基本操作，可以在通过命令行调用Pelican时指定选项。 更多信息，请参阅 <code class="docutils literal notranslate"><span class="pre">pelican</span> <span class="pre">--help</span></code> 。</p>
+</div>
+<div class="section" id="id4">
+<h2>对设置文件的修改不起作用<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>在尝试不同的设置（尤其是元数据设置）时，有可能会受缓存干扰，作的修改可能不见生效。
+在这种情况下，可以使用 <code class="docutils literal notranslate"><span class="pre">LOAD_CONTENT_CACHE</span> <span class="pre">=</span> <span class="pre">False</span></code> 禁用缓存或
+使用 <code class="docutils literal notranslate"><span class="pre">--ignore-cache</span></code> 命令行开关。</p>
+</div>
+<div class="section" id="pygments">
+<h2>我在创建自己的主题。 如何使用Pygments进行语法高亮显示？<a class="headerlink" href="#pygments" title="永久链接至标题">¶</a></h2>
+<p>Pygments为生成的内容添加了一些类。 主题使用这些类通过CSS来设置代码语法高亮显示的样式。
+具体来说，你可以通过主题CSS文件中的 <code class="docutils literal notranslate"><span class="pre">.highlight</span> <span class="pre">pre</span></code> 类来自定义语法高亮显示的外观。
+例如，要查看各种样式如何用于呈现Django代码，
+请使用 <a class="reference external" href="http://pygments.org/demo/">Pygments项目演示站点</a> 右上角的样式选择器下拉菜单选择</p>
+<p>你可以使用以下命令从Pygments内置样式（在本例中为 “monokai” ）生成初始CSS文件，
+然后将生成的CSS文件复制到你的新主题:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pygmentize</span> <span class="o">-</span><span class="n">S</span> <span class="n">monokai</span> <span class="o">-</span><span class="n">f</span> <span class="n">html</span> <span class="o">-</span><span class="n">a</span> <span class="o">.</span><span class="n">highlight</span> <span class="o">&gt;</span> <span class="n">pygment</span><span class="o">.</span><span class="n">css</span>
+<span class="n">cp</span> <span class="n">pygment</span><span class="o">.</span><span class="n">css</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">theme</span><span class="o">/</span><span class="n">static</span><span class="o">/</span><span class="n">css</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>记得要在CSS主文件中导入你的 <code class="docutils literal notranslate"><span class="pre">pygment.css</span></code> 文件。</p>
+</div>
+<div class="section" id="id6">
+<h2>我如何创建自己的主题？<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>请参阅 <a class="reference internal" href="themes.html#theming-pelican"><span class="std std-ref">关于主题</span></a>.</p>
+</div>
+<div class="section" id="markdown">
+<h2>我想使用Markdown，但是我收到了一个错误。<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
+<p>如果你没有先安装Markdown库就尝试生成Markdown内容的话，
+可能会看到 <code class="docutils literal notranslate"><span class="pre">No</span> <span class="pre">valid</span> <span class="pre">files</span> <span class="pre">found</span> <span class="pre">in</span> <span class="pre">content</span></code> 的错误提示。
+Markdown不是Pelican的硬依赖项，所以如果你有Markdown格式的内容，你需要确定你安装了Markdown库。
+你可以通过键入以下命令来执行安装，如果提示权限需要，则在前面加上 <code class="docutils literal notranslate"><span class="pre">sudo</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>我可以在模板中使用任意元数据吗？<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>可以的。例如，要在Markdown帖子中包含修改日期，可以在文章顶部包含以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Modified</span><span class="p">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span>
+</pre></div>
+</div>
+<p>对于reStructuredText，此元数据则应以冒号为前缀:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">Modified</span><span class="p">:</span> <span class="mi">2012</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">08</span>
+</pre></div>
+</div>
+<p>然后你就可以通过如下示例的语句在诸如 <code class="docutils literal notranslate"><span class="pre">article.html</span></code> 之类的模板文件中访问此元数据啦:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">article</span><span class="o">.</span><span class="n">modified</span> <span class="o">%</span><span class="p">}</span>
+<span class="n">Last</span> <span class="n">modified</span><span class="p">:</span> <span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">modified</span> <span class="p">}}</span>
+<span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>如果你想在文章上下文之外的模板中包含元数据（例如，<code class="docutils literal notranslate"><span class="pre">base.html</span></code> ），则 <code class="docutils literal notranslate"><span class="pre">if</span></code> 语句应该这样写:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">article</span> <span class="ow">and</span> <span class="n">article</span><span class="o">.</span><span class="n">modified</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>我该如何基于每个页面分配自定义模板？<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>想要每页有其自己的模板就跟在页面或文章中额外添加一行元数据一样简单。 例如，以下是reST格式的内容处理方式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">:</span><span class="n">template</span><span class="p">:</span> <span class="n">template_name</span>
+</pre></div>
+</div>
+<p>对于Markdown格式的内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Template</span><span class="p">:</span> <span class="n">template_name</span>
+</pre></div>
+</div>
+<p>然后只需要确保你的主题包含相关的模板文件就行了（例如 <code class="docutils literal notranslate"><span class="pre">template_name.html</span></code> ）。</p>
+</div>
+<div class="section" id="url">
+<h2>如何覆盖特定页面或文章的生成URL？<a class="headerlink" href="#url" title="永久链接至标题">¶</a></h2>
+<p>在要覆盖生成的URL的页面或文章中包含 <code class="docutils literal notranslate"><span class="pre">url</span></code> 和 <code class="docutils literal notranslate"><span class="pre">save_as</span></code> 元数据。 以下是一个reST格式的示例页面:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Override</span> <span class="n">url</span><span class="o">/</span><span class="n">save_as</span> <span class="n">page</span>
+<span class="c1">#########################</span>
+
+<span class="p">:</span><span class="n">url</span><span class="p">:</span> <span class="n">override</span><span class="o">/</span><span class="n">url</span><span class="o">/</span>
+<span class="p">:</span><span class="n">save_as</span><span class="p">:</span> <span class="n">override</span><span class="o">/</span><span class="n">url</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>使用此元数据，页面将写入 <code class="docutils literal notranslate"><span class="pre">override/url/index.html</span></code> ，Pelican将使用 <code class="docutils literal notranslate"><span class="pre">override/url/</span></code> 链接到此页面。</p>
+</div>
+<div class="section" id="id9">
+<h2>如何使用静态页面作为我的主页？<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>上面提到的覆盖功能可用于将静态页面指定为主页。
+以下的Markdown示例可以存储在 <code class="docutils literal notranslate"><span class="pre">content/pages/home.md</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Title: Welcome to My Site
+URL:
+save_as: index.html
+
+Thank you for visiting. Welcome!
+</pre></div>
+</div>
+<p>如果仍然需要原本的博客索引，则可以通过为 <code class="docutils literal notranslate"><span class="pre">'index'</span></code> 直接模
+板设置 <code class="docutils literal notranslate"><span class="pre">INDEX_SAVE_AS</span> <span class="pre">=</span> <span class="pre">'blog_index.html'</span></code> 将其保存在不同的位置。</p>
+</div>
+<div class="section" id="feed">
+<h2>如果我想禁用Feed生成怎么弄？<a class="headerlink" href="#feed" title="永久链接至标题">¶</a></h2>
+<p>要禁用Feed生成，应将所有Feed设置设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。
+除了三个Feed设置之外的所有设置都默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，因此如果要禁用所有Feed生成，只需设置以下变量:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FEED_ALL_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">CATEGORY_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">TRANSLATION_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_ATOM</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">AUTHOR_FEED_RSS</span> <span class="o">=</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">None</span></code> 这个值不需要用引号括起来。 请注意 <code class="docutils literal notranslate"><span class="pre">None</span></code> 和 <code class="docutils literal notranslate"><span class="pre">''</span></code> 不是一回事。</p>
+</div>
+<div class="section" id="siteurlfeed">
+<h2>我收到关于在没有正确设置SITEURL的情况下生成Feed的警告<a class="headerlink" href="#siteurlfeed" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="http://validator.w3.org/feed/docs/rss2.html#comments">RSS和Atom订阅要求所有URL链接都是绝对地址</a>
+为了在Pelican中正确生成链接，你需要将 <code class="docutils literal notranslate"><span class="pre">SITEURL</span></code> 设置为站点的完整路径。</p>
+<p>显示此警告时仍会生成Feeds源，但内部链接可能格式不正确，因此也可能无法验证这个feed。</p>
+</div>
+<div class="section" id="pelican-3-x-feed">
+<h2>自从我升级到Pelican 3.x后，我的Feed被乱套了<a class="headerlink" href="#pelican-3-x-feed" title="永久链接至标题">¶</a></h2>
+<p>从3.0开始，一些FEED设置名称更改了，要更明确地引用它们固有的Atom源（非常类似于FEED_RSS设置名称）。
+以下是重命名设置的确切列表:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FEED</span> <span class="o">-&gt;</span> <span class="n">FEED_ATOM</span>
+<span class="n">TAG_FEED</span> <span class="o">-&gt;</span> <span class="n">TAG_FEED_ATOM</span>
+<span class="n">CATEGORY_FEED</span> <span class="o">-&gt;</span> <span class="n">CATEGORY_FEED_ATOM</span>
+</pre></div>
+</div>
+<p>从3.1 开始，Pelican引入了新的源 <code class="docutils literal notranslate"><span class="pre">FEED_ALL_ATOM</span></code> : 这个源变量将不分语言聚合所有帖子。
+默认情况下，此设置将生成 <code class="docutils literal notranslate"><span class="pre">'feeds/all.atom.xml'</span></code> ，而 <code class="docutils literal notranslate"><span class="pre">FEED_ATOM</span></code> 现在也默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 。
+下面的feed设置也已重命名:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TRANSLATION_FEED</span> <span class="o">-&gt;</span> <span class="n">TRANSLATION_FEED_ATOM</span>
+</pre></div>
+</div>
+<p>引用旧的设置名称的旧主题可能无法正确链接。
+为了纠正这种情况,请通过更改模板文件中的相关值来更新你的主题的兼容性。
+有关完整的feed头部信息和使用的示例，请查看 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题。</p>
+</div>
+<div class="section" id="id10">
+<h2>Pelican只适合博客吗？<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>不呀。你可以轻松配置Pelican来创建和维护任何类型的静态站点。
+这可能需要对主题和Pelican配置进行一些自定义。
+例如，如果你要为产品构建一个启动网站并且不需要有标签，你可以从主题中删除相关的HTML代码。
+你还可以通过以下设置来禁用生成与标签相关的页面:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TAGS_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="n">TAG_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pelicanhtml">
+<h2>为什么即使启用了内容缓存，Pelican也总是写入所有HTML文件？<a class="headerlink" href="#pelicanhtml" title="永久链接至标题">¶</a></h2>
+<p>为了在写入之前可靠地确定HTML输出是否不同，必须保存和比较包括模板上下文，导入的插件等在
+内的大部分生成环境，至少以哈希的形式进行比较（其中又要对不可以用哈希比较的类型进行特殊处理）
+因为涉及的插件，分页等组合可能会以许多不同的方式改变。所以这将需要更多的处理时间、内存和存储空间。
+简单地每次重写文件反而要快得多，而且更可靠。</p>
+<p>但是，这意味着文件的修改时间每次都变，
+所以如果用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 的话，即使内容没变，也会上传它们。
+有个简单的解决方案是使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 的 <code class="docutils literal notranslate"><span class="pre">--checksum</span></code> 选项，
+这将使它以比Pelican更快的方式比较文件校验。</p>
+<p>当只有几个特定的输出文件时（例如，当处理某些特定页面或主题模板时），也可以使用 <cite>WRITE_SELECTED</cite> 选
+项，请参阅 <a class="reference internal" href="settings.html#writing-only-selected-content"><span class="std std-ref">仅写入选定内容</span></a> 。</p>
+</div>
+<div class="section" id="id11">
+<h2>如何只处理所有文章的子集？<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<p>出于调试目的，仅处理例如10篇文章通常很有用。
+这可以通过在 <code class="docutils literal notranslate"><span class="pre">ARTICLE_PATHS</span></code> 中仅明确指定文章的文件名来实现。
+可以使用类似于 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">content;</span> <span class="pre">find</span> <span class="pre">-name</span> <span class="pre">'*.md'</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-n</span> <span class="pre">10</span></code> 的命令找到这样的文件名列表。</p>
+</div>
+<div class="section" id="id12">
+<h2>升级Pelican后，我的标签云就丢失/损坏了<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<p>在改进Pelican的过程中，我们将 <cite>tag_cloud</cite> 功能从Pelican的核心功能中移除了，它现在变成
+一个单独的 <a class="reference external" href="https://github.com/getpelican/pelican-plugins/tree/master/tag_cloud">插件</a>
+有关Pelican插件系统的更多信息，请参阅 <a class="reference internal" href="plugins.html#plugins"><span class="std std-ref">插件介绍</span></a> 文档。</p>
+</div>
+<div class="section" id="id14">
+<h2>升级Pelican后，我的页面渲染不出来了<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>页面可以用小写的 <code class="docutils literal notranslate"><span class="pre">pages</span></code> 和大写的 <code class="docutils literal notranslate"><span class="pre">PAGES</span></code> 。
+为了使这个符合 <a class="reference internal" href="themes.html#templates-variables"><span class="std std-ref">模板和变量</span></a> 部分， Pelican删除了 <code class="docutils literal notranslate"><span class="pre">PAGES</span></code> 。
+通过更新主题来迭代将 <code class="docutils literal notranslate"><span class="pre">pages</span></code> 替换掉 <code class="docutils literal notranslate"><span class="pre">PAGES</span></code> 可以很快解决这个问题。 只需要将:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">pg</span> <span class="ow">in</span> <span class="n">PAGES</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>替换成:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">pg</span> <span class="ow">in</span> <span class="n">pages</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>如何阻止Pelican尝试将我的静态文件解析为内容？<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<p>Pelican的文章和page页生成器是先于静态生成器运行的。
+这意味着如果你使用类似于默认配置的设置，其中在 <code class="docutils literal notranslate"><span class="pre">*_PATHS</span></code> 设置中定义了静态源目录，
+则所有具有有效的内容文件扩展名的文件（ <code class="docutils literal notranslate"><span class="pre">.html</span></code> ， <code class="docutils literal notranslate"><span class="pre">.rst</span></code> ， <code class="docutils literal notranslate"><span class="pre">.md</span></code> ，…）都将先
+被视为文章或page页处理而不是当成静态文件。</p>
+<p>要规避这个问题，要么使用合适的 <code class="docutils literal notranslate"><span class="pre">*_EXCLUDES</span></code> 设置，要么通过 <code class="docutils literal notranslate"><span class="pre">READERS</span></code> 禁用有
+问题的阅读器（如果你不需要用到它）。
++</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tips.html" class="btn btn-neutral float-right" title="使用技巧" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="importer.html" class="btn btn-neutral float-left" title="导入站点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

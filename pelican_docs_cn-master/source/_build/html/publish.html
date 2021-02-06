@@ -1,0 +1,386 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>发布网站 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="设置选项" href="settings.html" />
+    <link rel="prev" title="编写内容" href="content.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">发布网站</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#site-generation">生成网站</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">查看生成的文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">部署网站</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">自动化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#invoke">Invoke 工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make">Make 工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>发布网站</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/publish.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>发布网站<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="site-generation">
+<span id="id2"></span><h2>生成网站<a class="headerlink" href="#site-generation" title="永久链接至标题">¶</a></h2>
+<p>当你安装了Pelican并且编写了一些内容（例如，以Markdown或reST格式）后，
+你可以通过 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令指定内容文件的路径和 <a class="reference internal" href="settings.html"><span class="doc">设置文件</span></a> 的路径（可选），
+将你的内容转换为HTML文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">content</span><span class="o">/</span> <span class="p">[</span><span class="o">-</span><span class="n">s</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">settings</span><span class="o">.</span><span class="n">py</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>上面的命令将使用默认主题生成一个简单的站点并将其保存在 <code class="docutils literal notranslate"><span class="pre">output/</span></code> 文件夹中，
+默认主题包含非常简单的没有样式的HTML，大家可以以它为基础创建自己的主题。</p>
+<p>处理单个文章或页面时，可以仅生成与该内容对应的文件。
+要做到这一点，使用 <code class="docutils literal notranslate"><span class="pre">--write-selected</span></code> 参数，比如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="o">--</span><span class="n">write</span><span class="o">-</span><span class="n">selected</span> <span class="n">output</span><span class="o">/</span><span class="n">posts</span><span class="o">/</span><span class="n">my</span><span class="o">-</span><span class="n">post</span><span class="o">-</span><span class="n">title</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>请注意，你必须为生成的 <em>output</em> 文件指定一个路径 - 不是指定源内容路径。
+要确定输出文件名和位置，请使用 <code class="docutils literal notranslate"><span class="pre">--debug</span></code> 参数。
+如果需要， <code class="docutils literal notranslate"><span class="pre">--write-selected</span></code> 可以接收以逗号分隔的路径列表，也可以当一项设置来配置。
+（参考: <a class="reference internal" href="settings.html#writing-only-selected-content"><span class="std std-ref">仅写入选定内容</span></a> ）</p>
+<p>你还可以让Pelican监视你的修改，而不用每次想要查看更改时手动运行命令。
+要启用此功能，请使用 <code class="docutils literal notranslate"><span class="pre">-r</span></code> 或 <code class="docutils literal notranslate"><span class="pre">--autoreload</span></code> 参数运行 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令。
+在非Windows环境中，还可以结合 <code class="docutils literal notranslate"><span class="pre">-l</span></code> 或 <code class="docutils literal notranslate"><span class="pre">--listen</span></code> 使用，
+这样可以同时自动重新生成*并且*输出到本地服务器 <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="o">--</span><span class="n">autoreload</span> <span class="o">--</span><span class="n">listen</span>
+</pre></div>
+</div>
+<p>Pelican还提供其他命令行开关。 输入下面语句可以查看可以使用的所有选项的帮助:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h3>查看生成的文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>Pelican生成的文件是静态文件，所以很容易可以查看。
+你可以直接用你的浏览器打开生成的文件来查看效果:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">firefox</span> <span class="n">output</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>由于这种直接查看的方法可能无法找到页面相关的CSS和其他链接资源，
+因此使用Python运行简单的Web服务器可以提供更可靠的预览体验。</p>
+<p>对于 Python 2, 运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">output</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">SimpleHTTPServer</span>
+</pre></div>
+</div>
+<p>对于 Python 3, 运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">output</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">.</span><span class="n">server</span>
+</pre></div>
+</div>
+<p>服务启动后，可以访问本地地址 <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a> 来查看你的网站</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>部署网站<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>站点生成后，可以在本地开发环境中预览它，以准备将其部署到生产环境中，
+你可能会先使用一些你配置好的特定于生产环境的设置（例如，feeds源分析等）来重新生成你的站点:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">s</span> <span class="n">publishconf</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>要使发布配置基于设置文件 <code class="docutils literal notranslate"><span class="pre">pelicanconf.py</span></code> ，你可以在 <code class="docutils literal notranslate"><span class="pre">publishconf.py</span></code> 文件中添加下面这一行语句
+来导入你的 <code class="docutils literal notranslate"><span class="pre">pelicanconf</span></code> 设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pelicanconf</span> <span class="k">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>如果你一开始是用 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 命令自动生成的 <code class="docutils literal notranslate"><span class="pre">publishconf.py</span></code> 文件的话，
+上面那一行语句是默认写入的。</p>
+<p>部署站点的步骤取决于你托管服务器。如果服务器运行的是Nginx或Apache而你有SSH访问权限，
+你可以使用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 工具来传输你的站点文件:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rsync</span> <span class="o">-</span><span class="n">avc</span> <span class="o">--</span><span class="n">delete</span> <span class="n">output</span><span class="o">/</span> <span class="n">host</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">site</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>还有许多其他部署方式，其中一些可以在初始化运行 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 命令设置站点时进行配置。
+有关通过GitHub Pages发布的详细信息，请参阅 <a class="reference internal" href="tips.html"><span class="doc">使用技巧</span></a> 页面。</p>
+</div>
+<div class="section" id="id5">
+<h2>自动化<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>虽然生成网站的规范方式是使用 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令，但自动化工具可于简化网站生成和发布流程操作。
+在 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 过程中问到的一个问题是问是否要自动生成站点和发布。
+如果你回答 “yes” 的话，会在项目的根目录中生成 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 两个文件。
+这两个文件根据 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 安装过程中的配置问答信息预先整理而成，
+是为我们简化操作而用的，并且随时可以根据特定需求和使用模式进行更改定制。
+如果发现这些自动化工具的实用性有限，你可以随时删除它们，
+这不会影响 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令的规范使用。</p>
+<p>以下是“包裹” <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令的自动化工具介绍，可以简化生成，预览和上传站点的过程。</p>
+<div class="section" id="invoke">
+<h3>Invoke 工具<a class="headerlink" href="#invoke" title="永久链接至标题">¶</a></h3>
+<p><a class="reference external" href="http://www.pyinvoke.org">Invoke</a> 的优点是它是用Python编写的，因此可以在各种环境中使用。缺点是它必须单独安装。
+用以下命令安装Invoke，如果需要权限，在命令前加上 <code class="docutils literal notranslate"><span class="pre">sudo</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">invoke</span>
+</pre></div>
+</div>
+<p>花点时间查看一下项目根目录中生成的 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 文件。
+你可以看到许多命令，你可以根据你的喜好给这些命令重命名，删除或自定义。
+或者开箱即食，直接使用这些命令，下面这行语句用于生成网站:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">build</span>
+</pre></div>
+</div>
+<p>如果你希望Pelican每次检测到更改时自动重新生成你的站点（在本地测试时尤其方便），可以用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">regenerate</span>
+</pre></div>
+</div>
+<p>为生成的站点启动服务以便在 <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a> 中查看，可以用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">serve</span>
+</pre></div>
+</div>
+<p>要在每次检测到更改时使浏览器自动重新加载生成的站点的话，
+先 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">livereload</span></code> ，然后使用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">livereload</span>
+</pre></div>
+</div>
+<p>在 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 初始化过程中，被问及是否要通过SSH上传站点时如果你选了”yes”的话，
+你可以用以下命令使用SSH连接方式通过rsync发布你的站点:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">invoke</span> <span class="n">publish</span>
+</pre></div>
+</div>
+<p>这些只是默认情况下可用的一些命令，你可以自行查看 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 中其他可用的命令。
+更重要的是，不要犹豫，开始定制 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 以满足你自己特定的需求和偏好吧。</p>
+</div>
+<div class="section" id="make">
+<h3>Make 工具<a class="headerlink" href="#make" title="永久链接至标题">¶</a></h3>
+<p>当你在是否生成自动化工具的问题中回答”yes”时，系统也会自动创建一份 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 文件。
+这种方法的优点是 <code class="docutils literal notranslate"><span class="pre">make</span></code> 命令内置于大多数POSIX系统中，因此不需要安装任何其他东西便可以使用它。
+缺点是非POSIX系统（例如Windows）不包含 <code class="docutils literal notranslate"><span class="pre">make</span></code> ，并且在这些系统上安装它可能有些复杂。</p>
+<p>如果想根据 <code class="docutils literal notranslate"><span class="pre">pelicanconf.py``文件中的配置使用</span> <span class="pre">``make</span></code> 来生成你的站点，可以运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>想要根据 <code class="docutils literal notranslate"><span class="pre">publishconf.py</span></code> 中的设置生成生产站点，请运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">publish</span>
+</pre></div>
+</div>
+<p>如果你希望Pelican每次检测到更改时自动重新生成你的站点（在本地测试时尤其方便），可以用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">regenerate</span>
+</pre></div>
+</div>
+<p>为生成的站点启动服务以便在 <a class="reference external" href="http://localhost:8000/">http://localhost:8000/</a> 中查看，可以用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">serve</span>
+</pre></div>
+</div>
+<p>通常你需要在两个独立的命令行终端窗口中分别运行 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">regenerate</span></code> 和 <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">serve</span></code> ，
+不过这里你可以运行下面命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">devserver</span>
+</pre></div>
+</div>
+<p>上述命令将以自动重构站点模式运行的同时提供本地http://localhost:8000地址浏览的web服务支持</p>
+<p>当你准备好发布你的网站时，你可以通过在 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 初始化中的问题选项中选择的方法上传它。
+下面这个例子是我们将利用ssh方式使用rsync:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">rsync_upload</span>
+</pre></div>
+</div>
+<p>好了，你的网站现在应该已经上线啦。</p>
+<p>（默认的 <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> 和 <code class="docutils literal notranslate"><span class="pre">devserver.sh</span></code> 脚本使用 <code class="docutils literal notranslate"><span class="pre">python</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 可执行文件来完成它的任务。
+如果你想使用不同的可执行文件，比如 <code class="docutils literal notranslate"><span class="pre">python3</span></code> ，你可以分别设置 <code class="docutils literal notranslate"><span class="pre">PY</span></code> 和 <code class="docutils literal notranslate"><span class="pre">PELICAN</span></code> 环境变量来
+覆盖默认的可执行文件名。）</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings.html" class="btn btn-neutral float-right" title="设置选项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="content.html" class="btn btn-neutral float-left" title="编写内容" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

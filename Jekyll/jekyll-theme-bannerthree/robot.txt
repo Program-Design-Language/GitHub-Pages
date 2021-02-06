@@ -1,0 +1,19 @@
+<<<<<<< Updated upstream
+---
+title : Sitemap
+---
+
+{% if site.url == 'https://www.bioinit.com' %}
+User-agent: Googlebot
+Disallow: /
+User-agent: bingbot
+Disallow: /
+{% endif %}
+
+User-agent: *
+Allow: /
+
+=======
+User-agent: *
+Allow: /
+>>>>>>> Stashed changes

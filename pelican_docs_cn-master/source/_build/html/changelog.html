@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>发布记录 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="文档英文版链接" href="links.html" />
+    <link rel="prev" title="Pelican的一些历史" href="report.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">发布记录</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.1.0 - 2019-07-14</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.0.1 (2018-11-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">4.0.0 (2018-11-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">3.7.1 (2017-01-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">3.7.0 (2016-12-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id15">3.6.3 (2015-08-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id16">3.6.2 (2015-08-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id17">3.6.0 (2015-06-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">3.5.0 (2014-11-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id19">3.4.0 (2014-07-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id20">3.3.0 (2013-09-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#and-3-2-2">3.2.1 and 3.2.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">3.2 (2013-04-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">3.1 (2012-12-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">3.0 (2012-08-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id24">2.8 (2012-02-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id25">2.7 (2011-06-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">2.6 (2011-03-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">2.5 (2010-11-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">2.4 (2010-11-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">2.3 (2010-10-31)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">2.2 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id31">2.1 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id32">2.0 (2010-10-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id33">1.2 (2010-09-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id34">1.1 (2010-08-19)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>发布记录</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>发布记录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>4.1.0 - 2019-07-14<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>实时浏览器重新加载更改的文件（由Invoke任务提供）</li>
+<li>添加由Poetry管理的 <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></li>
+<li>支持调用 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-m</span> <span class="pre">pelican</span></code></li>
+<li>将相对源路径属性添加到内容</li>
+<li>允许 <code class="docutils literal notranslate"><span class="pre">EXTRA_PATH_METADATA</span></code> 中的目录</li>
+<li>将 <code class="docutils literal notranslate"><span class="pre">all_articles</span></code> 变量添加到时间段页面（用于最近的帖子功能）</li>
+<li>改善调试模式输出</li>
+<li>从Atom Feed中删除空白或重复摘要</li>
+<li>修复分页，pelican-import命令，pelican-quickstart命令和feed导入程序中的错误</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>4.0.1 (2018-11-30)<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>重构``pelican.server``日志记录</li>
+<li>修复将所有静态文件作为“草稿”处理的错误</li>
+<li>修复了Invoke/Makefile的自动化，导入程序和其他杂项错误</li>
+</ul>
+<p><a href="#id4"><span class="problematic" id="id5">*</span></a>重构``pelican.server``日志记录
+<a href="#id6"><span class="problematic" id="id7">*</span></a>修复将所有静态文件作为“草稿”处理的错误
+<a href="#id8"><span class="problematic" id="id9">*</span></a>错误修复了Invoke / Makefile自动化，导入程序和其他杂项</p>
+<p>如果从3.7.x或更早版本升级，请注意4.0+中与slug相关的设置使用 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 和/或 <code class="docutils literal notranslate"><span class="pre">{lang}</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 。
+如果遇到 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 样式设置，Pelican将发出警告并回退到默认设置。
+一些用户提交的主题可能会尝试格式化设置值，但在构建网站时出现 <code class="docutils literal notranslate"><span class="pre">TypeError</span></code> 失败情况。
+在这种情况下，需要更新主题。
+例如，使用 <code class="docutils literal notranslate"><span class="pre">TAG_FEED_ATOM.format(slug=tag.slug)</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">TAG_FEED_ATOM|format(tag.slug)</span></code></p>
+</div>
+<div class="section" id="id10">
+<h2>4.0.0 (2018-11-13)<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>用 <code class="docutils literal notranslate"><span class="pre">pelican</span> <span class="pre">--listen</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">develop_server.sh</span></code> 脚本</li>
+<li>改进了大型静态文件（例如视频）的复制/链接行为</li>
+<li>新建 <code class="docutils literal notranslate"><span class="pre">{static}</span></code> 语法用于链接到静态内容; 即使不在 <code class="docutils literal notranslate"><span class="pre">STATIC_PATHS</span></code> 中，
+<code class="docutils literal notranslate"><span class="pre">{static}</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{attach}</span></code> 链接的内容也会被自动复制。</li>
+<li>Page页现在可以具有草稿 <code class="docutils literal notranslate"><span class="pre">draft</span></code></li>
+<li>通过新的 <code class="docutils literal notranslate"><span class="pre">--print-settings</span></code> 标志显示当前设置</li>
+<li>slug的所有设置现在都使用 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 和/或 <code class="docutils literal notranslate"><span class="pre">{lang}</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">%s</span></code>
+如果遇到 <a href="#id11"><span class="problematic" id="id12">``</span></a>%s``样式设置，Pelican将发出警告并回退到默认设置。</li>
+<li>新信号: <code class="docutils literal notranslate"><span class="pre">feed_generated</span></code> 和 <code class="docutils literal notranslate"><span class="pre">page_generated_write_page</span></code></li>
+<li>用Invoke替换Fabric，使用 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">fabfile.py</span></code> 模板</li>
+<li>用 <code class="docutils literal notranslate"><span class="pre">PAGINATED_TEMPLATES</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">PAGINATED_DIRECT_TEMPLATES</span></code> ，将分页控制扩展到所有模板并使页面大小可变</li>
+<li>用 <code class="docutils literal notranslate"><span class="pre">SLUG_REGEX_SUBSTITUTIONS</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">SLUG_SUBSTITUTIONS</span></code> 以获得更精细的控制</li>
+<li>在 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">'{base_name}'</span></code> 的值不再从 <code class="docutils literal notranslate"><span class="pre">'foo/bar.html'</span></code> 删除 <code class="docutils literal notranslate"><span class="pre">'bar'</span></code> (除非 <code class="docutils literal notranslate"><span class="pre">'bar'</span> <span class="pre">==</span> <span class="pre">'index'</span></code>)</li>
+<li><code class="docutils literal notranslate"><span class="pre">ARTICLE_ORDER_BY</span></code> 和 <code class="docutils literal notranslate"><span class="pre">PAGE_ORDER_BY</span></code> 现在也影响 1) 分类, 标签和作者页面
+2) feeds 3) 草稿及隐藏的文章或page页</li>
+<li>新的 <code class="docutils literal notranslate"><span class="pre">ARTICLE_TRANSLATION_ID</span></code> 和 <code class="docutils literal notranslate"><span class="pre">PAGE_TRANSLATION_ID</span></code> 设置，用于指定用于识别/禁用翻译的元数据属性</li>
+<li>使HTML阅读器将多次出现的元数据标签解析为列表</li>
+<li>新的Blogger XML备份导入程序</li>
+<li>如果使用 <code class="docutils literal notranslate"><span class="pre">--wp-attach</span></code> 下载文件，Wordpress导入器现在更新文件链接以指向本地副本。</li>
+<li>导入器不再插入额外的换行符，以防止破坏HTML属性。</li>
+<li>当解析 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 时，Pelican服务器现在处理 <code class="docutils literal notranslate"><span class="pre">foo.html</span></code> 和 <code class="docutils literal notranslate"><span class="pre">foo/index.html</span></code> 将比 <code class="docutils literal notranslate"><span class="pre">foo/</span></code> 优先。</li>
+</ul>
+</div>
+<div class="section" id="id13">
+<h2>3.7.1 (2017-01-10)<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>修复Quickstart脚本中的区域设置问题</li>
+<li>在setup.py中指定README和CHANGELOG的编码</li>
+</ul>
+</div>
+<div class="section" id="id14">
+<h2>3.7.0 (2016-12-12)<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>除了 <code class="docutils literal notranslate"><span class="pre">&lt;summary&gt;</span></code> 之外，Atom源也输出 <code class="docutils literal notranslate"><span class="pre">&lt;content&gt;</span></code></li>
+<li>Atom源使用 <code class="docutils literal notranslate"><span class="pre">&lt;published&gt;</span></code> 作为原始发布日期，使用 <code class="docutils literal notranslate"><span class="pre">&lt;updated&gt;</span></code> 作为修改日期</li>
+<li>简化Atom订阅源ID生成并支持URL片段</li>
+<li>使用特定分类的标题生成分类源</li>
+<li>RSS源现在默认为摘要而不是完整内容；
+设置 <code class="docutils literal notranslate"><span class="pre">RSS_FEED_SUMMARY_ONLY</span> <span class="pre">=</span> <span class="pre">False</span></code> 恢复到之前的设定</li>
+<li>用 <code class="docutils literal notranslate"><span class="pre">MARKDOWN</span></code> 设置替换 <code class="docutils literal notranslate"><span class="pre">MD_EXTENSIONS</span></code></li>
+<li>用更强大的 <code class="docutils literal notranslate"><span class="pre">JINJA_ENVIRONMENT</span></code> 设置替换 <code class="docutils literal notranslate"><span class="pre">JINJA_EXTENSIONS</span></code></li>
+<li>改进摘要截断逻辑，使用HTML解析器而不是正则表达式来处理跨越多行的特殊字符和标签</li>
+<li>在搜索站内链接替换时包括搜索摘要</li>
+<li>通过 <code class="docutils literal notranslate"><span class="pre">{author}name</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{index}</span></code> 语法链接到作者和索引</li>
+<li>通过 <code class="docutils literal notranslate"><span class="pre">LINKS_WIDGET_NAME</span></code> 和 <code class="docutils literal notranslate"><span class="pre">SOCIAL_WIDGET_NAME</span></code> 覆盖小部件名称</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">INDEX_SAVE_AS</span></code> 选项以覆盖默认的 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 值</li>
+<li>删除主题的上下文变量 <code class="docutils literal notranslate"><span class="pre">PAGES</span></code> 以支持使用 <code class="docutils literal notranslate"><span class="pre">pages</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">SLUG_SUBSTITUTIONS</span></code> 现在接受3元组元素，允许URL的slugs包含非字母数字字符</li>
+<li>使用 <code class="docutils literal notranslate"><span class="pre">TAG_SUBSTITUTIONS</span></code> 和 <code class="docutils literal notranslate"><span class="pre">CATEGORY_SUBSTITUTIONS</span></code> 设置可以更精确地控制标签和分类的slug</li>
+<li>使用 <code class="docutils literal notranslate"><span class="pre">AUTHOR_SUBSTITUTIONS</span></code> 设置可以更精确地控制作者slug</li>
+<li><code class="docutils literal notranslate"><span class="pre">DEFAULT_DATE</span></code> 可以定义为字符串</li>
+<li>当 <code class="docutils literal notranslate"><span class="pre">DEFAULT_DATE</span> <span class="pre">=</span> <span class="pre">'fs'</span></code> 时使用 <code class="docutils literal notranslate"><span class="pre">mtime</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">ctime</span></code></li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">--fatal=errors|warnings</span></code> 选项以用于持续集成</li>
+<li>使用生成器级缓存时，确保以前缓存的文件是已处理的文件而不是新文件。</li>
+<li>添加Python和Pelican版本信息供调试输出</li>
+<li>提高与Python 3.5的兼容性</li>
+<li>遵守并执行PEP8指南</li>
+<li>用 <code class="docutils literal notranslate"><span class="pre">data::</span></code> 指令替换设置文档中的表</li>
+</ul>
+</div>
+<div class="section" id="id15">
+<h2>3.6.3 (2015-08-14)<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>修复版本 tarball 中的权限问题</li>
+</ul>
+</div>
+<div class="section" id="id16">
+<h2>3.6.2 (2015-08-01)<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>修复测试中与Unicode相关的安装错误</li>
+<li>如果只有一页则不在 <code class="docutils literal notranslate"><span class="pre">notmyidea</span></code> 主题中显示分页</li>
+<li>在上下文中提供隐藏页面</li>
+<li>改进URLWrapper比较</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h2>3.6.0 (2015-06-15)<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>默认情况下禁用缓存以防止可能的混淆</li>
+<li>改进缓存行为，用 <code class="docutils literal notranslate"><span class="pre">cpickle</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">pickle</span></code></li>
+<li>在 <code class="docutils literal notranslate"><span class="pre">summary</span></code> 以外的元数据字段中允许Markdown或reST内容</li>
+<li>支持以分号分隔的作者/标签列表</li>
+<li>提高文章排序的灵活性</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">--relative-urls</span></code> 参数</li>
+<li>支持devserver监听localhost以外的地址</li>
+<li>将HTTP服务器处理程序统一为 <code class="docutils literal notranslate"><span class="pre">pelican.server</span></code></li>
+<li>处理草稿帖子的站内链接</li>
+<li>将 <code class="docutils literal notranslate"><span class="pre">tag_cloud</span></code> 从核心移到插件</li>
+<li>通过HTTPS加载默认主题的外部资源</li>
+<li>从WordPress XML导入草稿</li>
+<li>改进对Windows用户的支持</li>
+<li>增强日志记录和测试套件</li>
+<li>清理和重构代码库</li>
+<li>新信号: <code class="docutils literal notranslate"><span class="pre">all_generators_finalized</span></code> 和 <code class="docutils literal notranslate"><span class="pre">page_writer_finalized</span></code></li>
+</ul>
+</div>
+<div class="section" id="id18">
+<h2>3.5.0 (2014-11-04)<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>引入 <code class="docutils literal notranslate"><span class="pre">ARTICLE_ORDER_BY</span></code> 和 <code class="docutils literal notranslate"><span class="pre">PAGE_ORDER_BY</span></code> 设置来控制文章和页面的顺序。</li>
+<li>在模板渲染的日期中包含时区信息</li>
+<li>在文章和page页的元数据中公开读取器名称</li>
+<li>添加在路径中使用 <code class="docutils literal notranslate"><span class="pre">{attach}</span></code> 将静态文件与内容放在与文章和page页相同的目录中的功能。</li>
+<li>当Markdown文件中存在重复的元数据时，防止Pelican引发异常。</li>
+<li>引入 <code class="docutils literal notranslate"><span class="pre">TYPOGRIFY_IGNORE_TAGS</span></code> 设置以添加要被Typogrify忽略的HTML标签。</li>
+<li>添加在日期格式中使用``-<code class="docutils literal notranslate"><span class="pre">来去除前置零的功能。例如，</span> <span class="pre">``%-d/%-m/%y</span></code> 现在将显示为 <code class="docutils literal notranslate"><span class="pre">9/8/12</span></code> 。</li>
+<li>确保在快速入门配置期间正确禁用源生成。</li>
+<li>从不正确匹配的子目录中修复 <code class="docutils literal notranslate"><span class="pre">PAGE_EXCLUDES</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ARTICLE_EXCLUDES</span></code></li>
+<li>引入 <code class="docutils literal notranslate"><span class="pre">STATIC_EXCLUDE</span></code> 设置添加排除静态文件功能。</li>
+<li>修复了在 <code class="docutils literal notranslate"><span class="pre">RELATIVE_URLS</span></code> 启用状态下使用 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 出现的问题</li>
+<li>修复Feed的生成导致链接在使用其他语言环境时使用错误的月份名称语言</li>
+<li>修复了simple模板中作者列表格式不正确的问题。</li>
+<li>修复从设置中解析非字符串URL时的问题</li>
+<li>提高调试和警告消息的一致性</li>
+</ul>
+</div>
+<div class="section" id="id19">
+<h2>3.4.0 (2014-07-01)<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>通过新的缓存机制加速内容生成</li>
+<li>添加选择性生成帖子（而不是总是建立整个网站）</li>
+<li>改进许多文档，包括切换到更漂亮的RtD主题</li>
+<li>添加对多个内容和插件路径的支持</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">:modified:</span></code> 元数据字段来补充 <code class="docutils literal notranslate"><span class="pre">:date:</span></code>
+用于指定文章的最新更新日期和时间，与发布日期和时间无关。</li>
+<li>添加新的 <code class="docutils literal notranslate"><span class="pre">:authors:</span></code> 元数据字段添加对多位作者的支持</li>
+<li>在自动生成网站模式下，监视静态目录的更改</li>
+<li>根据需要添加过滤器以限制日志输出</li>
+<li>为草稿添加语言支持</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">SLUGIFY_SOURCE</span></code> 设置来控制帖子的slug内容的生成方式</li>
+<li>修复了许多与语言环境和编码有关的问题</li>
+<li>为帖子摘要应用Typogrify过滤器</li>
+<li>将静态文件复制到输出时保留文件元数据（例如时间戳）</li>
+<li>将AsciiDoc支持从Pelican核心转移到单独的插件中</li>
+<li>导入内容时生成内联链接而不是引用样式链接</li>
+<li>改进对 <code class="docutils literal notranslate"><span class="pre">IGNORE_FILES</span></code> 设置行为的处理</li>
+<li>正确转义标签名称中的符号字符（例如，<code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">++</span></code>）</li>
+<li>Python 3.4兼容性的小调整</li>
+<li>添加几个新信号</li>
+</ul>
+</div>
+<div class="section" id="id20">
+<h2>3.3.0 (2013-09-24)<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>放弃 Python 3.2 支持,转而支持 Python 3.3</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">Fabfile</span></code> ，这样Fabric可以用于工作流自动化而不是通过Make命令</li>
+<li><code class="docutils literal notranslate"><span class="pre">OUTPUT_RETENTION</span></code> 设置可用于保存元数据（例如，诸如 <code class="docutils literal notranslate"><span class="pre">.hg</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.git</span></code> 之类的VCS数据）以防止其在output目录中被删除</li>
+<li>Tumblr导入</li>
+<li>清理output文件夹时改善逻辑和一致性</li>
+<li>改进文档版本控制和发布自动化</li>
+<li>提高分页灵活性</li>
+<li>重命名信号以获得更好的一致性（某些插件可能需要更新）</li>
+<li>将元数据提取从生成器移动到读取器；元数据提取不再特定于文章</li>
+<li>弃用 <code class="docutils literal notranslate"><span class="pre">FILES_TO_COPY</span></code> 以支持 <code class="docutils literal notranslate"><span class="pre">STATIC_PATHS</span></code> 和 <code class="docutils literal notranslate"><span class="pre">EXTRA_PATH_METADATA</span></code></li>
+<li>Markdown帖子中的摘要不再包含脚注</li>
+<li>通过 <code class="docutils literal notranslate"><span class="pre">lstrip_blocks</span></code> Jinja参数删除输出中不必要的空格</li>
+<li>将PDF生成从核心移动到插件</li>
+<li>用 <code class="docutils literal notranslate"><span class="pre">READERS</span></code> 替换 <code class="docutils literal notranslate"><span class="pre">MARKUP</span></code> 设置</li>
+<li>如果img标签缺少 <code class="docutils literal notranslate"><span class="pre">alt</span></code> 属性则发出警告</li>
+<li>除了 <code class="docutils literal notranslate"><span class="pre">||</span></code> 之外，在相对链接语法中添加对 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 的支持</li>
+<li>添加对 <code class="docutils literal notranslate"><span class="pre">{tag}</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{category}</span></code> 相对链接的支持</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">content_written</span></code> 信号</li>
+</ul>
+</div>
+<div class="section" id="and-3-2-2">
+<h2>3.2.1 and 3.2.2<a class="headerlink" href="#and-3-2-2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>推动系统包含在FreeBSD Ports Collection中</li>
+</ul>
+</div>
+<div class="section" id="id21">
+<h2>3.2 (2013-04-24)<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>支持Python 3！</li>
+<li>从元数据覆盖页面的保存位置（例如，使用静态页面作为站点的主页）</li>
+<li>周期存档(每年、每月和每天的帖子存档)</li>
+<li>海报博客导入</li>
+<li>改进WordPress博客导入</li>
+<li>将插件迁移到单独的存储库</li>
+<li>改进HTML解析器</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">DISPLAY_CATEGORIES_ON_MENU</span></code> 选项提供使用菜单显示或隐藏分类的功能</li>
+<li>通过 <code class="docutils literal notranslate"><span class="pre">IGNORE_FILES</span></code> 设置告知自动重新生成功能需要忽略哪些文件</li>
+<li>改善帖子生成反馈给用户</li>
+<li>对于多语言帖子，使用元数据来指定哪个是原始版本，哪个是翻译版本</li>
+<li>将``.mdown``添加到支持的Markdown文件扩展名列表中</li>
+<li>文档相对URL生成（ <code class="docutils literal notranslate"><span class="pre">RELATIVE_URLS</span></code> ）现在默认关闭</li>
+</ul>
+</div>
+<div class="section" id="id22">
+<h2>3.1 (2012-12-04)<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>导入器现在默认将slugs存储在文件中。可以使用 <code class="docutils literal notranslate"><span class="pre">--disable-slugs</span></code> 选项禁用它。</li>
+<li>改进对站点内资源链接的处理</li>
+<li>确保导入WordPress时为帖子内容中的所有类型的行结尾添加段落</li>
+<li>在导入时解码WordPress帖子标题中的HTML实体</li>
+<li>改善默认主题中LinkedIn图标的外观</li>
+<li>在默认主题中添加GitHub和Google+社交图标支持</li>
+<li>优化社交图标</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">FEED_ALL_ATOM</span></code> 和 <code class="docutils literal notranslate"><span class="pre">FEED_ALL_RSS</span></code> 以生成包含所有帖子的feed源，不区分语言版本</li>
+<li>将 <code class="docutils literal notranslate"><span class="pre">TRANSLATION_FEED</span></code> 拆分为 <code class="docutils literal notranslate"><span class="pre">TRANSLATION_FEED_ATOM</span></code> 和 <code class="docutils literal notranslate"><span class="pre">TRANSLATION_FEED_RSS</span></code></li>
+<li>现在可以单独启用/禁用不同的源</li>
+<li>允许空白作者：如果没有设置 <code class="docutils literal notranslate"><span class="pre">AUTHOR</span></code> 设置，作者将不再默认为 <code class="docutils literal notranslate"><span class="pre">${USER}</span></code> ，如果帖子作者为空，帖子将不包含任何作者信息</li>
+<li>将对LESS和Webassets的支持从Pelican核心移出变为插件形式</li>
+<li><code class="docutils literal notranslate"><span class="pre">DEFAULT_DATE</span></code> 设置现在默认为 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，这意味着除非指定日期元数据否则不会生成文章</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">FILENAME_METADATA</span></code> 设置以支持从文件名中提取元数据</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">gzip_cache</span></code> 插件将常见文本文件压缩到与原始文件相同的目录中的 <code class="docutils literal notranslate"><span class="pre">.gz</span></code> 文件中，从而阻止服
+务器（例如Nginx）必须在HTTP调用期间压缩文件的行为</li>
+<li>添加对AsciiDoc格式内容的支持</li>
+<li>添加 <code class="docutils literal notranslate"><span class="pre">USE_FOLDER_AS_CATEGORY</span></code> 设置，以便可以打开/关闭功能</li>
+<li>支持任意Jinja模板文件</li>
+<li>恢复基本功能测试</li>
+<li>新信号: <code class="docutils literal notranslate"><span class="pre">generator_init</span></code>, <code class="docutils literal notranslate"><span class="pre">get_generators</span></code>, 和
+<code class="docutils literal notranslate"><span class="pre">article_generate_preread</span></code></li>
+</ul>
+</div>
+<div class="section" id="id23">
+<h2>3.0 (2012-08-08)<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>重构URL的处理方式</li>
+<li>改进了英文文档</li>
+<li>使用``setuptools``入口点修复package包</li>
+<li>添加了 <code class="docutils literal notranslate"><span class="pre">typogrify</span></code> 支持</li>
+<li>添加了禁用Feed生成的方法</li>
+<li>添加了对 <code class="docutils literal notranslate"><span class="pre">DIRECT_TEMPLATES</span></code> 的支持</li>
+<li>允许内容文件的多个扩展名</li>
+<li>添加了 LESS 支持</li>
+<li>改进了导入脚本</li>
+<li>添加了功能测试</li>
+<li>在生成的Makefile中支持Rsync</li>
+<li>改进的feed支持 (例如使用Feedburner可轻松插入)</li>
+<li>在reST中添加了对 <code class="docutils literal notranslate"><span class="pre">abbr</span></code> 的支持</li>
+<li>修正了一堆错误 :-)</li>
+</ul>
+</div>
+<div class="section" id="id24">
+<h2>2.8 (2012-02-28)<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>Dotclear导入</li>
+<li>允许使用Markdown扩展</li>
+<li>主题现在很容易进行扩展</li>
+<li>如果只有一个页面则不输出分页信息</li>
+<li>为每位作者添加一个页面及其所有文章</li>
+<li>改进了测试套件</li>
+<li>使主题更容易扩展</li>
+<li>删除了Skribit支持</li>
+<li>添加了一个 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 脚本</li>
+<li>修复了与时区相关的问题</li>
+<li>添加了一些Windows支持脚本</li>
+<li>日期可以秒为单位指定</li>
+<li>生成帖子时永远不会失败（跳过并继续）</li>
+<li>允许使用未来日期</li>
+<li>支持每种语言具有不同的时区</li>
+<li>丰富了文档</li>
+</ul>
+</div>
+<div class="section" id="id25">
+<h2>2.7 (2011-06-11)<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>使用日志记录 <code class="docutils literal notranslate"><span class="pre">logging</span></code> ，而不是回显</li>
+<li>支持自定义Jinja过滤器</li>
+<li>与Python 2.5的兼容性</li>
+<li>添加了主题管理器</li>
+<li>封装用于 Debian</li>
+<li>添加了草稿支持</li>
+</ul>
+</div>
+<div class="section" id="id26">
+<h2>2.6 (2011-03-08)<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>输出目录结构的变化</li>
+<li>使模板更易于使用/创建</li>
+<li>增加了RSS支持（仅限Atom）</li>
+<li>添加了Feed的标签支持</li>
+<li>丰富文档</li>
+<li>添加了另一个主题 (brownstone)</li>
+<li>添加了翻译</li>
+<li>用重写URL模块(或等效模块)添加了一种使用更简洁URL的方法</li>
+<li>添加了标签云</li>
+<li>添加了自动加载功能：每次检测到修改时，博客都会自动重新生成</li>
+<li>将文档翻译成法语</li>
+<li>从RSS源导入博客</li>
+<li>分页支持</li>
+<li>添加了Skribit支持</li>
+</ul>
+</div>
+<div class="section" id="id27">
+<h2>2.5 (2010-11-20)<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>支持WordPress导入</li>
+<li>添加了一些新主题 (martyalchin / wide-notmyidea)</li>
+<li>第一个错误报告！</li>
+<li>Linkedin支持</li>
+<li>添加了FAQ</li>
+<li>Google Analytics支持</li>
+<li>Twitter支持</li>
+<li>使用相对URL，而不是静态URL</li>
+</ul>
+</div>
+<div class="section" id="id28">
+<h2>2.4 (2010-11-06)<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>次要主题更改</li>
+<li>添加支持Disqus（有评论功能了）</li>
+<li>第二次代码重构</li>
+<li>添加了有关页面的配置设置</li>
+<li>博客条目也可以以PDF格式生成</li>
+</ul>
+</div>
+<div class="section" id="id29">
+<h2>2.3 (2010-10-31)<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>支持Markdown格式</li>
+</ul>
+</div>
+<div class="section" id="id30">
+<h2>2.2 (2010-10-30)<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>优化输出</li>
+<li>管理静态页面</li>
+</ul>
+</div>
+<div class="section" id="id31">
+<h2>2.1 (2010-10-30)<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>将 notmyidea 设为默认主题</li>
+</ul>
+</div>
+<div class="section" id="id32">
+<h2>2.0 (2010-10-30)<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>重构代码以使其更具可扩展性</li>
+<li>更改为设置变量</li>
+</ul>
+</div>
+<div class="section" id="id33">
+<h2>1.2 (2010-09-28)<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>添加了调试选项</li>
+<li>添加了每个分类的Feeds</li>
+<li>如果未提供元数据，则使用文件系统获取日期</li>
+<li>添加Pygments支持</li>
+</ul>
+</div>
+<div class="section" id="id34">
+<h2>1.1 (2010-08-19)<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li>第一个可用版本</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="links.html" class="btn btn-neutral float-right" title="文档英文版链接" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="report.html" class="btn btn-neutral float-left" title="Pelican的一些历史" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

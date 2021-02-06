@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>贡献和反馈指南 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Pelican内部原理" href="internals.html" />
+    <link rel="prev" title="使用技巧" href="tips.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">贡献和反馈指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">设置开发环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">构建文档</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">运行测试套件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-2-3">Python 2/3兼容性开发技巧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">记录日志技巧</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">限制无关的日志消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">在日志中输出回溯</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>贡献和反馈指南</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contribute.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>贡献和反馈指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>要为Pelican做出贡献有很多方法。 你可以改进文档，添加缺少的功能，修复错误（或只是报告错误也行）等。
+你还可以通过查看和评论 <a class="reference external" href="https://github.com/getpelican/pelican/issues">现有issues</a> 这个页面来提供帮助。</p>
+<p>不要犹豫，将Pelican fork到你的GitHub并在GitHub上提交issue或提出pull request吧。
+不过提交的时候，请遵守以下准则。</p>
+<div class="section" id="id2">
+<h2>设置开发环境<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>虽然有很多方法可以设置一个开发环境，但我们建议使用 <a class="reference external" href="https://virtualenv.pypa.io/en/stable/">Virtualenv</a> 。
+此工具允许你为单独Python项目设置单独的环境，项目间彼此隔离，
+这样你可以很方便地为每个项目使用不同的python模块（和不同的模块版本）。</p>
+<p>如果你还未安装 <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> ，你可以通过以下命令安装:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install virtualenv
+</pre></div>
+</div>
+<p>用 <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> 来创建和激活一个虚拟环境:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ virtualenv ~/virtualenvs/pelican
+$ cd ~/virtualenvs/pelican
+$ . bin/activate
+</pre></div>
+</div>
+<p>将Pelican源克隆到一个名为 <code class="docutils literal notranslate"><span class="pre">src/pelican</span></code> 的子目录中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/getpelican/pelican.git src/pelican
+$ cd src/pelican
+</pre></div>
+</div>
+<p>安装开发所需依赖项:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements/developer.pip
+</pre></div>
+</div>
+<p>安装Pelican和Pelican需要的依赖项:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python setup.py develop
+</pre></div>
+</div>
+<p>或者使用 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -e .
+</pre></div>
+</div>
+<p>为了方便地在多个Python版本环境下进行测试，我们还提供了一个 <code class="docutils literal notranslate"><span class="pre">.tox</span></code> 文件。</p>
+</div>
+<div class="section" id="id3">
+<h2>构建文档<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>如果你修改了文档，则应在提交之前预览一下你的修改:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -r requirements/docs.pip
+$ cd docs
+$ make html
+</pre></div>
+</div>
+<p>在浏览器中打开 <code class="docutils literal notranslate"><span class="pre">_build/html/index.html</span></code> 以预览文档。</p>
+</div>
+<div class="section" id="id4">
+<h2>运行测试套件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>在每次添加一个功能时，有两项关于测试的事情你需要做：检查现有测试是否通过，为新功能或错误修正添加测试。</p>
+<p>测试文件在 <code class="docutils literal notranslate"><span class="pre">pelican/tests</span></code> 中，你可以使用 <code class="docutils literal notranslate"><span class="pre">unittest</span></code> 的 “discover” 功能来运行它们:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python -Wd -m unittest discover
+</pre></div>
+</div>
+<p>进行修改并运行测试后，你可能会看到一个测试失败的提示：“某些生成的文件与预期的功能测试输出
+不同”（”some generated files differ from the expected functional tests
+output.”）。 这里，如果你进行过某些会影响到Pelican生成的HTML输出的更改，而基于这些更改的性质
+你能够料到并且确认其不会出错的话，你应该更新功能测试所使用的输出内容。
+为此，你首先应 <strong>确保你已安装了</strong> <code class="docutils literal notranslate"><span class="pre">en_EN.utf8</span></code> <strong>和</strong> <code class="docutils literal notranslate"><span class="pre">fr_FR.utf8</span></code> 两个 <strong>语言环境</strong> ，
+然后运行以下两个命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ LC_ALL=en_US.utf8 pelican -o pelican/tests/output/custom/ \
+    -s samples/pelican.conf.py samples/content/
+$ LC_ALL=fr_FR.utf8 pelican -o pelican/tests/output/custom_locale/ \
+    -s samples/pelican.conf_FR.py samples/content/
+$ LC_ALL=en_US.utf8 pelican -o pelican/tests/output/basic/ \
+    samples/content/
+</pre></div>
+</div>
+<p>你可能还会发现由于未安装某些依赖项（例如，Pandoc），一些测试会被跳过。 这并不意味着这些测试通过了；
+你至少应该验证一下这些跳过的测试不会受到你的修改的影响。</p>
+<p>你应该在每个支持Pelican的Python版本环境中运行测试套件。
+最好的办法是为每个Python版本创建一个单独的环境来完成。
+<a class="reference external" href="https://tox.readthedocs.io/en/latest/">Tox</a> 工具在这里非常好用，它可以在 <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> 创建的环境中自动运行测试。</p>
+</div>
+<div class="section" id="python-2-3">
+<h2>Python 2/3兼容性开发技巧<a class="headerlink" href="#python-2-3" title="永久链接至标题">¶</a></h2>
+<p>以下是一些可能对编写与Python 2.7和Python 3兼容的代码有用的提示:</p>
+<ul class="simple">
+<li>使用新语法。 例如:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">print</span> <span class="pre">..</span> <span class="pre">-&gt;</span> <span class="pre">print(..)</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">..,</span> <span class="pre">e</span> <span class="pre">-&gt;</span> <span class="pre">except</span> <span class="pre">..</span> <span class="pre">as</span> <span class="pre">e</span></code></li>
+</ul>
+</li>
+<li>使用新方法。 例如:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">dict.iteritems()</span> <span class="pre">-&gt;</span> <span class="pre">dict.items()</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">xrange(..)</span> <span class="pre">-</span> <span class="pre">&gt;</span> <span class="pre">list(range(..))</span></code></li>
+</ul>
+</li>
+<li>必要时使用 <code class="docutils literal notranslate"><span class="pre">six</span></code> 模块。 例如:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">isinstance(..,</span> <span class="pre">basestring)</span> <span class="pre">-&gt;</span> <span class="pre">isinstance(..,</span> <span class="pre">six.string_types)</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">isinstance(..,</span> <span class="pre">unicode)</span> <span class="pre">-&gt;</span> <span class="pre">isinstance(..,</span> <span class="pre">six.text_type)</span></code></li>
+</ul>
+</li>
+<li>假设每个字符串和文字都是Unicode格式:<ul>
+<li>使用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">unicode_literals</span></code></li>
+<li>不要在字符串前使用前缀 <code class="docutils literal notranslate"><span class="pre">u'</span></code> 。</li>
+<li>不要在过程中编码/解码字符串。 应循着代码定位到该字符串的源位置/目标位置，并在可能的第一个/最后一个位置对其进行编码/解码。</li>
+<li>尤其注意，编写你的函数时应预期会接收Unicode格式的内容，函数返回的内容也是Unicode格式。</li>
+<li>如果字符串是由众所周知的处理这种情况很糟糕的Python函数输出的，则对该字符串进行编码/解码。例如，Python 2中的 <code class="docutils literal notranslate"><span class="pre">strftime()</span></code> 函数。</li>
+<li>不要在新建的类中使用 <code class="docutils literal notranslate"><span class="pre">__unicode()__</span></code> 这个方法。只用 <code class="docutils literal notranslate"><span class="pre">__str()__</span></code> 这个方法然后用 <code class="docutils literal notranslate"><span class="pre">&#64;python_2_unicode_compatible</span></code> 来装饰这个类。</li>
+</ul>
+</li>
+<li>当我们将语言环境名称指定为Unicode时，Python 2中的 <code class="docutils literal notranslate"><span class="pre">setlocale()</span></code> 将会失效。
+而我们却到处都在用 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">unicode_literals</span></code> 。对这个情况，
+其中一种解决方法是将语言环境名称用 <code class="docutils literal notranslate"><span class="pre">str()</span></code> 括起来；
+在Python2中，这样可以将名称转换为字节字符串，而在Python3中，应该不会执行任何操作，因为区域设置名称已经是Unicode格式。</li>
+<li>整数数字不要以零开头。这在Python3中会是一个语法错误。</li>
+<li>不幸的是，似乎没有同时在Python2和3中都有效的八进制表示法。请使用十进制表示法。</li>
+</ul>
+</div>
+<div class="section" id="id5">
+<h2>记录日志技巧<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>尝试使用合适的日志记录级别。</p>
+<p>要记录不重复的消息，请使用一般的Python方式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 在文件顶部</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="c1"># 如果需要</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;A warning with </span><span class="si">%s</span><span class="s2"> formatting&quot;</span><span class="p">,</span> <span class="n">arg_to_be_formatted</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>不要自己格式化日志消息。 在消息中使用 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 格式并将参数传递给logger。
+这很重要，因为Pelican logger会为了Py2/Py3之间的兼容性而预处理一些参数（比如Exceptions）。</p>
+<div class="section" id="id6">
+<h3>限制无关的日志消息<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>如果日志消息会多次出现，你可能需要作一些限制以防止其泛滥。 为此，可以使
+用日志消息的 <code class="docutils literal notranslate"><span class="pre">extra</span></code> 这个关键字设置，参照以下格式写:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;这条用 </span><span class="si">%s</span><span class="s2"> 格式化的消息叫AAA消息&quot;</span><span class="p">,</span> <span class="n">arg_to_be_formatted</span><span class="p">,</span>
+    <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;limit_msg&#39;</span><span class="p">:</span> <span class="s1">&#39;AAA消息太多，显示这条通用消息&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>另外，如果你需要格式化通用消息的显示，你还可以在 <code class="docutils literal notranslate"><span class="pre">extra</span></code> 的字典中将 <code class="docutils literal notranslate"><span class="pre">'limit_args'</span></code> 设置为一个参数元组tuple。</p>
+<p>消息显示限制为 <code class="docutils literal notranslate"><span class="pre">5</span></code> 条，即，前四条具有相同 <code class="docutils literal notranslate"><span class="pre">'limit_msg'</span></code> 的日志消息正常输出显示，但是第
+五条日志将使用  <code class="docutils literal notranslate"><span class="pre">'limit_msg'</span></code> 替代显示（如果有 <code class="docutils literal notranslate"><span class="pre">'limit_args'</span></code> 的话也带上limit_args）。
+在第五条之后，将忽略相应的日志消息。</p>
+<p>例如，如果要记录丢失的资源，可以用以下代码:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">resource</span> <span class="ow">in</span> <span class="n">resources</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">resource</span><span class="o">.</span><span class="n">is_missing</span><span class="p">:</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span>
+            <span class="s1">&#39;找不到名字为 </span><span class="si">%s</span><span class="s1"> 的资源&#39;</span><span class="p">,</span> <span class="n">resource</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;limit_msg&#39;</span><span class="p">:</span> <span class="s1">&#39;好多资源都找不到啦找不到啦！&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+<p>日志消息将显示如下:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>WARNING: 找不到名字为 prettiest_cat.jpg 的资源
+WARNING: 找不到名字为 best_cat_ever.jpg 的资源
+WARNING: 找不到名字为 cutest_cat.jpg 的资源
+WARNING: 找不到名字为 lolcat.jpg 的资源
+WARNING: 好多资源都找不到啦找不到啦！
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>在日志中输出回溯<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>如果你在 <code class="docutils literal notranslate"><span class="pre">except</span></code> 语句块中加日志记录，你可能也希望让它提供回溯信息。
+你可以通过将 <code class="docutils literal notranslate"><span class="pre">exc_info</span></code> 关键字参数设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 来实现。
+不过，默认情况下应该不需要这样做，因为回溯消息会很长，而且普通用户可能会对此感到困惑。
+可以尝试将它们限制为 <code class="docutils literal notranslate"><span class="pre">--debug</span></code> 模式，如下所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">some_action</span><span class="p">()</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Exception occurred: </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span>
+        <span class="n">exc_info</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;DEBUG&#39;</span><span class="p">,</span> <span class="kc">False</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="internals.html" class="btn btn-neutral float-right" title="Pelican内部原理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="tips.html" class="btn btn-neutral float-left" title="使用技巧" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

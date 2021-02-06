@@ -1,0 +1,1789 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>设置选项 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="关于主题" href="themes.html" />
+    <link rel="prev" title="发布网站" href="publish.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">设置选项</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id3">基本设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#url">URL设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">时间和日期</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#template-pages">模板页</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">元数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#feed">Feed订阅设置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id21">分页</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id22">使用分页模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id23">翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id28">整理内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id29">主题</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id30">日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reading-only-modified-content">仅读取已修改的内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-only-selected-content">仅写入选定内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id33">设置示例</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>设置选项</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/settings.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>设置选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>可以通过命令行给Pelican指定一份设置文件，用以配置Pelican:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">s</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>如果你初始化用的是 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 命令, 你的主配置文件默认名将为 <code class="docutils literal notranslate"><span class="pre">pelicanconf.py</span></code></p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">在尝试不同的设置（尤其是设置元数据）时，有可能会受缓存干扰，作的修改可能不见生效。
+这种情况下，可以使用 <code class="docutils literal notranslate"><span class="pre">LOAD_CONTENT_CACHE</span> <span class="pre">=</span> <span class="pre">False</span></code> 禁用缓存或
+使用 <code class="docutils literal notranslate"><span class="pre">--ignore-cache</span></code> 命令行开关。</p>
+</div>
+<p>设置文件是以Python模块（一个文件）的方式进行配置，这里有一份
+<a class="reference external" href="https://github.com/getpelican/pelican/raw/master/samples/pelican.conf.py">示例设置文件</a>
+供参考</p>
+<p>要查看环境中的当前设置列表（包括默认值和任何自定义值），
+请运行以下命令（将一个或多个特定的设置关键字名称附加为参数以查看这些设置的值）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="o">--</span><span class="nb">print</span><span class="o">-</span><span class="n">settings</span>
+</pre></div>
+</div>
+<p>所有设置的标识符必须全部大写，否则不会被处理。
+设置数字（5,20等），布尔值（True，False，None等），
+字典或元组的值 <em>不</em> 应该用引号括起来。所有其他值（即字符串） <em>必须</em> 用引号括起来。</p>
+<p>除非另有说明，否则引用路径的设置可以是绝对路径，也可以是相对于配置文件的相对路径。
+在配置文件中定义的设置将传递给模板，进而应用于设置站点范围的内容。</p>
+<p>以下为Pelican设置项列表:</p>
+<div class="section" id="id3">
+<h2>基本设置<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt>
+<code class="descname">USE_FOLDER_AS_CATEGORY = True</code></dt>
+<dd><p>如果不想在文章中的元数据中指定分类，请将此设置设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>，并用子目录来放置组织
+你的文章，如此这些子目录将成为你的网站文章的分类。如果设置值 为 <code class="docutils literal notranslate"><span class="pre">False</span></code>，则会根
+据 <code class="docutils literal notranslate"><span class="pre">DEFAULT_CATEGORY</span></code> 中的值来设置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_CATEGORY = 'misc'</code></dt>
+<dd><p>默认的分类属性（备用用）</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DISPLAY_PAGES_ON_MENU = True</code></dt>
+<dd><p>是否在模板菜单上显示页面。 模板可能会也可能不会遵循此设置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DISPLAY_CATEGORIES_ON_MENU = True</code></dt>
+<dd><p>是否在模板菜单上显示分类。 模板可能会也可能不会遵循此设置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DOCUTILS_SETTINGS = {}</code></dt>
+<dd><p>设置docutils发布者的额外配置（仅适用于reStructuredText）。 有关详细信息，请参
+阅 <a class="reference external" href="http://docutils.sourceforge.net/docs/user/config.html">Docutils Configuration</a> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DELETE_OUTPUT_DIRECTORY = False</code></dt>
+<dd><p>在生成新站点之前，删除文件输出output目录以及其中 <strong>所有</strong> 内容, 这可以用于防止
+旧的，不必要的文件长期保留在output目录中。但是， <strong>这是一种破坏性的设置，应该特
+别小心对待。</strong></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">OUTPUT_RETENTION = []</code></dt>
+<dd><p>值为一个文件名列表，表示在output目录中的这些/这类文件将被保留不会删除。
+其中一个用法是保存版本控制数据。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">OUTPUT_RETENTION</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;.hg&quot;</span><span class="p">,</span> <span class="s2">&quot;.git&quot;</span><span class="p">,</span> <span class="s2">&quot;.bzr&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">JINJA_ENVIRONMENT = {'trim_blocks': True, 'lstrip_blocks': True}</code></dt>
+<dd><p>给使用的Jinja2自定义环境变量，还可以包含使用的扩展列表，
+详情参照 <a class="reference external" href="http://jinja.pocoo.org/docs/dev/api/#jinja2.Environment">Jinja Environment documentation</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">JINJA_FILTERS = {}</code></dt>
+<dd><p>给使用的Jinja2自定义过滤器，字典类型。
+数据为过滤器名称对应过滤器函数。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">JINJA_FILTERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;urlencode&#39;</span><span class="p">:</span> <span class="n">urlencode_filter</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>参考 <a class="reference external" href="http://jinja.pocoo.org/docs/api/#custom-filters">Jinja custom filters documentation</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">LOG_FILTER = []</code></dt>
+<dd><p>包含日志记录级别（最高为”warning”）和要忽略的消息的元组列表。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOG_FILTER</span> <span class="o">=</span> <span class="p">[(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span> <span class="s1">&#39;TAG_SAVE_AS is set to False&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">READERS = {}</code></dt>
+<dd><p>Pelican要处理或忽略的文件扩展名或Reader类。</p>
+<p>例如, 为了避免处理.html文件，设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">READERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;html&#39;</span><span class="p">:</span> <span class="kc">None</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>为 <code class="docutils literal notranslate"><span class="pre">foo</span></code> 扩展添加自定义阅读器，设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">READERS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;foo&#39;</span><span class="p">:</span> <span class="n">FooReader</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">IGNORE_FILES = ['.#*']</code></dt>
+<dd><p>一个全局模式列表。 处理器将忽略这里匹配出的文件和目录。
+例如，默认值 <code class="docutils literal notranslate"><span class="pre">['.#*']</span></code> 表示将忽略emacs锁定文件，
+而 <code class="docutils literal notranslate"><span class="pre">['__pycache__']</span></code> 表示忽略Python 3的缓存文件。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">MARKDOWN = {...}</code></dt>
+<dd><p>Markdown处理器的额外配置。 有关支持的选项的完整列表，请参阅Python Markdown文档
+的 <a class="reference external" href="https://python-markdown.github.io/reference/#markdown">选项部分</a> 。
+<code class="docutils literal notranslate"><span class="pre">extensions</span></code> 选项将从 <code class="docutils literal notranslate"><span class="pre">extension_configs</span></code> 选项中自动计算出来</p>
+<p>默认为:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">MARKDOWN</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;extension_configs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;markdown.extensions.codehilite&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;css_class&#39;</span><span class="p">:</span> <span class="s1">&#39;highlight&#39;</span><span class="p">},</span>
+        <span class="s1">&#39;markdown.extensions.extra&#39;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="s1">&#39;markdown.extensions.meta&#39;</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="p">},</span>
+    <span class="s1">&#39;output_format&#39;</span><span class="p">:</span> <span class="s1">&#39;html5&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">在设置文件中赋值会覆盖这里的默认值。</p>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">OUTPUT_PATH = 'output/'</code></dt>
+<dd><p>定义生成的文件的保存路径</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="PATH">
+<code class="descname">PATH</code><a class="headerlink" href="#PATH" title="永久链接至目标">¶</a></dt>
+<dd><p>Pelican要处理的内容目录的路径。
+如果未定义，并且没有通过 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令的参数指定路径，
+Pelican将使用当前的工作目录。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_PATHS = ['pages']</code></dt>
+<dd><p>‘页面’的目录和文件列表，为相对于 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 的相对路径。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_EXCLUDES = []</code></dt>
+<dd><p>除了 <code class="docutils literal notranslate"><span class="pre">ARTICLE_PATHS</span></code> 之外，在查找’页面’时要排除的目录列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_PATHS = ['']</code></dt>
+<dd><p>‘文章’的目录和文件列表, 为相对于 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 的相对路径。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_EXCLUDES = []</code></dt>
+<dd><p>除了 <code class="docutils literal notranslate"><span class="pre">PAGE_PATHS</span></code> 之外，在查找’文章’时要排除的目录列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">OUTPUT_SOURCES = False</code></dt>
+<dd><p>如果要将文章和页面以其原始格式（例如Markdown或reStructuredText）复制到指
+定的  <code class="docutils literal notranslate"><span class="pre">OUTPUT_PATH</span></code> ，则设置为True。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">OUTPUT_SOURCES_EXTENSION = '.text'</code></dt>
+<dd><p>控制SourcesGenerator将使用的扩展名。 默认为 <code class="docutils literal notranslate"><span class="pre">.text</span></code> 。
+如果不是有效字符串，则将使用默认值。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PLUGINS = []</code></dt>
+<dd><p>加载的插件列表。参考 <a class="reference internal" href="plugins.html#plugins"><span class="std std-ref">插件介绍</span></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PLUGIN_PATHS = []</code></dt>
+<dd><p>查找插件的目录列表. 参考 <a class="reference internal" href="plugins.html#plugins"><span class="std std-ref">插件介绍</span></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">SITENAME = 'A Pelican Blog'</code></dt>
+<dd><p>你的站点名称</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="SITEURL">
+<code class="descname">SITEURL</code><a class="headerlink" href="#SITEURL" title="永久链接至目标">¶</a></dt>
+<dd><p>你的网站的基本网址。默认情况下为未定义，因此最好指定你的网站URL；如果不指定，
+则不能使用格式正确的URL生成订阅源。如果你的网站可以通过HTTPS访问，这里的值
+应该以 <code class="docutils literal notranslate"><span class="pre">https://</span></code> 开头，否则以 <code class="docutils literal notranslate"><span class="pre">http://</span></code> 开头。 然后加上你的域名，最后没有斜杠。
+示例: <code class="docutils literal notranslate"><span class="pre">SITEURL</span> <span class="pre">=</span> <span class="pre">'https://example.com'</span></code></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">STATIC_PATHS = ['images']</code></dt>
+<dd><p>一个用于存放静态文件的目录列表 (相对于 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> ) 。这些文件会直接被复制到output
+目录而不作修改，通常会跳过文章，页面和其他内容源文件，所以同一个目录出现在这里和
+<code class="docutils literal notranslate"><span class="pre">PAGE_PATHS</span></code> 或 <code class="docutils literal notranslate"><span class="pre">ARTICLE_PATHS</span></code> 是没问题的。默认值为”images” 目录</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">STATIC_EXCLUDES = []</code></dt>
+<dd><p>在查找静态文件时要排除的目录列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">STATIC_EXCLUDE_SOURCES = True</code></dt>
+<dd><p>如果设置为False，则在复制 <code class="docutils literal notranslate"><span class="pre">STATIC_PATHS</span></code> 中找到的文件时不会跳过内容源文件。
+此设置用于向后兼容3.5版之前的Pelican版本。
+除非 <code class="docutils literal notranslate"><span class="pre">STATIC_PATHS</span></code> 包含一个同样位于 <code class="docutils literal notranslate"><span class="pre">ARTICLE_PATHS</span></code> 或 <code class="docutils literal notranslate"><span class="pre">PAGE_PATHS</span></code> 的
+目录，不然此设置不会生效。如果你尝试发布站点的源文件，
+请考虑使用 <code class="docutils literal notranslate"><span class="pre">OUTPUT_SOURCES</span></code> 设置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">STATIC_CREATE_LINKS = False</code></dt>
+<dd><p>为静态文件创建链接而不是复制文件。如果content目录和output目录位于同一设备上，
+则创建硬链接。 如果这两个目录在不同的文件系统上，用符号链接。如果创建了符号链接，
+记得在上传站点时向rsync添加 <code class="docutils literal notranslate"><span class="pre">-L</span></code> 或 <code class="docutils literal notranslate"><span class="pre">--copy-links</span></code> 选项。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">STATIC_CHECK_IF_MODIFIED = False</code></dt>
+<dd><p>如果设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，并且 <code class="docutils literal notranslate"><span class="pre">STATIC_CREATE_LINKS</span></code> 为 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，
+则比较内容和输出文件的mtimes时间戳，只复制比现有输出文件更新的内容文件。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TYPOGRIFY = False</code></dt>
+<dd><p>如果设置为True, 则通过 <a class="reference external" href="https://pypi.python.org/pypi/typogrify">Typogrify</a> 库
+将几个排版改进合并到生成的HTML中，
+Typogrify库可以用这句命令安装: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">typogrify</span></code> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TYPOGRIFY_IGNORE_TAGS = []</code></dt>
+<dd><p>要忽略的Typogrify标记列表。默认情况下，Typogrify将忽略 <code class="docutils literal notranslate"><span class="pre">pre</span></code> 和 <code class="docutils literal notranslate"><span class="pre">code</span></code> 标签。
+这需要安装Typogrify版本2.0.4或更高版本</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">SUMMARY_MAX_LENGTH = 50</code></dt>
+<dd><p>创建文章摘要时的字数，默认50（以单词测量）。这仅适用于你的内容未另外指定摘要的情况。
+设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 的话将使摘要成为原始内容的副本。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">WITH_FUTURE_DATES = True</code></dt>
+<dd><p>如果禁用，则在文件中指定日期为未来的日期时会使文件默认状态为草稿 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 。
+参考 <a class="reference internal" href="#reading-only-modified-content"><span class="std std-ref">仅读取已修改的内容</span></a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">INTRASITE_LINK_REGEX = '[{|](?P&lt;what&gt;.*?)[|}]'</code></dt>
+<dd><p>用于解析内部链接的正则表达式。链接到内部文件，标签等时的默认语法是
+在 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 或 <code class="docutils literal notranslate"><span class="pre">||</span></code> 中包含标识符，比如 <code class="docutils literal notranslate"><span class="pre">filename</span></code> 。 <code class="docutils literal notranslate"><span class="pre">{</span></code> 和 <code class="docutils literal notranslate"><span class="pre">}</span></code> 之
+间的标识符进入 <code class="docutils literal notranslate"><span class="pre">what</span></code> 捕获组。详情见 <a class="reference internal" href="content.html#ref-linking-to-internal-content"><span class="std std-ref">链接到内部内容</span></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PYGMENTS_RST_OPTIONS = []</code></dt>
+<dd><p>reStructuredText代码块的默认Pygments（语法高亮）设置列表。
+请参阅 <a class="reference internal" href="content.html#internal-pygments-options"><span class="std std-ref">语法高亮</span></a> 以获取支持的选项列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">SLUGIFY_SOURCE = 'title'</code></dt>
+<dd><p>指定从中里自动生成slug内容。 可以设置为 <code class="docutils literal notranslate"><span class="pre">title</span></code> 以使用’Title：’元数据标签
+或者使用 <code class="docutils literal notranslate"><span class="pre">basename</span></code> 以使用文章的文件名来创建slug。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CACHE_CONTENT = False</code></dt>
+<dd><p>如果设置 <code class="docutils literal notranslate"><span class="pre">True</span></code>, 则将内容保存在缓存中。有关缓存的详细信息，
+参考 <a class="reference internal" href="#reading-only-modified-content"><span class="std std-ref">仅读取已修改的内容</span></a> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CONTENT_CACHING_LAYER = 'reader'</code></dt>
+<dd><p>如果设为 <code class="docutils literal notranslate"><span class="pre">'reader'</span></code> , 则仅保存阅读器返回的原始内容和元数据。
+如果设为 <code class="docutils literal notranslate"><span class="pre">'generator'</span></code>, 则保存已处理的内容对象。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CACHE_PATH = 'cache'</code></dt>
+<dd><p>用于存储缓存文件的目录。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">GZIP_CACHE = True</code></dt>
+<dd><p>如果设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>, 使用gzip来压缩/解压缩缓存文件。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CHECK_MODIFIED_METHOD = 'mtime'</code></dt>
+<dd><p>控制如何检查对文件的修改。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">LOAD_CONTENT_CACHE = False</code></dt>
+<dd><p>如果设为 <code class="docutils literal notranslate"><span class="pre">True</span></code>, 从缓存中加载未修改的内容。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">WRITE_SELECTED = []</code></dt>
+<dd><p>如果列表不为空, 则 <strong>只</strong> 写入此列表中列出的路径的输出文件。
+路径应该是当前Pelican工作目录的绝对路径或相对路径。
+有关可能的用法示例，请参阅 <a class="reference internal" href="#writing-only-selected-content"><span class="std std-ref">仅写入选定内容</span></a>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FORMATTED_FIELDS = ['summary']</code></dt>
+<dd><p>包含要解析并转换为HTML的reST / Markdown内容的元数据字段列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PORT = 8000</code></dt>
+<dd><p>当运行pelican命令带参数 –listen时，启动的web服务的端口</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">BIND = ''</code></dt>
+<dd><p>要绑定HTTP服务器的IP。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="url">
+<h2>URL设置<a class="headerlink" href="#url" title="永久链接至标题">¶</a></h2>
+<p>首先要了解的是，目前有两种URL的形成方法： <em>相对地址</em> 和 <em>绝对地址</em> 。
+在本地测试时，相对URL非常方便，而绝对URL在发布时则最可靠且最有用。
+支持两者的一种方法是将一个Pelican配置文件用于本地开发，另一个用于发布。
+要查看此类设置的示例，请使用 <a class="reference internal" href="install.html"><span class="doc">安装Pelican</span></a> 部分中描述
+的 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 脚本，该脚本将分别为本地开发和发布生成两个单独的配置文件。</p>
+<p>你可以自定义保存文件的URL和位置。 <code class="docutils literal notranslate"><span class="pre">*_URL</span></code> 和 <code class="docutils literal notranslate"><span class="pre">*_SAVE_AS</span></code> 变量使用Python的格式字符串。
+这些变量允许你将文章放在诸如 <code class="docutils literal notranslate"><span class="pre">{slug}/index.html</span></code> 之类的位置，
+并将它们链接为 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 以获得干净的URL（参见下面的示例）。
+通过这些设置，你可以灵活地将文章和页面放置在任何位置。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">如果指定一个 <code class="docutils literal notranslate"><span class="pre">datetime</span></code> 指令， 则将使用输入文件元数据中的日期的值来替换它。
+如果没有为特定文件指定日期， Pelican将依赖文件的 <code class="docutils literal notranslate"><span class="pre">mtime</span></code> 时间戳
+有关更多信息，请查看 <a class="reference external" href="https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior">Python datetime documentation</a> 。</p>
+</div>
+<p>另外，你也可以使用其他的文件元数据的属性:</p>
+<ul class="simple">
+<li>slug</li>
+<li>date</li>
+<li>lang</li>
+<li>author</li>
+<li>category</li>
+</ul>
+<p>用法示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ARTICLE_URL</span> <span class="o">=</span> <span class="s1">&#39;posts/{date:%Y}/{date:%b}/{date:</span><span class="si">%d</span><span class="s1">}/</span><span class="si">{slug}</span><span class="s1">/&#39;</span>
+<span class="n">ARTICLE_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;posts/{date:%Y}/{date:%b}/{date:</span><span class="si">%d</span><span class="s1">}/</span><span class="si">{slug}</span><span class="s1">/index.html&#39;</span>
+<span class="n">PAGE_URL</span> <span class="o">=</span> <span class="s1">&#39;pages/</span><span class="si">{slug}</span><span class="s1">/&#39;</span>
+<span class="n">PAGE_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;pages/</span><span class="si">{slug}</span><span class="s1">/index.html&#39;</span>
+</pre></div>
+</div>
+<p>这会将你的文章保存成类似这样的形式 <code class="docutils literal notranslate"><span class="pre">/posts/2011/Aug/07/sample-post/index.html</span></code> ,
+将页面保存为 <code class="docutils literal notranslate"><span class="pre">/pages/about/index.html</span></code> , 并且在
+<code class="docutils literal notranslate"><span class="pre">/posts/2011/Aug/07/sample-post/</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/pages/about/</span></code> 这两个URL中渲染展示。</p>
+<dl class="data">
+<dt>
+<code class="descname">RELATIVE_URLS = False</code></dt>
+<dd><p>定义 Pelican 是否使用相对文档URL。
+只有在开发/测试时,并且只有在你完全了解它对链接/feed源的影响时,才将其设置为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_URL = '{slug}.html'</code></dt>
+<dd><p>要引用的文章的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_SAVE_AS = '{slug}.html'</code></dt>
+<dd><p>保存文章的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_LANG_URL = '{slug}-{lang}.html'</code></dt>
+<dd><p>用于引用非默认语言文章的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_LANG_SAVE_AS = '{slug}-{lang}.html'</code></dt>
+<dd><p>保存非默认语言文章的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_URL = 'drafts/{slug}.html'</code></dt>
+<dd><p>要引用的文章草稿的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_SAVE_AS = 'drafts/{slug}.html'</code></dt>
+<dd><p>保存文章草稿的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_LANG_URL = 'drafts/{slug}-{lang}.html'</code></dt>
+<dd><p>用于引用非默认语言文章草稿的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_LANG_SAVE_AS = 'drafts/{slug}-{lang}.html'</code></dt>
+<dd><p>保存非默认语言文章草稿的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_URL = 'pages/{slug}.html'</code></dt>
+<dd><p>来链接到pages页面的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_SAVE_AS = 'pages/{slug}.html'</code></dt>
+<dd><p>保存pages页面的位置。这里的值必须与 PAGE_URL 的值相同，否则你将需要在服务器配置中重写。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_LANG_URL = 'pages/{slug}-{lang}.html'</code></dt>
+<dd><p>用来链接到非默认语言的pages页面的 URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'</code></dt>
+<dd><p>保存非默认语言pages页面的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_PAGE_URL = 'drafts/pages/{slug}.html'</code></dt>
+<dd><p>链接到pages页面草稿的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_PAGE_SAVE_AS = 'drafts/pages/{slug}.html'</code></dt>
+<dd><p>保存pages页面草稿的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_PAGE_LANG_URL = 'drafts/pages/{slug}-{lang}.html'</code></dt>
+<dd><p>链接到非默认语言pages页面草稿的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DRAFT_PAGE_LANG_SAVE_AS = 'drafts/pages/{slug}-{lang}.html'</code></dt>
+<dd><p>保存非默认语言pages页面草稿的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_URL = 'author/{slug}.html'</code></dt>
+<dd><p>链接到作者页的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_SAVE_AS = 'author/{slug}.html'</code></dt>
+<dd><p>保存作者页的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_URL = 'category/{slug}.html'</code></dt>
+<dd><p>链接到分类页的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_SAVE_AS = 'category/{slug}.html'</code></dt>
+<dd><p>保存分类页的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_URL = 'tag/{slug}.html'</code></dt>
+<dd><p>链接到标签页的URL。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_SAVE_AS = 'tag/{slug}.html'</code></dt>
+<dd><p>保存标签页的位置。</p>
+</dd></dl>
+
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">如果你不希望创建一个或多个默认页面(例如,你是网站上的唯一作者,因此不需要作者页面),
+请相应地将 <code class="docutils literal notranslate"><span class="pre">*_SAVE_AS</span></code> 设置设置为 <code class="docutils literal notranslate"><span class="pre">''</span></code> ,以防止生成相关页面。</p>
+</div>
+<p>Pelican 可以根据选择将文章以年份、月份或哪天来创建存档。
+默认情况下,这些辅助存档处于禁用状态, 但如果为它们各自的 <code class="docutils literal notranslate"><span class="pre">_SAVE_AS</span></code> 提供格式字符串,
+则会自动启用。这些周期存档的层级会直观地与网页URL的层级一样,使读者能够更轻松地浏览你积累写下的文章。</p>
+<p>示例:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">YEAR_ARCHIVE_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;posts/{date:%Y}/index.html&#39;</span>
+<span class="n">MONTH_ARCHIVE_SAVE_AS</span> <span class="o">=</span> <span class="s1">&#39;posts/{date:%Y}/{date:%b}/index.html&#39;</span>
+</pre></div>
+</div>
+<p>通过上面两行设置，Pelican 将在（假设年份是2018年） <code class="docutils literal notranslate"><span class="pre">posts/2018/index.html</span></code> 创建
+你当年所有帖子的存档，并在 <code class="docutils literal notranslate"><span class="pre">posts/2018/Aug/index.html</span></code> 创建你八月所有帖子的存档。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">周期存档网址最好以 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 结尾。这样访问者可以删除修改网址部分信息就能
+适当地转到某个存档，而不用指定页面名称。</p>
+</div>
+<dl class="data">
+<dt>
+<code class="descname">YEAR_ARCHIVE_URL = ''</code></dt>
+<dd><p>按年份归类的帖子存档的访问 URL。仅当在 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 中设置
+有 <code class="docutils literal notranslate"><span class="pre">{url}</span></code> 占位符时才使用。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">YEAR_ARCHIVE_SAVE_AS = ''</code></dt>
+<dd><p>按年份保存的帖子存档的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">MONTH_ARCHIVE_URL = ''</code></dt>
+<dd><p>按月份归类的帖子存档的访问 URL。仅当在 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 中设置
+有 <code class="docutils literal notranslate"><span class="pre">{url}</span></code> 占位符时才使用。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">MONTH_ARCHIVE_SAVE_AS = ''</code></dt>
+<dd><p>按月份保存的帖子存档的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DAY_ARCHIVE_URL = ''</code></dt>
+<dd><p>按天数归类的帖子存档的访问 URL。仅当在 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 中设置
+有 <code class="docutils literal notranslate"><span class="pre">{url}</span></code> 占位符时才使用。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DAY_ARCHIVE_SAVE_AS = ''</code></dt>
+<dd><p>按天数保存的帖子存档的位置。</p>
+</dd></dl>
+
+<p><code class="docutils literal notranslate"><span class="pre">DIRECT_TEMPLATES</span></code> 的工作方式与上面提到的有点不同。只有 <code class="docutils literal notranslate"><span class="pre">_SAVE_AS</span></code> 设置可用,
+但可用于任何直接模板。</p>
+<dl class="data">
+<dt>
+<code class="descname">ARCHIVES_SAVE_AS = 'archives.html'</code></dt>
+<dd><p>保存文章存档页的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHORS_SAVE_AS = 'authors.html'</code></dt>
+<dd><p>保存作者列表的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORIES_SAVE_AS = 'categories.html'</code></dt>
+<dd><p>保存分类列表的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAGS_SAVE_AS = 'tags.html'</code></dt>
+<dd><p>保存标签列表的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">INDEX_SAVE_AS = 'index.html'</code></dt>
+<dd><p>保存所有文章列表的位置。</p>
+</dd></dl>
+
+<p>直接模板页的 URL 与主题相关。某些主题用字符串设置相应的 <code class="docutils literal notranslate"><span class="pre">*_URL</span></code>，而
+其他主题则将这些页面硬编码为： <code class="docutils literal notranslate"><span class="pre">'archives.html'</span></code>, <code class="docutils literal notranslate"><span class="pre">'authors.html'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'categories.html'</span></code>, <code class="docutils literal notranslate"><span class="pre">'tags.html'</span></code> 。</p>
+<dl class="data">
+<dt>
+<code class="descname">SLUG_REGEX_SUBSTITUTIONS = [</code></dt>
+<dt>
+<code class="descname">(r'[^\w\s-]', ''),  # 删除非字母字符/空白符/'-'符号</code></dt>
+<dt>
+<code class="descname">(r'(?u)\A\s*', ''),  # 删除前面的空白符</code></dt>
+<dt>
+<code class="descname">(r'(?u)\s*\Z', ''),  # 删除末尾的空白符</code></dt>
+<dt>
+<code class="descname">(r'[-\s]+', '-'),  # 将多个空格或&quot;-&quot;减少为一个&quot;-&quot;</code></dt>
+<dt>
+<code class="descname">]</code></dt>
+<dd><p>在生成文章页和pages页的 slug 时进行的正则替换。
+指定为按顺序应用的 <code class="docutils literal notranslate"><span class="pre">(from,</span> <span class="pre">to)</span></code> 格式的列表,忽略大小写。
+默认替换设置为删除非字母数字字符并将内部空白转换为破折号。
+除了这些替换之外,slug内容将始终转换为小写 ascii 字符,
+删除前面和末尾空格。用于向后兼容 URL格式。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_REGEX_SUBSTITUTIONS = SLUG_REGEX_SUBSTITUTIONS</code></dt>
+<dd><p>替换作者slugs内容的正则。默认值为 <code class="docutils literal notranslate"><span class="pre">SLUG_REGEX_SUBSTITUTIONS</span></code> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_REGEX_SUBSTITUTIONS = SLUG_REGEX_SUBSTITUTIONS</code></dt>
+<dd><p>替换分类slugs内容的正则。默认值为 <code class="docutils literal notranslate"><span class="pre">SLUG_REGEX_SUBSTITUTIONS</span></code>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_REGEX_SUBSTITUTIONS = SLUG_REGEX_SUBSTITUTIONS</code></dt>
+<dd><p>替换标签slugs内容的正则。默认值为 <code class="docutils literal notranslate"><span class="pre">SLUG_REGEX_SUBSTITUTIONS</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id5">
+<h2>时间和日期<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="TIMEZONE">
+<code class="descname">TIMEZONE</code><a class="headerlink" href="#TIMEZONE" title="永久链接至目标">¶</a></dt>
+<dd><p>日期信息中使用的时区,用于生成 Atom 和 RSS 源。</p>
+<p>如果不定义时区，则默认假定为 UTC。这意味着,如果你的区域设置不是 UTC, 则生成
+的 Atom 和 RSS 源将包含不正确的日期信息。</p>
+<p>如果此设置未定义，Pelican会发出警告， 因为在之前版本中此项设置是非强制性的。</p>
+<p>查看 <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">the wikipedia page</a> 以获取有效时区值的列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_DATE = None</code></dt>
+<dd><p>要使用的默认日期。  如果设为 <code class="docutils literal notranslate"><span class="pre">'fs'</span></code>, Pelican在无法从元数据获取到日期信息时会
+使用文件系统的时间戳信息 (mtime) 。如果给定任何其他字符串，Pelican则使用解析文章
+元数据的方法来解析此字符串。如果设置为tuple对象,则通过将tuple传递
+给 <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> 构造函数来生成默认的日期对象。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_DATE_FORMAT = '%a %d %B %Y'</code></dt>
+<dd><p>设置默认日期格式</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DATE_FORMATS = {}</code></dt>
+<dd><p>如果你管理多种语言,则可以在此处设置日期格式。</p>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">DATE_FORMATS</span></code> 未设置，Pelican将回退使用 <code class="docutils literal notranslate"><span class="pre">DEFAULT_DATE_FORMAT</span></code> 的设置。
+如果需要维护多种语言对应的不同日期格式，可以在这里用语言名称（即文章中
+的元数据 <code class="docutils literal notranslate"><span class="pre">lang</span></code> 的值）作为字典的key。</p>
+<p>除了 <a class="reference external" href="https://docs.python.org/library/datetime.html#strftime-strptime-behavior">Python strftime documentation</a> 中列出的标准C89 strftime格式代码外，还
+可以在 <code class="docutils literal notranslate"><span class="pre">%</span></code> 和格式化字符之间加 <code class="docutils literal notranslate"><span class="pre">-</span></code> 字符来删除前导的数字0。例如,
+<code class="docutils literal notranslate"><span class="pre">%d/%m/%Y</span></code> 将输出 <code class="docutils literal notranslate"><span class="pre">01/01/2014</span></code> ，而  <code class="docutils literal notranslate"><span class="pre">%-d/%-m/%Y</span></code> 则将输出为 <code class="docutils literal notranslate"><span class="pre">1/1/2014</span></code> 。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DATE_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;jp&#39;</span><span class="p">:</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">(</span><span class="si">%a</span><span class="s1">)&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>还可以用 <code class="docutils literal notranslate"><span class="pre">(locale,</span> <span class="pre">format)</span></code> 格式的tuple元组作为字典的值来设置每种语言的
+不同区域设置，这样的话会覆盖 <code class="docutils literal notranslate"><span class="pre">LOCALE</span></code> 设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># On Unix/Linux</span>
+<span class="n">DATE_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;en_US&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;jp&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;ja_JP&#39;</span><span class="p">,</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">(</span><span class="si">%a</span><span class="s1">)&#39;</span><span class="p">),</span>
+<span class="p">}</span>
+
+<span class="c1"># On Windows</span>
+<span class="n">DATE_FORMATS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;en&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;usa&#39;</span><span class="p">,</span><span class="s1">&#39;</span><span class="si">%a</span><span class="s1">, </span><span class="si">%d</span><span class="s1"> %b %Y&#39;</span><span class="p">),</span>
+    <span class="s1">&#39;jp&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;jpn&#39;</span><span class="p">,</span><span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">(</span><span class="si">%a</span><span class="s1">)&#39;</span><span class="p">),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt id="LOCALE">
+<code class="descname">LOCALE</code><a class="headerlink" href="#LOCALE" title="永久链接至目标">¶</a></dt>
+<dd><p>更改区域设置 <a class="footnote-reference" href="#id7" id="id6">[1]</a> 。可以在此处提供一个区域列表,也可以提供表示区域的单个字符串。
+如果提供的是列表，将一个一个尝试直到某个区域设置正常工作。</p>
+<p>你可以将区域设置设置为进一步控制日期格式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="n">LOCALE</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;usa&#39;</span><span class="p">,</span> <span class="s1">&#39;jpn&#39;</span><span class="p">,</span>      <span class="c1"># On Windows</span>
+           <span class="s1">&#39;en_US&#39;</span><span class="p">,</span> <span class="s1">&#39;ja_JP&#39;</span>   <span class="c1"># On Unix/Linux</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>有关可用区域设置的列表,windows系统请参阅 <a class="reference external" href="http://msdn.microsoft.com/en-us/library/cdax410z%28VS.71%29.aspx">locales on Windows</a>  ,
+Unix/Linux系统可以使用 <code class="docutils literal notranslate"><span class="pre">locale</span> <span class="pre">-a</span></code> 命令查看， 有关详细信息,请参
+阅 <a class="reference external" href="https://linux.die.net/man/1/locale">locale(1)</a> 。</p>
+</dd></dl>
+
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[1]</a></td><td>默认为系统区域.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="template-pages">
+<span id="id8"></span><h2>模板页<a class="headerlink" href="#template-pages" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt>
+<code class="descname">TEMPLATE_PAGES = None</code></dt>
+<dd><p>一个包含了 和博客条目一起渲染展示的模板页面 的映射。请参阅 <a class="reference internal" href="#template-pages"><span class="std std-ref">模板页</span></a> 。</p>
+<p>如果要生成博客条目以外的自定义页面，可以使用任何 Jinja2 模板文件，只要给其指定
+指向该文件的路径和生成该文件的目标路径。</p>
+<p>例如,如果你想给博客建三个静态页面 (一个读书列表页、一个个人简历页和联系人页面)，
+你可以像这样:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TEMPLATE_PAGES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;src/books.html&#39;</span><span class="p">:</span> <span class="s1">&#39;dest/books.html&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;src/resume.html&#39;</span><span class="p">:</span> <span class="s1">&#39;dest/resume.html&#39;</span><span class="p">,</span>
+                  <span class="s1">&#39;src/contact.html&#39;</span><span class="p">:</span> <span class="s1">&#39;dest/contact.html&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TEMPLATE_EXTENSIONS = ['.html']</code></dt>
+<dd><p>从模板名称查找模板文件时使用的扩展名。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DIRECT_TEMPLATES = ['index', 'authors', 'categories', 'tags', 'archives']</code></dt>
+<dd><p>直接用于呈现内容的模板列表。
+通常，直接模板用于生成内容集合的索引页(例如类别和标记索引页)。
+如果不需要作者、类别和标记等集合页，可以设置 <code class="docutils literal notranslate"><span class="pre">DIRECT_TEMPLATES</span> <span class="pre">=</span> <span class="pre">['index',</span> <span class="pre">'archives']</span></code></p>
+<p>系统会从 <code class="docutils literal notranslate"><span class="pre">THEME_TEMPLATES_OVERRIDES</span></code> 维护的路径值中搜索 <code class="docutils literal notranslate"><span class="pre">DIRECT_TEMPLATES</span></code> 。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id9">
+<h2>元数据<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt id="AUTHOR">
+<code class="descname">AUTHOR</code><a class="headerlink" href="#AUTHOR" title="永久链接至目标">¶</a></dt>
+<dd><p>默认作者名 (通常为你的名字).</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_METADATA = {}</code></dt>
+<dd><p>应用到所有文章和页面的默认元数据项。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FILENAME_METADATA = r'(?P&lt;date&gt;d{4}-d{2}-d{2}).*'</code></dt>
+<dd><p>从文件名中提取元数据的正则表达式。系统将在元数据对象中设置这些被匹配到的命名组。
+默认值设为仅从文件名中提取日期。</p>
+<p>例如,如果要提取日期和slug内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FILENAME_METADATA</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;(?P&lt;date&gt;\d</span><span class="si">{4}</span><span class="s1">-\d</span><span class="si">{2}</span><span class="s1">-\d</span><span class="si">{2}</span><span class="s1">)_(?P&lt;slug&gt;.*)&#39;</span>
+</pre></div>
+</div>
+<p>另外可以参阅 <code class="docutils literal notranslate"><span class="pre">SLUGIFY_SOURCE</span></code>.</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PATH_METADATA = ''</code></dt>
+<dd><p>类似于 <code class="docutils literal notranslate"><span class="pre">FILENAME_METADATA</span></code> ，不过这里是从 相对于内容源目录的页面的完整路径 中解析。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">EXTRA_PATH_METADATA = {}</code></dt>
+<dd><p>由相对路径作为key，额外元数据作为值的字典值。
+相对路径要求使用基于操作系统的正确的目录分隔符(即UNIX中的 / 和Windows中的 \ ),
+与Pelican其他某些文件的设置不同。目录路径应用于目录下的所有文件。
+指定最明确的路径最优先。</p>
+</dd></dl>
+
+<p>并非所有元数据都要求要 <a class="reference internal" href="content.html#internal-metadata"><span class="std std-ref">嵌入到源文件中</span></a> ，例如，一般
+博客文章通常以 <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD-SLUG.rst</span></code> 这样的方式命名，或者嵌套在 <code class="docutils literal notranslate"><span class="pre">YYYY/MM/DD-SLUG</span></code> 目录
+中，如要从文件名或路径中提取元数据，可以用Python的组命名表示法  <a class="reference external" href="https://docs.python.org/3/library/re.html#regular-expression-syntax">group name notation</a> 中
+的 <code class="docutils literal notranslate"><span class="pre">(?P&lt;name&gt;…)</span></code> 在 <code class="docutils literal notranslate"><span class="pre">FILENAME_METADATA</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">PATH_METADATA</span></code> 中设置正则表达式。
+如果要附加其他元数据但又不想在路径中对其进行编码，可以设置 <code class="docutils literal notranslate"><span class="pre">EXTRA_PATH_METADATA</span></code> :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;relative/path/to/file-1&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;key-1a&#39;</span><span class="p">:</span> <span class="s1">&#39;value-1a&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;key-1b&#39;</span><span class="p">:</span> <span class="s1">&#39;value-1b&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="s1">&#39;relative/path/to/file-2&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;key-2&#39;</span><span class="p">:</span> <span class="s1">&#39;value-2&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+<p>这是用于移动某个特定文件的安装位置的便捷方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 利用以下默认值</span>
+<span class="c1"># STATIC_SAVE_AS = &#39;{path}&#39;</span>
+<span class="c1"># STATIC_URL = &#39;{path}&#39;</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;static/robots.txt&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;static/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="feed">
+<h2>Feed订阅设置<a class="headerlink" href="#feed" title="永久链接至标题">¶</a></h2>
+<p>默认情况下,Pelican使用 Atom 源。如果你喜欢, 也可以使用 RSS 源。</p>
+<p>Pelican会为你的所有文章生成分类订阅源和所有文章订阅源。默认不生成标签订阅源，不过可以
+用 <code class="docutils literal notranslate"><span class="pre">TAG_FEED_ATOM</span></code> 和 <code class="docutils literal notranslate"><span class="pre">TAG_FEED_RSS</span></code> 来设置生成:</p>
+<dl class="data">
+<dt>
+<code class="descname">FEED_DOMAIN = None, i.e. base URL is &quot;/&quot;</code></dt>
+<dd><p>域名用于添加到订阅源地址前面。
+由于源URL应该始终是一个绝对地址，所以强烈建议设置此变量 (例如,”<a class="reference external" href="https://feeds.example.com">https://feeds.example.com</a>”)。
+如果你已经显式定义了SITEURL(见上文)并且希望对feeds订阅使用相同的域名，
+则可以设置为: <code class="docutils literal notranslate"><span class="pre">FEED_DOMAIN</span> <span class="pre">=</span> <span class="pre">SITEURL</span></code> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ATOM = None, i.e. no Atom feed</code></dt>
+<dd><p>用于保存Atom源的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ATOM_URL = None</code></dt>
+<dd><p>Atom源的相对URL地址，如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">FEED_ATOM</span></code> 的值来表示Atom源的位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_RSS = None, i.e. no RSS</code></dt>
+<dd><p>用于保存RSS源的位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_RSS_URL = None</code></dt>
+<dd><p>RSS源的相对URL地址，如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">FEED_RSS</span></code> 的值来表示RSS源的位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ALL_ATOM = 'feeds/all.atom.xml'</code></dt>
+<dd><p>用于保存’所有文章’的Atom源的位置: 这个订阅源将包括所有的文章帖子，且不区分语言版本。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ALL_ATOM_URL = None</code></dt>
+<dd><p>‘所有文章’的Atom源的相对URL地址，如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">FEED_ALL_ATOM</span></code> 的值来表
+示这个Atom源的位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ALL_RSS = None, i.e. no all-posts RSS</code></dt>
+<dd><p>用于保存’所有文章’的RSS源的位置: 这个订阅源将包括所有的文章帖子，且不区分语言版本。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">FEED_ALL_RSS_URL = None</code></dt>
+<dd><p>‘所有文章’的RSS源的相对URL地址，如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">FEED_ALL_RSS</span></code> 的值来表
+示这个RSS源的位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'</code></dt>
+<dd><p>用于保存 分类Atom源 的位置。 <a class="footnote-reference" href="#id20" id="id10">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_FEED_ATOM_URL = None</code></dt>
+<dd><p>分类Atom源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。 <a class="footnote-reference" href="#id20" id="id11">[2]</a> 如果不设置,
+则用 <code class="docutils literal notranslate"><span class="pre">CATEGORY_FEED_ATOM</span></code> 的值来表示其位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_FEED_RSS = None, i.e. no RSS</code></dt>
+<dd><p>用于保存 分类RSS源 的位置。包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符 <a class="footnote-reference" href="#id20" id="id12">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CATEGORY_FEED_RSS_URL = None</code></dt>
+<dd><p>分类RSS源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。 <a class="footnote-reference" href="#id20" id="id13">[2]</a> 如果不设置,
+则用 <code class="docutils literal notranslate"><span class="pre">CATEGORY_FEED_RSS</span></code> 的值来表示其位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_FEED_ATOM = 'feeds/{slug}.atom.xml'</code></dt>
+<dd><p>用于保存 作者Atom源 的位置。 <a class="footnote-reference" href="#id20" id="id14">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_FEED_ATOM_URL = None</code></dt>
+<dd><p>作者Atom源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。 <a class="footnote-reference" href="#id20" id="id15">[2]</a> 如果不设置,
+则用 <code class="docutils literal notranslate"><span class="pre">AUTHOR_FEED_ATOM</span></code> 的值来表示其位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_FEED_RSS = 'feeds/{slug}.rss.xml'</code></dt>
+<dd><p>用于保存 作者RSS源 的位置。 <a class="footnote-reference" href="#id20" id="id16">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">AUTHOR_FEED_RSS_URL = None</code></dt>
+<dd><p>作者RSS源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。 <a class="footnote-reference" href="#id20" id="id17">[2]</a> 如果不设置,
+则用 <code class="docutils literal notranslate"><span class="pre">AUTHOR_FEED_RSS</span></code> 的值来表示其位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_FEED_ATOM = None, i.e. no tag feed</code></dt>
+<dd><p>用于保存 标签Atom源 的位置， 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符 <a class="footnote-reference" href="#id20" id="id18">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_FEED_ATOM_URL = None</code></dt>
+<dd><p>标签Atom源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。
+<a class="footnote-reference" href="#id20" id="id19">[2]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TAG_FEED_RSS = None, i.e. no RSS tag feed</code></dt>
+<dd><p>标签RSS源的相对URL地址, 包含 <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 占位符。如果不设置,
+则用 <code class="docutils literal notranslate"><span class="pre">TAG_FEED_RSS</span></code> 的值来表示其位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="FEED_MAX_ITEMS">
+<code class="descname">FEED_MAX_ITEMS</code><a class="headerlink" href="#FEED_MAX_ITEMS" title="永久链接至目标">¶</a></dt>
+<dd><p>订阅源的条目的最大数，默认不设限制。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">RSS_FEED_SUMMARY_ONLY = True</code></dt>
+<dd><p>仅在RSS源的 <code class="docutils literal notranslate"><span class="pre">description</span></code> 标记中包含摘要。
+如果设置为 <code class="docutils literal notranslate"><span class="pre">False</span></code> ，则将改为包含全部内容。
+此设置不会影响 Atom 源,仅影响 RSS 源。</p>
+</dd></dl>
+
+<p>如果不想生成订阅源，以上变量值设为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 即可。</p>
+<table class="docutils footnote" frame="void" id="id20" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id10">1</a>, <a class="fn-backref" href="#id11">2</a>, <a class="fn-backref" href="#id12">3</a>, <a class="fn-backref" href="#id13">4</a>, <a class="fn-backref" href="#id14">5</a>, <a class="fn-backref" href="#id15">6</a>, <a class="fn-backref" href="#id16">7</a>, <a class="fn-backref" href="#id17">8</a>, <a class="fn-backref" href="#id18">9</a>, <a class="fn-backref" href="#id19">10</a>)</em> <code class="docutils literal notranslate"><span class="pre">{slug}</span></code> 替换为 分类/作者/标签 的名称。</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id21">
+<h2>分页<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<p>Pelican的默认行为是列出所有文章标题以及索引页上的简短说明。
+这适用于中小型网站，具有大量文章的网站则对其进行分页可能会更好些。</p>
+<p>你可以使用以下设置来配置分页。</p>
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_ORPHANS = 0</code></dt>
+<dd><p>最后一页列出的文章数量的最小值。如果你不希望最后一页仅列出寥寥几篇文章时，可以设置此选项。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_PAGINATION = False</code></dt>
+<dd><p>每页所列出的文章数量的最大值，不包括上面的ORPHANS单独页。
+设置 False 为禁用分页。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGINATED_TEMPLATES = {'index': None, 'tag': None, 'category': None, 'author': None}</code></dt>
+<dd><p>设置各个模板块是否单独使用分布以及每页显示的文章数。
+如果这一项的值为 <code class="docutils literal notranslate"><span class="pre">None</span></code> ，则默认为 <code class="docutils literal notranslate"><span class="pre">DEFAULT_PAGINATION</span></code> 的值。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGINATION_PATTERNS = (</code></dt>
+<dt>
+<code class="descname">(1, '{name}{extension}', '{name}{extension}'),</code></dt>
+<dt>
+<code class="descname">(2, '{name}{number}{extension}', '{name}{number}{extension}'),)</code></dt>
+<dd><p>用于确定高级分页输出的一组模式。</p>
+</dd></dl>
+
+<div class="section" id="id22">
+<h3>使用分页模式<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h3>
+<p>默认情况下，  <code class="docutils literal notranslate"><span class="pre">.../foo.html</span></code>  之后的页面将创建为 <code class="docutils literal notranslate"><span class="pre">.../foo2.html</span></code> 等。
+可以使用 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code> 设置来更改此设置。
+设置需要一个包含三个参数的序列， 这三个参数是:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">minimum_page</span><span class="p">,</span> <span class="n">page_url</span><span class="p">,</span> <span class="n">page_save_as</span><span class="p">,)</span>
+</pre></div>
+</div>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">page_url</span></code> 和 <code class="docutils literal notranslate"><span class="pre">page_save_as</span></code> ，你可以使用许多变量。
+<code class="docutils literal notranslate"><span class="pre">{url}</span></code> 和 <code class="docutils literal notranslate"><span class="pre">{save_as}</span></code> 分别对应相应的页面类型（例如 <code class="docutils literal notranslate"><span class="pre">ARTICLE_SAVE_AS</span></code> ）
+的 <code class="docutils literal notranslate"><span class="pre">*_URL</span></code> 和 <code class="docutils literal notranslate"><span class="pre">*_SAVE_AS</span></code> 值。
+如果 <code class="docutils literal notranslate"><span class="pre">{save_as}</span> <span class="pre">==</span> <span class="pre">foo/bar.html</span></code> ，则表示 <code class="docutils literal notranslate"><span class="pre">{name}</span> <span class="pre">==</span> <span class="pre">foo/bar</span></code> 并且 <code class="docutils literal notranslate"><span class="pre">{extension}</span>
+<span class="pre">==</span> <span class="pre">.html</span></code> 。 <code class="docutils literal notranslate"><span class="pre">{base_name}</span></code> 相当于  <code class="docutils literal notranslate"><span class="pre">{name}</span></code> 只不过如果末尾有 <code class="docutils literal notranslate"><span class="pre">/index</span></code> 的话它会
+自动将其删掉。 <code class="docutils literal notranslate"><span class="pre">{number}</span></code> 相当于页码。</p>
+<p>例如, 如果要保持第一页不变, 但将后续页面放在 <code class="docutils literal notranslate"><span class="pre">.../page/2/</span></code> 等位置, 你可以如下所
+示设置 <code class="docutils literal notranslate"><span class="pre">PAGINATION_PATTERNS</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PAGINATION_PATTERNS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{url}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{save_as}</span><span class="s1">`,</span>
+    <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{base_name}</span><span class="s1">/page/</span><span class="si">{number}</span><span class="s1">/&#39;</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">{base_name}</span><span class="s1">/page/</span><span class="si">{number}</span><span class="s1">/index.html&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>翻译<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<p>Pelican 提供了一种翻译文章的方法。请参阅 <a class="reference internal" href="content.html"><span class="doc">编写内容</span></a> 部分了解更多信息。</p>
+<dl class="data">
+<dt>
+<code class="descname">DEFAULT_LANG = 'en'</code></dt>
+<dd><p>使用的默认语言。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_TRANSLATION_ID = 'slug'</code></dt>
+<dd><p>标识哪些文章是彼此的翻译版本的元数据属性。
+可以是字符串或字符串集合。设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 或 <code class="docutils literal notranslate"><span class="pre">False</span></code> 以禁用翻译标识。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_TRANSLATION_ID = 'slug'</code></dt>
+<dd><p>标识哪些pages页是彼此的翻译版本的元数据属性。
+可以是字符串或字符串集合。设置为 <code class="docutils literal notranslate"><span class="pre">None</span></code> 或 <code class="docutils literal notranslate"><span class="pre">False</span></code> 以禁用翻译标识。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TRANSLATION_FEED_ATOM = 'feeds/all-{lang}.atom.xml'</code></dt>
+<dd><p>用于翻译的Atom订阅源的保存位置。 <a class="footnote-reference" href="#id27" id="id24">[3]</a></p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TRANSLATION_FEED_ATOM_URL = None</code></dt>
+<dd><p>用于翻译的Atom源的相对URL，包含 <code class="docutils literal notranslate"><span class="pre">{lang}</span></code> 占位符。 <a class="footnote-reference" href="#id27" id="id25">[3]</a>
+如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">TRANSLATION_FEED_ATOM</span></code> 的值作为保存位置和URL地址。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TRANSLATION_FEED_RSS = None, i.e. no RSS</code></dt>
+<dd><p>用于翻译的RSS订阅源的保存位置。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">TRANSLATION_FEED_RSS_URL = None</code></dt>
+<dd><p>用于翻译的RSS源的相对URL，包含 <code class="docutils literal notranslate"><span class="pre">{lang}</span></code> 占位符。 <a class="footnote-reference" href="#id27" id="id26">[3]</a>
+如果不设置，则用 <code class="docutils literal notranslate"><span class="pre">TRANSLATION_FEED_RSS</span></code> 的值作为保存位置和URL地址。</p>
+</dd></dl>
+
+<table class="docutils footnote" frame="void" id="id27" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td><em>(<a class="fn-backref" href="#id24">1</a>, <a class="fn-backref" href="#id25">2</a>, <a class="fn-backref" href="#id26">3</a>)</em> {lang} 是指语言代码</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id28">
+<h2>整理内容<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
+<dl class="data">
+<dt>
+<code class="descname">NEWEST_FIRST_ARCHIVES = True</code></dt>
+<dd><p>按日期排序存档，最新的排最前。（False: 按旧文章排前的顺序。）</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">REVERSE_CATEGORY_ORDER = False</code></dt>
+<dd><p>反转分类的排序。（True: 列表按字母倒序排序；默认列表按字母顺序排序。）</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">ARTICLE_ORDER_BY = 'reversed-date'</code></dt>
+<dd><p>定义文章（模板中的 <code class="docutils literal notranslate"><span class="pre">articles_page.object_list</span></code> ）的排序方式。
+有效选项有：元数据作为字符串（使用 <code class="docutils literal notranslate"><span class="pre">reversed-</span></code> 前缀，则反向排序），
+特殊选项 <code class="docutils literal notranslate"><span class="pre">'basename'</span></code> 将使用文件基本的名称（没有路径）或自定义函数从文章中提取排序的key。
+默认值 <code class="docutils literal notranslate"><span class="pre">'reversed-date'</span></code> 将基于日期按相反的顺序对文章进行排序（即最新的文章排前头）。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">PAGE_ORDER_BY = 'basename'</code></dt>
+<dd><p>定义pages页(模板中的 <code class="docutils literal notranslate"><span class="pre">pages</span></code> 变量)的排序方式。
+可选项与上面的 <code class="docutils literal notranslate"><span class="pre">ARTICLE_ORDER_BY</span></code> 相同。
+默认值 <code class="docutils literal notranslate"><span class="pre">'basename'</span></code> 将按页面基本的名称来排序。</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id29">
+<h2>主题<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<p>我们有一章专门的章节讨论Pelican主题。(查看 <a class="reference internal" href="themes.html#theming-pelican"><span class="std std-ref">关于主题</span></a> ）
+不过，以下这些是与主题相关的设置。</p>
+<dl class="data">
+<dt id="THEME">
+<code class="descname">THEME</code><a class="headerlink" href="#THEME" title="永久链接至目标">¶</a></dt>
+<dd><p>生成输出的主题。
+可以是主题文件夹的相对路径或绝对路径，也可以是默认主题的名称
+或是通过 <code class="docutils literal notranslate"><span class="pre">pelican-themes</span></code> 安装的主题(见下文)。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">THEME_STATIC_DIR = 'theme'</code></dt>
+<dd><p>在输出路径中的一个目录，此目录供Pelican放置从 <cite>THEME_STATIC_PATHS</cite> 中收集的文件。
+默认值为 <cite>theme</cite> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">THEME_STATIC_PATHS = ['static']</code></dt>
+<dd><p>要复制的静态主题路径。
+默认值为 <cite>static</cite> ，但如果你的主题有其他静态路径，你可以将它们标明在这里。
+如果在这里定义的路径中包含有相同名称的文件或目录，这些文件或目录会被一步一步覆盖掉。</p>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">THEME_TEMPLATES_OVERRIDES = []</code></dt>
+<dd><p>搜索模板，你希望Jinja2在搜索主题的 <code class="docutils literal notranslate"><span class="pre">templates/</span></code> 目录之前所要搜索其他路径的一个列表。
+这样允许你重写单个主题的模板文件，而无需将主题fork过来。 Jinja2的搜索顺序如下:
+先搜索 <code class="docutils literal notranslate"><span class="pre">THEME_TEMPLATES_OVERRIDES</span></code> 中的文件，再搜索主题的 <code class="docutils literal notranslate"><span class="pre">templates/</span></code> 。</p>
+<p>你还可以使用 <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">%}</span></code> 指令，以 <code class="docutils literal notranslate"><span class="pre">!theme</span></code> 为前缀来扩展主题中的模板，
+如以下示例所示:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="n">extends</span> <span class="s1">&#39;!theme/article.html&#39;</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="data">
+<dt>
+<code class="descname">CSS_FILE = 'main.css'</code></dt>
+<dd><p>指定要加载的 CSS 文件。</p>
+</dd></dl>
+
+<p>默认情况下，有两个主题可用。你可以设置 <code class="docutils literal notranslate"><span class="pre">THEME</span></code> 指定它们或者
+在 <code class="docutils literal notranslate"><span class="pre">pelican</span></code> 命令中用 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 参数来设定:</p>
+<ul class="simple">
+<li>notmyidea</li>
+<li>simple (a synonym for “plain text” :)</li>
+</ul>
+<p>在这个地址有许多其他主题 <a class="reference external" href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a>.
+Pelican附带 <a class="reference internal" href="pelican-themes.html"><span class="doc">pelican-themes命令</span></a> ，一个用于管理主题的小脚本。</p>
+<p>你可以定义自己的主题，不管是从头开始创建，还是复制别人的主题来修改。
+这里有 <a class="reference internal" href="themes.html"><span class="doc">主题相关指南</span></a> 。</p>
+<p>以下是指定首选主题的示例方法:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># 指定内置主题的名称</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;notmyidea&quot;</span>
+<span class="c1"># 指定通过pelican-themes工具安装的主题的名称</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;chunk&quot;</span>
+<span class="c1"># 通过相对于设置文件的路径指定一个自定义主题</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;themes/mycustomtheme&quot;</span>
+<span class="c1"># 通过绝对路径指定自定义主题</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s2">&quot;/home/myuser/projects/mysite/themes/mycustomtheme&quot;</span>
+</pre></div>
+</div>
+<p>内置的 <code class="docutils literal notranslate"><span class="pre">notmyidea</span></code> 主题可以作以下设置。
+你也可以在你的主题设置中用它们。</p>
+<dl class="data">
+<dt id="SITESUBTITLE">
+<code class="descname">SITESUBTITLE</code><a class="headerlink" href="#SITESUBTITLE" title="永久链接至目标">¶</a></dt>
+<dd><p>在头部header显示一个副标题</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="DISQUS_SITENAME">
+<code class="descname">DISQUS_SITENAME</code><a class="headerlink" href="#DISQUS_SITENAME" title="永久链接至目标">¶</a></dt>
+<dd><p>Pelican可以处理Disqus的评论。在此处指定Disqus站点名称的标识符。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="GITHUB_URL">
+<code class="descname">GITHUB_URL</code><a class="headerlink" href="#GITHUB_URL" title="永久链接至目标">¶</a></dt>
+<dd><p>你的GitHub地址(如果有的话)。然后它将使用此信息创建一个GitHub功能区。
+Your GitHub URL (if you have one). It will then use this information to
+create a GitHub ribbon.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="GOOGLE_ANALYTICS">
+<code class="descname">GOOGLE_ANALYTICS</code><a class="headerlink" href="#GOOGLE_ANALYTICS" title="永久链接至目标">¶</a></dt>
+<dd><p>设置为 <code class="docutils literal notranslate"><span class="pre">UA-XXXXX-Y</span></code> 属性的跟踪ID以激活 Google 分析。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="GA_COOKIE_DOMAIN">
+<code class="descname">GA_COOKIE_DOMAIN</code><a class="headerlink" href="#GA_COOKIE_DOMAIN" title="永久链接至目标">¶</a></dt>
+<dd><p>设置谷歌分析跟踪代码的 Cookie 域字段。默认为 <code class="docutils literal notranslate"><span class="pre">auto</span></code> 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="GOSQUARED_SITENAME">
+<code class="descname">GOSQUARED_SITENAME</code><a class="headerlink" href="#GOSQUARED_SITENAME" title="永久链接至目标">¶</a></dt>
+<dd><p>设置为 ‘XXX-YYYYYY-X’ 以激活 GoSquared。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="MENUITEMS">
+<code class="descname">MENUITEMS</code><a class="headerlink" href="#MENUITEMS" title="永久链接至目标">¶</a></dt>
+<dd><p>一个其他菜单项的列表，列表中的值为元组tuple（Title，URL)，用于显示在主菜单的开头。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="PIWIK_URL">
+<code class="descname">PIWIK_URL</code><a class="headerlink" href="#PIWIK_URL" title="永久链接至目标">¶</a></dt>
+<dd><p>指向Piwik服务器的URL - 开头没有 ‘<a class="reference external" href="http://">http://</a>’ 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="PIWIK_SSL_URL">
+<code class="descname">PIWIK_SSL_URL</code><a class="headerlink" href="#PIWIK_SSL_URL" title="永久链接至目标">¶</a></dt>
+<dd><p>如果SSL-URL与普通Piwik-URL不同，则也必须包含此设置。(可选)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="PIWIK_SITE_ID">
+<code class="descname">PIWIK_SITE_ID</code><a class="headerlink" href="#PIWIK_SITE_ID" title="永久链接至目标">¶</a></dt>
+<dd><p>被监视网站的 ID。你可以在 Piwik 管理界面 &gt; 设置 &gt; 网站中找到该ID。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="LINKS">
+<code class="descname">LINKS</code><a class="headerlink" href="#LINKS" title="永久链接至目标">¶</a></dt>
+<dd><p>一个列表，列表中的值为元组tuple（Title，URL)，用于在头部header显示链接。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="SOCIAL">
+<code class="descname">SOCIAL</code><a class="headerlink" href="#SOCIAL" title="永久链接至目标">¶</a></dt>
+<dd><p>一个显示在”社交”部分的元组tuples(Title, URL)列表。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="TWITTER_USERNAME">
+<code class="descname">TWITTER_USERNAME</code><a class="headerlink" href="#TWITTER_USERNAME" title="永久链接至目标">¶</a></dt>
+<dd><p>允许向文章添加按钮以鼓励其他人分享此文章发推。
+如果你希望显示此按钮，请设置添加你的Twitter用户名。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="LINKS_WIDGET_NAME">
+<code class="descname">LINKS_WIDGET_NAME</code><a class="headerlink" href="#LINKS_WIDGET_NAME" title="永久链接至目标">¶</a></dt>
+<dd><p>允许重命名链接小部件。 如果未指定，则默认值为 “links” 。</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="SOCIAL_WIDGET_NAME">
+<code class="descname">SOCIAL_WIDGET_NAME</code><a class="headerlink" href="#SOCIAL_WIDGET_NAME" title="永久链接至目标">¶</a></dt>
+<dd><p>允许重命名”社交”小部件。 如果未指定，则默认值为 “social” 。</p>
+</dd></dl>
+
+<p>另外， 你可以在设置中添加下面一行语句以使用 <code class="docutils literal notranslate"><span class="pre">notmyidea</span></code> 主题的”宽屏”版本:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CSS_FILE</span> <span class="o">=</span> <span class="s2">&quot;wide.css&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>日志<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<p>有时,在生成网站时可能会出现许多警告信息。
+在大量恼人的日志中找到**有意义的**错误消息可能相当棘手。
+为了过滤掉冗余日志消息，Pelican 附带了 <code class="docutils literal notranslate"><span class="pre">LOG_FILTER</span></code> 设置。</p>
+<p><code class="docutils literal notranslate"><span class="pre">LOG_FILTER</span></code> 应为一个列表，其中的值为元组tuples <code class="docutils literal notranslate"><span class="pre">(level,</span> <span class="pre">msg)</span></code> ,
+每个元组由日志级别（最高为 <code class="docutils literal notranslate"><span class="pre">warning</span></code> ）和要忽略的消息组成。
+只需要将想隐藏掉的消息填进这个列表，它们就会被过滤掉。</p>
+<p>例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">LOG_FILTER</span> <span class="o">=</span> <span class="p">[(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span> <span class="s1">&#39;TAG_SAVE_AS is set to False&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>可以通过模板来筛选消息。可以去查看源代码获取其中的模板。</p>
+<p>例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="n">LOG_FILTER</span> <span class="o">=</span> <span class="p">[(</span><span class="n">logging</span><span class="o">.</span><span class="n">WARN</span><span class="p">,</span> <span class="s1">&#39;Empty alt attribute for image </span><span class="si">%s</span><span class="s1"> in </span><span class="si">%s</span><span class="s1">&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">按模板来过滤信息是项危险的操作。
+有可能会无意中筛选掉具有相同模板的多个消息类型（包括未来的pelican版本的信息）
+所以要小心对待。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">如果传递了 <code class="docutils literal notranslate"><span class="pre">--debug</span></code> 参数，则此选项不执行任何操作。</p>
+</div>
+</div>
+<div class="section" id="reading-only-modified-content">
+<span id="id31"></span><h2>仅读取已修改的内容<a class="headerlink" href="#reading-only-modified-content" title="永久链接至标题">¶</a></h2>
+<p>为了加快构建过程，Pelican可以选择只读取修改过的文章和页面。</p>
+<p>当Pelican即将读取某些内容源文件时:</p>
+<ol class="arabic">
+<li><p class="first">如果 <code class="docutils literal notranslate"><span class="pre">LOAD_CONTENT_CACHE</span></code> 值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则从缓存文件中加载来自先前构建版
+本的文件的哈希信息或修改时间信息。这些文件存储在 <code class="docutils literal notranslate"><span class="pre">CACHE_PATH</span></code> 目录中。
+如果文件在缓存文件中没有记录，则照常读取该文件。</p>
+</li>
+<li><p class="first">根据 <code class="docutils literal notranslate"><span class="pre">CHECK_MODIFIED_METHOD</span></code> 的设置来检查文件:</p>
+<blockquote>
+<div><ul class="simple">
+<li>如果设为 <code class="docutils literal notranslate"><span class="pre">'mtime'</span></code>, 则检查文件的修改时间。</li>
+<li>如果设置为由 <code class="docutils literal notranslate"><span class="pre">hashlib</span></code> 模块提供的某个函数的名称，比如  <code class="docutils literal notranslate"><span class="pre">'md5'</span></code> ，
+则检查文件哈希值。</li>
+<li>如果设置为任何其他内容或在缓存文件中找不到有关该文件的必要信息，则内容将照常读取。</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">如果系统认为文件未经修改过，则从缓存加载以前生成时保存的内容数据，并且不会读取该文件。</p>
+</li>
+<li><p class="first">如果系统认为文件被修改过，则读取该文件，如果 <code class="docutils literal notranslate"><span class="pre">CACHE_CONTENT</span></code> 的值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，则
+会将新的修改信息和内容数据保存到缓存中。</p>
+</li>
+</ol>
+<p>如果将 <code class="docutils literal notranslate"><span class="pre">CONTENT_CACHING_LAYER</span></code> 的值是设为 <code class="docutils literal notranslate"><span class="pre">'reader'</span></code> (默认值)，则将reader阅读
+器返回的原始内容和元数据添加至缓存。如果此设置改为 <code class="docutils literal notranslate"><span class="pre">'generator'</span></code> ，则将已处理的内容
+对象添加至缓存。缓存已处理的内容对象可能会与插件和 <code class="docutils literal notranslate"><span class="pre">WITH_FUTURE_DATES</span></code> 功能都有冲突
+(与插件起冲突是因为可能会跳过某些读取相关信号)，(与 <code class="docutils literal notranslate"><span class="pre">WITH_FUTURE_DATES</span></code> 功能冲突是
+因为缓存内容对象的 <code class="docutils literal notranslate"><span class="pre">draft</span></code> 草稿状态不会随时间自动更改)。</p>
+<p>检查修改时间相比对比文件哈希值更快， 但检查修改时间有时并不可靠，因为 <code class="docutils literal notranslate"><span class="pre">mtime</span></code> 时间戳
+信息有可能会丢失，例如，当使用 <code class="docutils literal notranslate"><span class="pre">cp</span></code> 或 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 命令复制内容源文件却没有
+用 <code class="docutils literal notranslate"><span class="pre">mtime</span></code> 保留模式时（ <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 可以通过传递 <code class="docutils literal notranslate"><span class="pre">--archive</span></code> 标志来调用)。</p>
+<p>缓存文件的格式是Python的pickles格式，不同版本的Python可能无法读取这些文件，因为
+pickle的格式经常改变。如果遇到此类错误，系统会捕获该错误，并且以新格式自动重新生
+成缓存文件。更改 <code class="docutils literal notranslate"><span class="pre">GZIP_CACHE</span></code> 的设置也会重新生成缓存文件。</p>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">--ignore-cache</span></code> 命令行参数的使用，在需要重新生成整个缓存时（例如,在修改将影响缓存内容的设置文件时,
+或仅用于调试目的时），非常有用。
+当Pelican在自动重新加载模式下运行时，如果 <code class="docutils literal notranslate"><span class="pre">AUTORELOAD_IGNORE_CACHE</span></code> 的值为 <code class="docutils literal notranslate"><span class="pre">True</span></code> ，
+则修改设置文件将自动忽略缓存。</p>
+<p>请注意，即使使用缓存的内容，所有输也都会每次重写一遍，因此生成的 <code class="docutils literal notranslate"><span class="pre">*.html</span></code> 文件的修改次数将一直改变。
+因此，用 <code class="docutils literal notranslate"><span class="pre">rsync</span></code> 上传时带上 <code class="docutils literal notranslate"><span class="pre">--checksum</span></code> 参数很有用。</p>
+</div>
+<div class="section" id="writing-only-selected-content">
+<span id="id32"></span><h2>仅写入选定内容<a class="headerlink" href="#writing-only-selected-content" title="永久链接至标题">¶</a></h2>
+<p>当只处理一篇文章或单个页面，或调整你的主题时，
+经常需要尽快生成和查看出来的效果。
+这种情况下，生成和写入整个站点输出通常没有必要。
+通过在 <code class="docutils literal notranslate"><span class="pre">WRITE_SELECTED</span></code> 列表中指定所需的文件作为输出路径，可以实现**只**写入这些文件。
+这个列表也可以用 <code class="docutils literal notranslate"><span class="pre">--write-selected</span></code> 参数在命令行上指定，该参数接受一个用逗号分隔的
+输出文件路径列表。默认情况下此列表为空，所以正常是所有输出文件都写入的。
+可以查看 <a class="reference internal" href="publish.html#site-generation"><span class="std std-ref">生成网站</span></a> 了解更多详情。</p>
+</div>
+<div class="section" id="id33">
+<h2>设置示例<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<p>以下配置文件示例为块引用，<a class="reference external" href="https://github.com/getpelican/pelican/blob/f61bd2ceba5be68833d6a7b9d1a6670046dc0581/samples/pelican.conf.py">这里是原文件链接</a> 。</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">unicode_literals</span>
+
+<span class="n">AUTHOR</span> <span class="o">=</span> <span class="s1">&#39;Alexis Métaireau&#39;</span>
+<span class="n">SITENAME</span> <span class="o">=</span> <span class="s2">&quot;Alexis&#39; log&quot;</span>
+<span class="n">SITESUBTITLE</span> <span class="o">=</span> <span class="s1">&#39;A personal blog.&#39;</span>
+<span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;http://blog.notmyidea.org&#39;</span>
+<span class="n">TIMEZONE</span> <span class="o">=</span> <span class="s2">&quot;Europe/Paris&quot;</span>
+
+<span class="c1"># can be useful in development, but set to False when you&#39;re ready to publish</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">GITHUB_URL</span> <span class="o">=</span> <span class="s1">&#39;http://github.com/ametaireau/&#39;</span>
+<span class="n">DISQUS_SITENAME</span> <span class="o">=</span> <span class="s2">&quot;blog-notmyidea&quot;</span>
+<span class="n">REVERSE_CATEGORY_ORDER</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">LOCALE</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+<span class="n">DEFAULT_PAGINATION</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">DEFAULT_DATE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">FEED_ALL_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/all.rss.xml&#39;</span>
+<span class="n">CATEGORY_FEED_RSS</span> <span class="o">=</span> <span class="s1">&#39;feeds/{slug}.rss.xml&#39;</span>
+
+<span class="n">LINKS</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;Biologeek&#39;</span><span class="p">,</span> <span class="s1">&#39;http://biologeek.org&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Filyb&#39;</span><span class="p">,</span> <span class="s2">&quot;http://filyb.info/&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Libert-fr&#39;</span><span class="p">,</span> <span class="s2">&quot;http://www.libert-fr.com&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;N1k0&#39;</span><span class="p">,</span> <span class="s2">&quot;http://prendreuncafe.com/blog/&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Tarek Ziadé&#39;</span><span class="p">,</span> <span class="s2">&quot;http://ziade.org/blog&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Zubin Mithra&#39;</span><span class="p">,</span> <span class="s2">&quot;http://zubin71.wordpress.com/&quot;</span><span class="p">),)</span>
+
+<span class="n">SOCIAL</span> <span class="o">=</span> <span class="p">((</span><span class="s1">&#39;twitter&#39;</span><span class="p">,</span> <span class="s1">&#39;http://twitter.com/ametaireau&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;lastfm&#39;</span><span class="p">,</span> <span class="s1">&#39;http://lastfm.com/user/akounet&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;github&#39;</span><span class="p">,</span> <span class="s1">&#39;http://github.com/ametaireau&#39;</span><span class="p">),)</span>
+
+<span class="c1"># global metadata to all the contents</span>
+<span class="n">DEFAULT_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;yeah&#39;</span><span class="p">:</span> <span class="s1">&#39;it is&#39;</span><span class="p">}</span>
+
+<span class="c1"># path-specific metadata</span>
+<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;robots.txt&#39;</span><span class="p">},</span>
+    <span class="p">}</span>
+
+<span class="c1"># static paths will be copied without parsing their contents</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;pictures&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;extra/robots.txt&#39;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+<span class="c1"># custom page generated with a jinja2 template</span>
+<span class="n">TEMPLATE_PAGES</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;pages/jinja2_template.html&#39;</span><span class="p">:</span> <span class="s1">&#39;jinja2_template.html&#39;</span><span class="p">}</span>
+
+<span class="c1"># code blocks with line numbers</span>
+<span class="n">PYGMENTS_RST_OPTIONS</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;linenos&#39;</span><span class="p">:</span> <span class="s1">&#39;table&#39;</span><span class="p">}</span>
+
+<span class="c1"># foobar will not be used, because it&#39;s not in caps. All configuration keys</span>
+<span class="c1"># have to be in caps</span>
+<span class="n">foobar</span> <span class="o">=</span> <span class="s2">&quot;barbaz&quot;</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="themes.html" class="btn btn-neutral float-right" title="关于主题" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="publish.html" class="btn btn-neutral float-left" title="发布网站" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

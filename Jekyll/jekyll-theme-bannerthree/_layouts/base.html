@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include header.html %}
+</head>
+<body>
+{% include nav.html %}
+<div id="post">
+    <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
+    <div id="pjax">{{ content }}</div> <!-- end #pjax -->
+    <div class="addon">
+        <hr/>
+        {% include base_js.html %}
+        {% include addon_tags.html %}
+        {% include addon_share.html %}
+        {% include addon_comment.html %}
+    </div>
+    {% include base_copyright.html %}
+    <div id="post__toc-trigger">
+        <div id="post__toc">
+            <span id="post__toc-title">目录</span>
+            <ul id="post__toc-ul"></ul>
+        </div>
+    </div>
+</div> <!-- end #post -->
+    
+<script>
+    var h0 = document.body.clientHeight;
+    var h1 = document.getElementById("avatar").offsetHeight;
+    var h2 = document.getElementById("tags__bottom").offsetHeight;
+    var h =  document.getElementById("tags__ul").scrollHeight;
+
+    var obj    = document.getElementById("tags__ul"); 
+    var items  = obj.getElementsByTagName("li");
+    var new_h  = h0 - h1 - h2 - h2;
+    var tags_h = new_h -15; 
+    if (h > new_h) {
+      obj.style.height = tags_h + "px";
+      //obj.style.paddingBottom = 15 + 'px';
+      obj.style.overflowY = "scroll";
+      obj.style.overflowX = "hidden";
+      items[0].style.borderTop = "none";
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>插件介绍 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="pelican-themes命令" href="pelican-themes.html" />
+    <link rel="prev" title="关于主题" href="themes.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">插件介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">如何使用插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">哪里可以找到插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">如何创建插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">信号列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">插件示例</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">如何创建新的阅读器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">添加新生成器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>插件介绍</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/plugins.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plugins">
+<span id="id1"></span><h1>插件介绍<a class="headerlink" href="#plugins" title="永久链接至标题">¶</a></h1>
+<p>Pelican从3.0版本开始支持插件。 插件是一种无需直接修改Pelican核心而向Pelican添加功能的方法。</p>
+<div class="section" id="id2">
+<h2>如何使用插件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>要加载插件，你必须在设置文件中指定它们。 有两种方法，第一种方法使用字符串指明可调用路径:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;package.myplugin&#39;</span><span class="p">,]</span>
+</pre></div>
+</div>
+<p>另一种方法是先导入它们，再将其添加到列表中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">package</span> <span class="k">import</span> <span class="n">myplugin</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="n">myplugin</span><span class="p">,]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">在尝试使用不同的插件（尤其是处理元数据和内容的插件）时，有可能会受缓存干扰，作的修改可能不见生效。
+在这种情况下，可以使用 <code class="docutils literal notranslate"><span class="pre">LOAD_CONTENT_CACHE</span> <span class="pre">=</span> <span class="pre">False</span></code> 禁用缓存或
+使用 <code class="docutils literal notranslate"><span class="pre">--ignore-cache</span></code> 命令行开关。</p>
+</div>
+<p>如果你的插件不在可导入路径中，你可以在 <code class="docutils literal notranslate"><span class="pre">PLUGIN_PATHS</span></code> 设置路径列表。
+如下例所示，<code class="docutils literal notranslate"><span class="pre">PLUGIN_PATHS</span></code> 列表中的路径可以是绝对路径或相对于设置文件的相对路径:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;plugins&quot;</span><span class="p">,</span> <span class="s2">&quot;/srv/pelican/plugins&quot;</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;assets&quot;</span><span class="p">,</span> <span class="s2">&quot;liquid_tags&quot;</span><span class="p">,</span> <span class="s2">&quot;sitemap&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>哪里可以找到插件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>我们有维护一个单独的插件库供大家共享和使用。
+请访问 <a class="reference external" href="https://github.com/getpelican/pelican-plugins">pelican-插件</a> 库以获取可用插件列表。</p>
+<p>请注意，虽然我们会尽力审查和维护这些插件，但由于这些插件是由Pelican社区的大家提交的，
+所以对它们的支持和它们的互操作性质量可能良莠不齐。</p>
+</div>
+<div class="section" id="id4">
+<h2>如何创建插件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>这里的插件是基于信号的概念开发的。Pelican发出信号，插件订阅接收这些信号。
+定义的信号列表在下面列出。</p>
+<p>插件遵循的唯一一条规则是定义一个可调用的注册器 <code class="docutils literal notranslate"><span class="pre">register</span></code> ，在其中将接收的信号映射到插件设定的逻辑里，
+让我们来举个简单的例子:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pelican</span> <span class="k">import</span> <span class="n">signals</span>
+
+<span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">sender</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> initialized !!&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">sender</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="n">signals</span><span class="o">.</span><span class="n">initialized</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">信号接收器是弱引用的，所以不能在 <code class="docutils literal notranslate"><span class="pre">register</span></code> 中定义，否则信号在发出之前就将被当成垃圾信息收集去。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>信号列表<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>下面是当前可用的信号列表:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="20%" />
+<col width="56%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">信号</th>
+<th class="head">参数</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>initialized</td>
+<td>pelican object</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>finalized</td>
+<td>pelican object</td>
+<td>在所有生成器执行完pelican退出之前调用
+可用于自定义 后处理操作， 例如:
+- 精简js/css资源
+- 使用更新的站点地图sitemap通知/ping搜索引擎。</td>
+</tr>
+<tr class="row-even"><td>generator_init</td>
+<td>generator</td>
+<td>在 Generator.__init__ 中调用</td>
+</tr>
+<tr class="row-odd"><td>all_generators_finalized</td>
+<td>generators</td>
+<td>在所有生成器执行完后但未写入输出内容之前调用</td>
+</tr>
+<tr class="row-even"><td>readers_init</td>
+<td>readers</td>
+<td>在 Readers.__init__ 中调用</td>
+</tr>
+<tr class="row-odd"><td>article_generator_context</td>
+<td>article_generator, metadata</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>article_generator_preread</td>
+<td>article_generator</td>
+<td>在 ArticlesGenerator.generate_context 读取文章之前调用；
+用处是让代码在对每篇文章进行解析之前执行一些操作</td>
+</tr>
+<tr class="row-odd"><td>article_generator_init</td>
+<td>article_generator</td>
+<td>在 ArticlesGenerator.__init__ 中调用</td>
+</tr>
+<tr class="row-even"><td>article_generator_pretaxonomy</td>
+<td>article_generator</td>
+<td>在分类列表和标签列表创建之前调用，
+用处，比如修改要生成的文章列表以防止删除的文章泄露显示在分类和标签中</td>
+</tr>
+<tr class="row-odd"><td>article_generator_finalized</td>
+<td>article_generator</td>
+<td>在 ArticlesGenerator.generate_context 结尾处调用</td>
+</tr>
+<tr class="row-even"><td>article_generator_write_article</td>
+<td>article_generator, content</td>
+<td>在编写每篇文章之前调用，文章作为内容传递</td>
+</tr>
+<tr class="row-odd"><td>article_writer_finalized</td>
+<td>article_generator, writer</td>
+<td>在所有文章和相关页面编写完但文章生成器未关闭之前调用</td>
+</tr>
+<tr class="row-even"><td>get_generators</td>
+<td>pelican object</td>
+<td>在 Pelican.get_generator_classes 中调用可以返
+回一个或多个生成器Generator，返回多个生成器时以元组tuple或列表list的方式返回。</td>
+</tr>
+<tr class="row-odd"><td>get_writer</td>
+<td>pelican object</td>
+<td>在 Pelican.get_writer 中调用，可以返回一个自定义编写器Writer。</td>
+</tr>
+<tr class="row-even"><td>page_generator_context</td>
+<td>page_generator, metadata</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>page_generator_preread</td>
+<td>page_generator</td>
+<td>在 PageGenerator.generate_context 读取一个page页之前调用；
+可以用在需要让代码在对每个page页进行解析之前执行一些操作的情形下</td>
+</tr>
+<tr class="row-even"><td>page_generator_init</td>
+<td>page_generator</td>
+<td>在 PagesGenerator.__init__ 中调用</td>
+</tr>
+<tr class="row-odd"><td>page_generator_finalized</td>
+<td>page_generator</td>
+<td>在 PagesGenerator.generate_context 结尾处调用</td>
+</tr>
+<tr class="row-even"><td>page_generator_write_page</td>
+<td>page_generator, content</td>
+<td>在编写每个page页之前调用，page页作为内容传递</td>
+</tr>
+<tr class="row-odd"><td>page_writer_finalized</td>
+<td>page_generator, writer</td>
+<td>在所有page页编写完但page生成器未关闭之前调用</td>
+</tr>
+<tr class="row-even"><td>static_generator_context</td>
+<td>static_generator, metadata</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>static_generator_preread</td>
+<td>static_generator</td>
+<td>在 StaticGenerator.generate_context 读取一个静态文件时调用；
+在每个静态文件被添加到静态文件列表之前可以编写代码执行一些操作</td>
+</tr>
+<tr class="row-even"><td>static_generator_init</td>
+<td>static_generator</td>
+<td>在 StaticGenerator.__init__ 中调用</td>
+</tr>
+<tr class="row-odd"><td>static_generator_finalized</td>
+<td>static_generator</td>
+<td>在 StaticGenerator.generate_context 结尾处调用</td>
+</tr>
+<tr class="row-even"><td>content_object_init</td>
+<td>content_object</td>
+<td>在 Content.__init__ 结尾处调用</td>
+</tr>
+<tr class="row-odd"><td>content_written</td>
+<td>path, context</td>
+<td>每次写入内容文件时调用。</td>
+</tr>
+<tr class="row-even"><td>feed_generated</td>
+<td>context, feed</td>
+<td>每次生成一条feed时都会调用。 可用于在写入feed对象之前对其进行修改。</td>
+</tr>
+<tr class="row-odd"><td>feed_written</td>
+<td>path, context, feed</td>
+<td>每次写入feed文件时调用。</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="first admonition-title">警告</p>
+<p class="last">如果你打算读取内容对象的 <code class="docutils literal notranslate"><span class="pre">summary</span></code> 或 <code class="docutils literal notranslate"><span class="pre">content</span></code> 属性，请避免使用 <code class="docutils literal notranslate"><span class="pre">content_object_init</span></code> 信号。
+当要 <a class="reference internal" href="content.html#ref-linking-to-internal-content"><span class="std std-ref">链接到内部内容</span></a> 时，该组合可能会导致产生未解析的链接（请参阅 <a class="reference external" href="https://github.com/getpelican/pelican-plugins/issues/314">pelican-plugins bug #314</a> ）。
+可以改为使用 <code class="docutils literal notranslate"><span class="pre">_summary</span></code> 和 <code class="docutils literal notranslate"><span class="pre">_content</span></code> 属性，或者将你的插件安排在稍后阶段运行（例如 <code class="docutils literal notranslate"><span class="pre">all_generators_finalized</span></code> ）。</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p>从Pelican3.2开始，信号名称标准化使用。旧版插件可能需要更新才能使用新名称:</p>
+<table border="1" class="last docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">旧名称</th>
+<th class="head">新名称</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>article_generate_context</td>
+<td>article_generator_context</td>
+</tr>
+<tr class="row-odd"><td>article_generate_finalized</td>
+<td>article_generator_finalized</td>
+</tr>
+<tr class="row-even"><td>article_generate_preread</td>
+<td>article_generator_preread</td>
+</tr>
+<tr class="row-odd"><td>pages_generate_context</td>
+<td>page_generator_context</td>
+</tr>
+<tr class="row-even"><td>pages_generate_preread</td>
+<td>page_generator_preread</td>
+</tr>
+<tr class="row-odd"><td>pages_generator_finalized</td>
+<td>page_generator_finalized</td>
+</tr>
+<tr class="row-even"><td>pages_generator_init</td>
+<td>page_generator_init</td>
+</tr>
+<tr class="row-odd"><td>static_generate_context</td>
+<td>static_generator_context</td>
+</tr>
+<tr class="row-even"><td>static_generate_preread</td>
+<td>static_generator_preread</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>插件示例<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>我们最终意识到一些创建插件的方法最好在文档中共享，所以有以下内容！</p>
+<div class="section" id="id7">
+<h3>如何创建新的阅读器<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>首先你可能需要添加对你自己设定的输入格式的支持。
+虽然在Pelican核心中添加此功能也行，但不明智。
+我们还是通过插件来定义一个新的阅读器好些。</p>
+<p>主要是因为插件编写很容易，而且插件未激活时不会影响pelican的运行速度</p>
+<p>我们直接来看例子吧:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pelican</span> <span class="k">import</span> <span class="n">signals</span>
+<span class="kn">from</span> <span class="nn">pelican.readers</span> <span class="k">import</span> <span class="n">BaseReader</span>
+
+<span class="c1"># Create a new reader class, inheriting from the pelican.reader.BaseReader</span>
+<span class="k">class</span> <span class="nc">NewReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="n">enabled</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># Yeah, you probably want that :-)</span>
+
+    <span class="c1"># The list of file extensions you want this reader to match with.</span>
+    <span class="c1"># If multiple readers were to use the same extension, the latest will</span>
+    <span class="c1"># win (so the one you&#39;re defining here, most probably).</span>
+    <span class="n">file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;yeah&#39;</span><span class="p">]</span>
+
+    <span class="c1"># You need to have a read method, which takes a filename and returns</span>
+    <span class="c1"># some content and the associated metadata.</span>
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="n">metadata</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="s1">&#39;Oh yeah&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="s1">&#39;Foo&#39;</span><span class="p">,</span>
+                    <span class="s1">&#39;date&#39;</span><span class="p">:</span> <span class="s1">&#39;2012-12-01&#39;</span><span class="p">}</span>
+
+        <span class="n">parsed</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">metadata</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">parsed</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_metadata</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="s2">&quot;Some content&quot;</span><span class="p">,</span> <span class="n">parsed</span>
+
+<span class="k">def</span> <span class="nf">add_reader</span><span class="p">(</span><span class="n">readers</span><span class="p">):</span>
+    <span class="n">readers</span><span class="o">.</span><span class="n">reader_classes</span><span class="p">[</span><span class="s1">&#39;yeah&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">NewReader</span>
+
+<span class="c1"># This is how pelican works.</span>
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="n">signals</span><span class="o">.</span><span class="n">readers_init</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">add_reader</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>添加新生成器<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>添加一个新的生成器也很简单。 你可能需要查看 <a class="reference internal" href="internals.html"><span class="doc">Pelican内部原理</span></a> 以获取有关如何创建自己的生成器的更多信息。</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_generators</span><span class="p">(</span><span class="n">pelican_object</span><span class="p">):</span>
+    <span class="c1"># define a new generator here if you need to</span>
+    <span class="k">return</span> <span class="n">MyGenerator</span>
+
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="n">signals</span><span class="o">.</span><span class="n">get_generators</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">get_generators</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pelican-themes.html" class="btn btn-neutral float-right" title="pelican-themes命令" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="themes.html" class="btn btn-neutral float-left" title="关于主题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

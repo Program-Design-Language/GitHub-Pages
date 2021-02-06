@@ -1,0 +1,961 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>关于主题 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="插件介绍" href="plugins.html" />
+    <link rel="prev" title="设置选项" href="settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">关于主题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">主题框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#templates-variables">模板和变量</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">常用变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">排序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">格式化日期</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#index-html">模板页index.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#author-html">模板页author.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#category-html">模板页category.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#article-html">模板页article.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-html">模板页page.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tag-html">模板页tag.html</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#period-archives-html">模板页period_archives.html</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">对象</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#object-article">文章</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#object-author-cat-tag">作者 / 分类 / 标签</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page">页面Page</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#feeds">Feeds订阅源</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">继承</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id15">例子</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#base-html">base.html</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#style-css">style.css</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">下载</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>关于主题</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/themes.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="theming-pelican">
+<span id="id1"></span><h1>关于主题<a class="headerlink" href="#theming-pelican" title="永久链接至标题">¶</a></h1>
+<p>要生成其HTML输出，Pelican使用具有灵活性和语法简单等特点的 <a class="reference external" href="http://jinja.pocoo.org/">Jinja</a> 模
+板引擎。如果你想创建自己的主题，欢迎随时从 <a class="reference external" href="https://github.com/getpelican/pelican/tree/master/pelican/themes/simple/templates">“simple” theme</a> 主题中汲取灵感</p>
+<p>要使用你创建的（或手动下载后修改的）主题生成网站，可以通过在pelican命令中加 <code class="docutils literal notranslate"><span class="pre">-t</span></code> 参数来指定该主题:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">t</span> <span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">site</span><span class="o">/</span><span class="n">themes</span><span class="o">/</span><span class="n">your</span><span class="o">-</span><span class="n">theme</span>
+</pre></div>
+</div>
+<p>如果你不希望在每个调用上指定主题，则可以在 <code class="docutils literal notranslate"><span class="pre">THEME</span></code> 变量中设置指向首选主题的位置。</p>
+<div class="section" id="id2">
+<h2>主题框架<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>要制作你自己的主题，你必须遵循以下的文件结构:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>├── static
+│   ├── css
+│   └── images
+└── templates
+    ├── archives.html         // 显示存档
+    ├── period_archives.html  // 显示时间段存档
+    ├── article.html          // 应用于每篇文章
+    ├── author.html           // 应用于每个作者
+    ├── authors.html          // 应用于所有作者
+    ├── categories.html       // 列出所有分类
+    ├── category.html         // 应用于每个分类
+    ├── index.html            // 索引 (列出所有文章)
+    ├── page.html             // 应用于每个page页
+    ├── tag.html              // 应用于每个标签
+    └── tags.html             // 列出所有标签，可以是标签云
+</pre></div>
+</div>
+<ul class="simple">
+<li><cite>static</cite> 包含所有静态资源，这些静态资源将被复制到输出目录的 <cite>theme</cite> 文件夹。
+上述文件系统布局中包括CSS文件夹和图像文件夹，但这些只是示例。把你需要的放在这个目录下。</li>
+<li><cite>templates</cite> 包含将用于生成内容的所有模板。上面列出的模板文件是强制性的；
+创建主题时如果有需要，你可以添加自己的模板文件。</li>
+</ul>
+</div>
+<div class="section" id="templates-variables">
+<span id="id3"></span><h2>模板和变量<a class="headerlink" href="#templates-variables" title="永久链接至标题">¶</a></h2>
+<p>其理念是让你可以使用简单的语法嵌入到 HTML 页面中。
+本文档描述的是主题中应存在哪些模板，生成站点时会将哪些变量传递给每个模板。</p>
+<p>只要设置文件中定义的变量拼写全大写，所有模板都将接收它们。你可以直接访问它们。</p>
+<div class="section" id="id4">
+<h3>常用变量<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>所有这些设置将适用于所有模板。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="16%" />
+<col width="84%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>output_file</td>
+<td>当前正在生成的文件的名称。例如，当pelican渲染主页，输
+出文件output_file将为 “index.html” 。</td>
+</tr>
+<tr class="row-odd"><td>articles</td>
+<td>文章列表，按日期降序排序。 所有元素都是 <cite>Article</cite> 文章
+对象，因此你可以访问它们的属性（例如标题、摘要、作者
+等）。有时这些信息被隐去（比如在标签页）。不过你可以在
+所有文章 <cite>all_articles</cite> 变量中找到有关的信息。</td>
+</tr>
+<tr class="row-even"><td>dates</td>
+<td>同样是文章列表，不过按日期升序排序。</td>
+</tr>
+<tr class="row-odd"><td>drafts</td>
+<td>文章草稿列表。</td>
+</tr>
+<tr class="row-even"><td>authors</td>
+<td>一个元组tuples（作者，文章）列表，包含所有作者和相应的文章（值）。</td>
+</tr>
+<tr class="row-odd"><td>categories</td>
+<td>一个元组tuples（分类，文章）列表，包含所有分类和相应的文章（值 ）。</td>
+</tr>
+<tr class="row-even"><td>tags</td>
+<td>一个元组tuples（标签，文章）列表，包含所有标签和相应的文章（值 ）。</td>
+</tr>
+<tr class="row-odd"><td>pages</td>
+<td>pages页面列表</td>
+</tr>
+<tr class="row-even"><td>hidden_pages</td>
+<td>隐藏的pages页面列表</td>
+</tr>
+<tr class="row-odd"><td>draft_pages</td>
+<td>pages页面草稿列表</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h3>排序<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>URL包装器（当前为分类、标签和作者），内含比较方法，可以很方便地按名称排序:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="n">tag</span><span class="p">,</span> <span class="n">articles</span> <span class="ow">in</span> <span class="n">tags</span><span class="o">|</span><span class="n">sort</span> <span class="o">%</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>如果要根据不同的条件进行排序， <a class="reference external" href="http://jinja.pocoo.org/docs/templates/#sort">Jinja的排序命令</a> 中有许多选项可用。</p>
+</div>
+<div class="section" id="id7">
+<h3>格式化日期<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>Pelican根据你的设置和区域设置 (<code class="docutils literal notranslate"><span class="pre">DATE_FORMATS</span></code>/<code class="docutils literal notranslate"><span class="pre">DEFAULT_DATE_FORMAT</span></code>) 以及提供一
+个 <code class="docutils literal notranslate"><span class="pre">locale_date</span></code> 属性以供你对日期进行格式化设置。
+另外，日期 <code class="docutils literal notranslate"><span class="pre">date</span></code> 属性是一个 <a class="reference external" href="https://docs.python.org/2/library/datetime.html#datetime-objects">datetime</a> 对象。
+如果你要自定义区别于你的设置中的格式的日期格式，请使用Pelican附带的Jinja过滤器 <code class="docutils literal notranslate"><span class="pre">strftime</span></code> 。
+用法与Python的 <a class="reference external" href="https://docs.python.org/2/library/datetime.html#strftime-strptime-behavior">strftime</a> 格式相同，筛选器会根据配置的区域来正确设置你的日期格式:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span> <span class="n">article</span><span class="o">.</span><span class="n">date</span><span class="o">|</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> %B %Y&#39;</span><span class="p">)</span> <span class="p">}}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="index-html">
+<h3>模板页index.html<a class="headerlink" href="#index-html" title="永久链接至标题">¶</a></h3>
+<p>这是生成的你的博客主页或索引页 <code class="docutils literal notranslate"><span class="pre">index.html</span></code> 。</p>
+<p>如果分页功能处于启用状态，则后续的页面将类似 <code class="docutils literal notranslate"><span class="pre">index{number}.html</span></code> 这种形式。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>articles_paginator</td>
+<td>文章列表的分页对象</td>
+</tr>
+<tr class="row-odd"><td>articles_page</td>
+<td>文章的当前页码</td>
+</tr>
+<tr class="row-even"><td>articles_previous_page</td>
+<td>文章的前一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>articles_next_page</td>
+<td>文章的下一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>dates_paginator</td>
+<td>文章列表的分页对象，按日期升序排序</td>
+</tr>
+<tr class="row-odd"><td>dates_page</td>
+<td>文章的当前页，按日期升序排序。</td>
+</tr>
+<tr class="row-even"><td>dates_previous_page</td>
+<td>文章的前一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>dates_next_page</td>
+<td>文章的下一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>page_name</td>
+<td>‘index’ – 用于分页链接</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="author-html">
+<h3>模板页author.html<a class="headerlink" href="#author-html" title="永久链接至标题">¶</a></h3>
+<p>此模板将应用于每个作者，根据 <code class="docutils literal notranslate"><span class="pre">AUTHOR_SAVE_AS</span></code> 设置 (<cite>默认值:</cite> <code class="docutils literal notranslate"><span class="pre">author/{slug}.html</span></code>) 生成输出。
+如果分页功能处于启用状态，则后续的页面默认类似为 <code class="docutils literal notranslate"><span class="pre">author/{slug}{number}.html</span></code> 这种形式。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>author</td>
+<td>作者姓名</td>
+</tr>
+<tr class="row-odd"><td>articles</td>
+<td>作者的文章</td>
+</tr>
+<tr class="row-even"><td>dates</td>
+<td>作者的文章，按日期升序排序</td>
+</tr>
+<tr class="row-odd"><td>articles_paginator</td>
+<td>文章列表的分页对象</td>
+</tr>
+<tr class="row-even"><td>articles_page</td>
+<td>文章的当前页面</td>
+</tr>
+<tr class="row-odd"><td>articles_previous_page</td>
+<td>文章的前一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>articles_next_page</td>
+<td>文章的下一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>dates_paginator</td>
+<td>文章列表的分页对象，按日期升序排序</td>
+</tr>
+<tr class="row-even"><td>dates_page</td>
+<td>文章的当前页，按日期升序排序。</td>
+</tr>
+<tr class="row-odd"><td>dates_previous_page</td>
+<td>文章的前一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>dates_next_page</td>
+<td>文章的下一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>page_name</td>
+<td>AUTHOR_URL 其中 <cite>{slug}</cite> 之后的所有内容都被删除 - 对于分页链接有用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="category-html">
+<h3>模板页category.html<a class="headerlink" href="#category-html" title="永久链接至标题">¶</a></h3>
+<p>此模板将应用于每个现有类别，根据 <code class="docutils literal notranslate"><span class="pre">CATEGORY_SAVE_AS</span></code> 设置 (<cite>默认值:</cite> <code class="docutils literal notranslate"><span class="pre">category/{slug}.html</span></code>) 生成输出。
+如果分页功能处于启用状态，则后续的页面默认类似为 <code class="docutils literal notranslate"><span class="pre">category/{slug}{number}.html</span></code> 这种形式。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>category</td>
+<td>分类名</td>
+</tr>
+<tr class="row-odd"><td>articles</td>
+<td>分类文章</td>
+</tr>
+<tr class="row-even"><td>dates</td>
+<td>分类的文章，按日期升序排序</td>
+</tr>
+<tr class="row-odd"><td>articles_paginator</td>
+<td>文章列表的分页对象</td>
+</tr>
+<tr class="row-even"><td>articles_page</td>
+<td>文章的当前页面</td>
+</tr>
+<tr class="row-odd"><td>articles_previous_page</td>
+<td>文章的前一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>articles_next_page</td>
+<td>文章的下一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>dates_paginator</td>
+<td>文章列表的分页对象，按日期升序排序</td>
+</tr>
+<tr class="row-even"><td>dates_page</td>
+<td>文章的当前页，按日期升序排序。</td>
+</tr>
+<tr class="row-odd"><td>dates_previous_page</td>
+<td>文章的前一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>dates_next_page</td>
+<td>文章的下一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>page_name</td>
+<td>CATEGORY_URL 其中 <cite>{slug}</cite> 之后的所有内容都被删除 - 对于分页链接有用</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="article-html">
+<h3>模板页article.html<a class="headerlink" href="#article-html" title="永久链接至标题">¶</a></h3>
+<p>此模板将应用于每篇文章, 根据 <code class="docutils literal notranslate"><span class="pre">ARTICLE_SAVE_AS</span></code> 设置 (<cite>默认值:</cite> <code class="docutils literal notranslate"><span class="pre">{slug}.html</span></code>) 生成输出。
+可以使用以下变量。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>article</td>
+<td>显示的文章</td>
+</tr>
+<tr class="row-odd"><td>category</td>
+<td>当前文章的分类名称</td>
+</tr>
+</tbody>
+</table>
+<p>在文章源文件头部区域添加的任何元数据都将被视为 <code class="docutils literal notranslate"><span class="pre">article</span></code> 对象的字段。
+字段名称将与元数据所用的名称相同，不过是采用小写字母形式。</p>
+<p>例如，你可以在文章元数据中添加一个 <cite>FacebookImage</cite> 的字段，如下所示:</p>
+<div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span>Title: I love Python more than music
+Date: 2013-11-06 10:06
+Tags: personal, python
+Category: Tech
+Slug: python-je-l-aime-a-mourir
+Author: Francis Cabrel
+FacebookImage: http://franciscabrel.com/images/pythonlove.png
+</pre></div>
+</div>
+<p>这个新的元数据将作为 <cite>article.facebookimage</cite> 在 <cite>article.html</cite> 模板中提供调用。
+例如,这允许你为Facebook的公开图形标签指定一张图片，该图片随每篇文章而不同:</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">article.facebookimage</span> <span class="cp">}}</span><span class="s">&quot;</span><span class="p">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="page-html">
+<h3>模板页page.html<a class="headerlink" href="#page-html" title="永久链接至标题">¶</a></h3>
+<p>此模板将应用于每个page页面，根据 <code class="docutils literal notranslate"><span class="pre">PAGE_SAVE_AS</span></code> 设置 (<cite>默认值:</cite> <code class="docutils literal notranslate"><span class="pre">pages/{slug}.html</span></code>) 生成输出。
+可以使用以下变量。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>page</td>
+<td>显示的页面对象。你可以访问其标题、slug和内容。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tag-html">
+<h3>模板页tag.html<a class="headerlink" href="#tag-html" title="永久链接至标题">¶</a></h3>
+<p>此模板将应用于每个标签tag，根据 <code class="docutils literal notranslate"><span class="pre">TAG_SAVE_AS</span></code> 设置 (<cite>默认值:</cite> <code class="docutils literal notranslate"><span class="pre">tag/{slug}.html</span></code>) 生成输出。
+如果分页功能处于启用状态，则后续的页面默认类似为 <code class="docutils literal notranslate"><span class="pre">tag/{slug}{number}.html</span></code> 这种形式。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>tag</td>
+<td>标签名称</td>
+</tr>
+<tr class="row-odd"><td>articles</td>
+<td>与此标签相关的文章</td>
+</tr>
+<tr class="row-even"><td>dates</td>
+<td>与此标签相关的文章，按日期升序排序</td>
+</tr>
+<tr class="row-odd"><td>articles_paginator</td>
+<td>文章列表的分页对象</td>
+</tr>
+<tr class="row-even"><td>articles_page</td>
+<td>文章的当前页面</td>
+</tr>
+<tr class="row-odd"><td>articles_previous_page</td>
+<td>文章的前一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>articles_next_page</td>
+<td>文章的下一页(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>dates_paginator</td>
+<td>文章列表的分页对象，按日期升序排序</td>
+</tr>
+<tr class="row-even"><td>dates_page</td>
+<td>文章的当前页，按日期升序排序。</td>
+</tr>
+<tr class="row-odd"><td>dates_previous_page</td>
+<td>文章的前一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-even"><td>dates_next_page</td>
+<td>文章的下一页，按日期升序排序(如果页面不存在，则为”无”)</td>
+</tr>
+<tr class="row-odd"><td>page_name</td>
+<td>TAG_URL 其中 <cite>{slug}</cite> 之后的所有内容都被删除</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="period-archives-html">
+<h3>模板页period_archives.html<a class="headerlink" href="#period-archives-html" title="永久链接至标题">¶</a></h3>
+<p>这个模板页面，如果定义了 <code class="docutils literal notranslate"><span class="pre">YEAR_ARCHIVE_SAVE_AS</span></code> 的路径，则按年份处理输出文章，
+如果定义了 <code class="docutils literal notranslate"><span class="pre">MONTH_ARCHIVE_SAVE_AS</span></code> ，则按月份，定义 <code class="docutils literal notranslate"><span class="pre">DAY_ARCHIVE_SAVE_AS</span></code> 按天数。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="74%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">变量</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>period</td>
+<td>一个元组tuple( <cite>年</cite> , <cite>月</cite> , <cite>日</cite> )，表示当前时间段。
+<cite>年</cite> 和 <cite>日</cite> 格式是数字，而 <cite>月</cite> 是字符串。
+当时间段给定只有年份时，此元组也才只包含 <cite>年</cite> 。
+如果时间段给定有年和月等，元组将包含 <cite>年</cite> 和 <cite>月</cite> 。</td>
+</tr>
+</tbody>
+</table>
+<p>你可以在 <a class="reference external" href="https://github.com/getpelican/pelican/blob/master/pelican/themes/simple/templates/period_archives.html">“simple” 主题的 period_archives.html 模板</a>
+查看使用 <cite>period</cite> 的示例。</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>对象<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>详细说明模板中可用且有用的对象属性。这里并没有列出所有的属性，这里选择性地列出模板中通常会用到的属性。</p>
+<div class="section" id="object-article">
+<span id="id9"></span><h3>文章<a class="headerlink" href="#object-article" title="永久链接至标题">¶</a></h3>
+<p>这里’文章’的表述基于 <cite>source_path</cite> 属性的字符串值。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="70%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">属性</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>author</td>
+<td>文章的 <a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">作者</span></a></td>
+</tr>
+<tr class="row-odd"><td>authors</td>
+<td>文章的 <a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">作者</span></a> 列表</td>
+</tr>
+<tr class="row-even"><td>category</td>
+<td>文章的 <a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">分类</span></a></td>
+</tr>
+<tr class="row-odd"><td>content</td>
+<td>文章渲染内容</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>表示文章日期的日期时间对象</td>
+</tr>
+<tr class="row-odd"><td>date_format</td>
+<td>默认日期格式或区域设置日期格式</td>
+</tr>
+<tr class="row-even"><td>default_template</td>
+<td>默认模板名称</td>
+</tr>
+<tr class="row-odd"><td>in_default_lang</td>
+<td>表示文章是否采用默认语言编写的布尔值</td>
+</tr>
+<tr class="row-even"><td>lang</td>
+<td>文章所用语言</td>
+</tr>
+<tr class="row-odd"><td>locale_date</td>
+<td>按 <cite>date_format</cite> 格式化的日期</td>
+</tr>
+<tr class="row-even"><td>metadata</td>
+<td>文章头部元数据 <cite>dict</cite></td>
+</tr>
+<tr class="row-odd"><td>save_as</td>
+<td>保存文章页的位置</td>
+</tr>
+<tr class="row-even"><td>slug</td>
+<td>页面的slug内容</td>
+</tr>
+<tr class="row-odd"><td>source_path</td>
+<td>文章源文件的完整系统路径</td>
+</tr>
+<tr class="row-even"><td>relative_source_path</td>
+<td>基于 <a class="reference external" href="settings.html#PATH">PATH</a> 的文章源文件的相对路径</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>文章状态，可以是’已发布’或’草稿’</td>
+</tr>
+<tr class="row-even"><td>summary</td>
+<td>展示的摘要内容</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td><a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">标签</span></a> 对象列表</td>
+</tr>
+<tr class="row-even"><td>template</td>
+<td>使用的模板名称</td>
+</tr>
+<tr class="row-odd"><td>title</td>
+<td>文章标题</td>
+</tr>
+<tr class="row-even"><td>translations</td>
+<td>翻译 <a class="reference internal" href="#object-article"><span class="std std-ref">文章</span></a> 对象列表</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>文章页的URL</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="object-author-cat-tag">
+<span id="id10"></span><h3>作者 / 分类 / 标签<a class="headerlink" href="#object-author-cat-tag" title="永久链接至标题">¶</a></h3>
+<p>这里三个对象的表述基于 <cite>name</cite> 属性的字符串值。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">属性</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>name</td>
+<td>对象的名称 <a class="footnote-reference" href="#id12" id="id11">[1]</a>.</td>
+</tr>
+<tr class="row-odd"><td>page_name</td>
+<td>作者页面名称</td>
+</tr>
+<tr class="row-even"><td>save_as</td>
+<td>保存作者页面的位置</td>
+</tr>
+<tr class="row-odd"><td>slug</td>
+<td>页面的slug内容</td>
+</tr>
+<tr class="row-even"><td>url</td>
+<td>作者页的URL</td>
+</tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id11">[1]</a></td><td>对于 Author 对象, 来自 <cite>:authors:</cite> or <cite>AUTHOR</cite>.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="page">
+<span id="object-page"></span><h3>页面Page<a class="headerlink" href="#page" title="永久链接至标题">¶</a></h3>
+<p>这里’页面page’的表述基于 <cite>source_path</cite> 属性的字符串值。</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="71%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">属性</th>
+<th class="head">描述</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>author</td>
+<td>该页 <a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">作者</span></a></td>
+</tr>
+<tr class="row-odd"><td>content</td>
+<td>页面渲染内容</td>
+</tr>
+<tr class="row-even"><td>date</td>
+<td>表示page页日期的日期时间对象</td>
+</tr>
+<tr class="row-odd"><td>date_format</td>
+<td>默认日期格式或区域设置日期格式</td>
+</tr>
+<tr class="row-even"><td>default_template</td>
+<td>默认模板名称</td>
+</tr>
+<tr class="row-odd"><td>in_default_lang</td>
+<td>表示文章是否采用默认语言编写的布尔值</td>
+</tr>
+<tr class="row-even"><td>lang</td>
+<td>文章所用语言</td>
+</tr>
+<tr class="row-odd"><td>locale_date</td>
+<td>按 <cite>date_format</cite> 格式化的日期</td>
+</tr>
+<tr class="row-even"><td>metadata</td>
+<td>文章头部元数据 <cite>dict</cite></td>
+</tr>
+<tr class="row-odd"><td>save_as</td>
+<td>保存page页的位置</td>
+</tr>
+<tr class="row-even"><td>slug</td>
+<td>page页的slug内容</td>
+</tr>
+<tr class="row-odd"><td>source_path</td>
+<td>page页源文件的完整系统路径</td>
+</tr>
+<tr class="row-even"><td>relative_source_path</td>
+<td>基于 <a class="reference external" href="settings.html#PATH">PATH</a> 的page页源文件的相对路径</td>
+</tr>
+<tr class="row-odd"><td>status</td>
+<td>page页状态，可以是’已发布’、’隐藏’或’草稿’</td>
+</tr>
+<tr class="row-even"><td>summary</td>
+<td>展示的摘要内容</td>
+</tr>
+<tr class="row-odd"><td>tags</td>
+<td><a class="reference internal" href="#object-author-cat-tag"><span class="std std-ref">标签</span></a> 对象列表</td>
+</tr>
+<tr class="row-even"><td>template</td>
+<td>使用的模板名称</td>
+</tr>
+<tr class="row-odd"><td>title</td>
+<td>page页标题</td>
+</tr>
+<tr class="row-even"><td>translations</td>
+<td>翻译 <a class="reference internal" href="#object-article"><span class="std std-ref">文章</span></a> 对象列表</td>
+</tr>
+<tr class="row-odd"><td>url</td>
+<td>page页的URL</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="feeds">
+<h2>Feeds订阅源<a class="headerlink" href="#feeds" title="永久链接至标题">¶</a></h2>
+<p>feed变量在版本3.0中发生更改。每个变量现在都在名称中明确指出是ATOM还是RSS。
+ATOM仍然是默认值。旧主题需要对此进行更新。
+下面是feed变量的一个完整列表:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FEED_ATOM</span>
+<span class="n">FEED_RSS</span>
+<span class="n">FEED_ALL_ATOM</span>
+<span class="n">FEED_ALL_RSS</span>
+<span class="n">CATEGORY_FEED_ATOM</span>
+<span class="n">CATEGORY_FEED_RSS</span>
+<span class="n">AUTHOR_FEED_ATOM</span>
+<span class="n">AUTHOR_FEED_RSS</span>
+<span class="n">TAG_FEED_ATOM</span>
+<span class="n">TAG_FEED_RSS</span>
+<span class="n">TRANSLATION_FEED_ATOM</span>
+<span class="n">TRANSLATION_FEED_RSS</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>继承<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<p>3.0版本开始，Pelican支持从 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题继承，因此你可以在自己的主题中继承使用 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题模板。</p>
+<p>如果丢失了主题的 <code class="docutils literal notranslate"><span class="pre">templates/</span></code> 目录下的某个必需文件，pelican会使用 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题中的匹配模板文件来替换。
+所以如果你觉得 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题的HTML框架模板合适可用，你就不用从头开始编写新模板。</p>
+<p>你还可以用 <code class="docutils literal notranslate"><span class="pre">{%</span> <span class="pre">extends</span> <span class="pre">%}</span></code> 指令从 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题扩展模板来自定义你自己的主题，请看以下示例:</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!simple/index.html&quot;</span> <span class="cp">%}</span>   <span class="c">&lt;!-- extends the ``index.html`` template from the ``simple`` theme --&gt;</span>
+
+<span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;index.html&quot;</span> <span class="cp">%}</span>   <span class="c">&lt;!-- &quot;regular&quot; extending --&gt;</span>
+</pre></div>
+</div>
+<div class="section" id="id15">
+<h3>例子<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>使用此系统，可以仅用两个文件就创建主题。</p>
+<div class="section" id="base-html">
+<h4>base.html<a class="headerlink" href="#base-html" title="永久链接至标题">¶</a></h4>
+<p>第一个文件是 <code class="docutils literal notranslate"><span class="pre">templates/base.html</span></code> 模板文件:</p>
+<div class="highlight-html+jinja notranslate"><div class="highlight"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;!simple/base.html&quot;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">head</span> <span class="cp">%}</span>
+<span class="cp">{{</span> <span class="nb">super</span><span class="o">()</span> <span class="cp">}}</span>
+   <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">SITEURL</span> <span class="cp">}}</span><span class="s">/theme/css/style.css&quot;</span> <span class="p">/&gt;</span>
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>第一行，我们从 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题中扩展出 <code class="docutils literal notranslate"><span class="pre">base.html</span></code> 模板，就不必重写整个文件。</li>
+<li>第三行，我们调用头部 <code class="docutils literal notranslate"><span class="pre">head</span></code> 区块，这里已经在 <code class="docutils literal notranslate"><span class="pre">simple</span></code> 主题被定义过。</li>
+<li>第四行，函数 <code class="docutils literal notranslate"><span class="pre">super()</span></code> 保留了先前插入到头部 <code class="docutils literal notranslate"><span class="pre">head</span></code> 区块的内容。</li>
+<li>第五行，我们在此页面附加一个样式表文件。</li>
+<li>最后一行，依照代码规则关闭 <code class="docutils literal notranslate"><span class="pre">head</span></code> 块.</li>
+</ol>
+<p>所有其他的模板文件都会调用这个文件，所以里面的CSS样式表文件也可以应用到所有其他页面。</p>
+</div>
+<div class="section" id="style-css">
+<h4>style.css<a class="headerlink" href="#style-css" title="永久链接至标题">¶</a></h4>
+<p>第二个文件是 <code class="docutils literal notranslate"><span class="pre">static/css/style.css</span></code> CSS 样式表文件:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">body</span> <span class="p">{</span>
+    <span class="k">font-family</span> <span class="p">:</span> <span class="kc">monospace</span> <span class="p">;</span>
+    <span class="k">font-size</span> <span class="p">:</span> <span class="mi">100</span><span class="kt">%</span> <span class="p">;</span>
+    <span class="k">background-color</span> <span class="p">:</span> <span class="kc">white</span> <span class="p">;</span>
+    <span class="k">color</span> <span class="p">:</span> <span class="mh">#111</span> <span class="p">;</span>
+    <span class="k">width</span> <span class="p">:</span> <span class="mi">80</span><span class="kt">%</span> <span class="p">;</span>
+    <span class="k">min-width</span> <span class="p">:</span> <span class="mi">400</span><span class="kt">px</span> <span class="p">;</span>
+    <span class="k">min-height</span> <span class="p">:</span> <span class="mi">200</span><span class="kt">px</span> <span class="p">;</span>
+    <span class="k">padding</span> <span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="p">;</span>
+    <span class="k">margin</span> <span class="p">:</span> <span class="mi">5</span><span class="kt">%</span> <span class="mi">10</span><span class="kt">%</span> <span class="p">;</span>
+    <span class="k">border</span> <span class="p">:</span> <span class="kc">thin</span> <span class="kc">solid</span> <span class="kc">gray</span> <span class="p">;</span>
+    <span class="k">border-radius</span> <span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="p">;</span>
+    <span class="k">display</span> <span class="p">:</span> <span class="kc">block</span> <span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">a</span><span class="p">:</span><span class="nd">link</span>    <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">blue</span> <span class="p">;</span> <span class="k">text-decoration</span> <span class="p">:</span> <span class="kc">none</span> <span class="p">;</span>      <span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">hover</span>   <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">blue</span> <span class="p">;</span> <span class="k">text-decoration</span> <span class="p">:</span> <span class="kc">underline</span> <span class="p">;</span> <span class="p">}</span>
+<span class="nt">a</span><span class="p">:</span><span class="nd">visited</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">blue</span> <span class="p">;</span>                               <span class="p">}</span>
+
+<span class="nt">h1</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+<span class="nt">h2</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+<span class="nt">h3</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+<span class="nt">h4</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+<span class="nt">h5</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+<span class="nt">h6</span> <span class="nt">a</span> <span class="p">{</span> <span class="k">color</span> <span class="p">:</span> <span class="kc">inherit</span> <span class="cp">!important</span> <span class="p">}</span>
+
+<span class="nt">pre</span> <span class="p">{</span>
+    <span class="k">margin</span> <span class="p">:</span> <span class="mi">2</span><span class="kt">em</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">2</span><span class="kt">em</span> <span class="mi">4</span><span class="kt">em</span> <span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">menu</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="k">display</span> <span class="p">:</span> <span class="kc">inline</span> <span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">#</span><span class="nn">post-list</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span> <span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="p">;</span>
+    <span class="k">margin-top</span> <span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h4>下载<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h4>
+<p>你可以从 <a class="reference download external" download="" href="https://docs.getpelican.com/en/stable/_downloads/theme-basic.zip"><code class="xref download docutils literal notranslate"><span class="pre">这里</span></code></a> 下载这个范例主题。</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugins.html" class="btn btn-neutral float-right" title="插件介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="settings.html" class="btn btn-neutral float-left" title="设置选项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

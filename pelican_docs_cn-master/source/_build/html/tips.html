@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>使用技巧 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="贡献和反馈指南" href="contribute.html" />
+    <link rel="prev" title="常见问题（FAQ）" href="faq.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用技巧</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">自定义404页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#github">发布到GitHub</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">项目页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">用户页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">自定义404页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">每次提交都更新你的网站</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">将静态文件复制到站点的根目录</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#youtubevimeo">如何添加YouTube视频或Vimeo视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ssl">使用SSL在本地开发</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internals.html">Pelican内部原理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>使用技巧</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tips.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>使用技巧<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>以下是一些可能对你有用的pelican使用技巧</p>
+<div class="section" id="id2">
+<h2>自定义404页面<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>当浏览器发出一个资源请求但Web服务器找不到该资源时，服务器通常会显示一个通用
+的 “未找到文件”（404）的错误页面，这个页面内容很明确，不过有时可能很直接而显得不太美观。
+要提供一个跟你的网站主题相匹配的404错误页面，其中一种方法是创建自定义404页面（注意 <em>不是</em> 一篇文章），
+例如下面这个保存在 <code class="docutils literal notranslate"><span class="pre">content/pages/404.md</span></code> 中的Markdown格式例文:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Title: Not Found
+Status: hidden
+Save_as: 404.html
+
+找不到相关项目，也许你可以查看 [存档页](/archives.html)?
+</pre></div>
+</div>
+<p>下一步是配置Web服务器在出404错误时显示这个自定义页面而不是默认的404页面。
+对于Nginx，在配置文件的 <code class="docutils literal notranslate"><span class="pre">location</span></code> 区域添加以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">error_page</span> <span class="mi">404</span> <span class="o">/</span><span class="mf">404.</span><span class="n">html</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>对于 Apache:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ErrorDocument</span> <span class="mi">404</span> <span class="o">/</span><span class="mf">404.</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>对于Amazon S3，先在AWS cosole上导航到存储桶设置中的 <code class="docutils literal notranslate"><span class="pre">静态站点托管</span></code> 菜单，再从那里设置:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="n">Document</span><span class="p">:</span> <span class="mf">404.</span><span class="n">html</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="github">
+<h2>发布到GitHub<a class="headerlink" href="#github" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://help.github.com/categories/20/articles">GitHub Pages</a> 提供了一种简单方便
+的方式来发布Pelican网站。 其中有 <a class="reference external" href="https://help.github.com/articles/user-organization-and-project-pages">两种类型的页面</a> 可选：
+项目页面 <em>Project Pages</em> 和用户页面 <em>User Pages</em> 。 Pelican站点即可以作为项目页面也可以作为用户页面发布。</p>
+<div class="section" id="id4">
+<h3>项目页面<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>要将一个Pelican站点发布为项目页面，你需要将Pelican生成的 <code class="docutils literal notranslate"><span class="pre">output</span></code> 目录的内容推送 <em>push</em> 到
+GitHub上某个repo库的 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分支中。</p>
+<p><a class="reference external" href="https://github.com/davisp/ghp-import">ghp-import</a> 工具是个优秀的导入内容到gh-pages的工具，要以
+用 <code class="docutils literal notranslate"><span class="pre">pip</span></code> 命令安装，有了这个工具上面提到的推送内容过程会变得非常简单。</p>
+<p>例如，如果你的Pelican站点的源内容包含在一个GitHub库repo中，并且你希望以这个库的项目页面的形式发布该网站，
+则可以使用以下命令:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pelican content -o output -s pelicanconf.py
+$ ghp-import output -b gh-pages
+$ git push origin gh-pages
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">output</span></code> 命令用于更新本地的库中 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分支的 <code class="docutils literal notranslate"><span class="pre">output</span></code> 目录的内容更（如果
+这个分支不存在则会先创建它）。 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">gh-pages</span></code> 命令的作用则是将内容推送到远程的 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分
+支进行更新以发布Pelican站点。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">用 <code class="docutils literal notranslate"><span class="pre">pelican-quickstart</span></code> 命令初始化时自动生成的两个文件，其中Makefile中的 <code class="docutils literal notranslate"><span class="pre">github</span></code> 目
+标（以及 <code class="docutils literal notranslate"><span class="pre">tasks.py</span></code> 中的  <code class="docutils literal notranslate"><span class="pre">gh_pages</span></code> 任务） 都默认是指将站点发布为项目页面的，如上面例子所述。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>用户页面<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>要以用户页面的形式发布Pelican站点，你需要先在你的GitHub上建立 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span></code> 这个库，
+然后将Pelican生成的站点的 <code class="docutils literal notranslate"><span class="pre">output</span></code> 目录中的内容推送 <em>push</em> 到这个库的 <code class="docutils literal notranslate"><span class="pre">master</span></code> 主分支中。</p>
+<p>同样的，我们还是可以用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 命令来操作推送:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pelican content -o output -s pelicanconf.py
+$ ghp-import output -b gh-pages
+$ git push git@github.com:elemoine/elemoine.github.io.git gh-pages:master
+</pre></div>
+</div>
+<p>先用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 命令更新本地的分支，再用 <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> 命令将本地分支推送
+到GitHub上 <code class="docutils literal notranslate"><span class="pre">elemoine.github.io</span></code> 库的 <code class="docutils literal notranslate"><span class="pre">master</span></code> 分支。</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">要将Pelican站点发布为用户页面，请设置调整Makefile文件中的 <code class="docutils literal notranslate"><span class="pre">github</span></code> 值。</p>
+</div>
+<p>发布到用户页面的另一个选项是在项目的根目录中生成输出文件。</p>
+<p>例如，你的主项目文件夹是 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span></code> ，你可以在其中新建一个名为 <code class="docutils literal notranslate"><span class="pre">Pelican</span></code> 的
+子目录用于创建Pelican项目。 然后在 <code class="docutils literal notranslate"><span class="pre">Pelican</span></code> 文件夹下运行:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pelican content -o .. -s pelicanconf.py
+</pre></div>
+</div>
+<p>现在，你可以将整个项目 <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span></code> 推送到GitHub库的主分支中:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push origin master
+</pre></div>
+</div>
+<p>（假设你已经将origin设置为远程的库了）。</p>
+</div>
+<div class="section" id="id6">
+<h3>自定义404页面<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>GitHub页面将显示上面内容中我们自定义的404页面，
+如相关的 <a class="reference external" href="https://help.github.com/articles/custom-404-pages/">GitHub文档</a> 中所述。</p>
+</div>
+<div class="section" id="id8">
+<h3>每次提交都更新你的网站<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>要在每次提交时自动更新Pelican站点，你可以创建一个提交后-勾子。
+例如，你可以在 <code class="docutils literal notranslate"><span class="pre">.git/hooks/post-commit</span></code> 中添加以下内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span> <span class="o">-</span><span class="n">o</span> <span class="n">output</span> <span class="o">-</span><span class="n">s</span> <span class="n">pelicanconf</span><span class="o">.</span><span class="n">py</span> <span class="o">&amp;&amp;</span> <span class="n">ghp</span><span class="o">-</span><span class="kn">import</span> <span class="nn">output</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">gh</span><span class="o">-</span><span class="n">pages</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h3>将静态文件复制到站点的根目录<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>想将GitHub Pages绑定到 <a class="reference external" href="https://help.github.com/articles/setting-up-a-custom-domain-with-pages">个人域名</a>
+的话，你需要你的网站根目录下的 <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> 文件中填写好你的网站域名（例如 <code class="docutils literal notranslate"><span class="pre">blog.example.com</span></code> ）。
+即，创建 <code class="docutils literal notranslate"><span class="pre">content/extra/</span></code> 目录并在目录下添加一个 <code class="docutils literal notranslate"><span class="pre">CNAME</span></code> 文件（注意，文件全名就是CANME，无扩展名）。
+然后设置 <code class="docutils literal notranslate"><span class="pre">STATIC_PATHS</span></code> 告诉Pelican将此文件复制到输出目录output目录中。 例如:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;images&#39;</span><span class="p">,</span> <span class="s1">&#39;extra/CNAME&#39;</span><span class="p">]</span>
+<span class="n">EXTRA_PATH_METADATA</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;extra/CNAME&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;path&#39;</span><span class="p">:</span> <span class="s1">&#39;CNAME&#39;</span><span class="p">},}</span>
+</pre></div>
+</div>
+<p>注意：使用正斜杠， <code class="docutils literal notranslate"><span class="pre">/</span></code> ，即使在Windows系统也是。</p>
+<p>你还可以在任意站点的根目录下放置 <code class="docutils literal notranslate"><span class="pre">favicon.ico</span></code> 网站图标文件或 <code class="docutils literal notranslate"><span class="pre">robots.txt</span></code> 网站针对蜘蛛的设置文件
+然后在 <code class="docutils literal notranslate"><span class="pre">EXTRA_PATH_METADATA</span></code> 设置中添加这些文件。</p>
+</div>
+</div>
+<div class="section" id="youtubevimeo">
+<h2>如何添加YouTube视频或Vimeo视频<a class="headerlink" href="#youtubevimeo" title="永久链接至标题">¶</a></h2>
+<p>最简单的方法是复制这些网站的视频的嵌入代码直接粘贴到你的源文件内容中。</p>
+<p>或者，你也可以使用像 <code class="docutils literal notranslate"><span class="pre">liquid_tags</span></code> 、 <code class="docutils literal notranslate"><span class="pre">pelican_youtube</span></code> 或 <code class="docutils literal notranslate"><span class="pre">pelican_vimeo</span></code> 这样
+的Pelican插件将视频嵌入到你的内容中。</p>
+<p>甚至，你还可以用标记语言的插件，reST和Markdown等标记语言都有插件可以让你在内容中添加视频。
+你可以在reST格式文件中使用 <a class="reference external" href="https://gist.github.com/dbrgn/2922648">reST视频命令</a> 或者
+在Markdown格式文件中使用 <a class="reference external" href="https://github.com/italomaia/mdx-video">mdx_video插件</a> 。</p>
+</div>
+<div class="section" id="ssl">
+<h2>使用SSL在本地开发<a class="headerlink" href="#ssl" title="永久链接至标题">¶</a></h2>
+<p>以下是如何设置本地pelican服务器以支持SSL。</p>
+<p>首先，使用 <code class="docutils literal notranslate"><span class="pre">openssl</span></code> 创建一份自签名证书和一份密钥（即创建 <code class="docutils literal notranslate"><span class="pre">cert.pem</span></code> 和 <code class="docutils literal notranslate"><span class="pre">key.pem</span></code> 两个文件）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+</pre></div>
+</div>
+<p>用以下命令启动服务器（服务器在 <code class="docutils literal notranslate"><span class="pre">output</span></code> 目录中启动）:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pelican</span><span class="o">.</span><span class="n">server</span> <span class="mi">8443</span> <span class="o">--</span><span class="n">key</span><span class="o">=../</span><span class="n">key</span><span class="o">.</span><span class="n">pem</span> <span class="o">--</span><span class="n">cert</span><span class="o">=../</span><span class="n">cert</span><span class="o">.</span><span class="n">pem</span>
+</pre></div>
+</div>
+<p>如果你用 <code class="docutils literal notranslate"><span class="pre">develop-server.sh</span></code> ，则将下面两行内容添加到该文件顶部:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CERT</span><span class="o">=</span><span class="s2">&quot;$BASEDIR/cert.pem&quot;</span>
+<span class="n">KEY</span><span class="o">=</span><span class="s2">&quot;$BASEDIR/key.pem&quot;</span>
+</pre></div>
+</div>
+<p>并照如下修改 <code class="docutils literal notranslate"><span class="pre">pelican.server</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$PY -m pelican.server $port --ssl --cert=&quot;$CERT&quot; --key=&quot;$KEY&quot; &amp;
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="contribute.html" class="btn btn-neutral float-right" title="贡献和反馈指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="faq.html" class="btn btn-neutral float-left" title="常见问题（FAQ）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

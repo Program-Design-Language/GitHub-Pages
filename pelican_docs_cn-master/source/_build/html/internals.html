@@ -1,0 +1,286 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Pelican内部原理 &mdash; pelican_cn 4.1.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="Pelican的一些历史" href="report.html" />
+    <link rel="prev" title="贡献和反馈指南" href="contribute.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pelican_cn
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">快速入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">安装Pelican</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content.html">编写内容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publish.html">发布网站</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings.html">设置选项</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">关于主题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins.html">插件介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pelican-themes.html">pelican-themes命令</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">导入站点</a></li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题（FAQ）</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">使用技巧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">贡献和反馈指南</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pelican内部原理</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">整体结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">如何实现一个新的文件格式读取器?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#generator">如何实现一个新的生成器generator?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="report.html">Pelican的一些历史</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">发布记录</a></li>
+<li class="toctree-l1"><a class="reference internal" href="links.html">文档英文版链接</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pelican_cn</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Pelican内部原理</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/internals.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pelican">
+<h1>Pelican内部原理<a class="headerlink" href="#pelican" title="永久链接至标题">¶</a></h1>
+<p>本节介绍Pelican内部如何工作。正如你将会看到的，它非常简单，不过给它写个小文档也无伤大雅。 :)</p>
+<p>你还可以在 <a class="reference internal" href="report.html"><span class="doc">Pelican的一些历史</span></a> 部分找到原作者撰写的报告的摘录，其中有一些软件设计的信息。</p>
+<div class="section" id="id1">
+<h2>整体结构<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>Pelican所做的是获取文件列表并将其处理成某种输出。
+通常情况下，输入文件为reStructuredText和Markdown格式的文件，而输出则是一个博客站，
+但其实输入和输出根据你的意愿可以任何内容。</p>
+<p>其中实现的逻辑为将之分为不同的类和概念:</p>
+<ul class="simple">
+<li><strong>Writers</strong> 负责编写文件: .html文件, RSS源等。由于这些操作很常用，因此对象创建一次后将传递给生成器Generators。</li>
+<li><strong>Readers</strong> 用于读取各种格式 (目前是HTML, Markdown 和 reStructuredText三种格式，不过系统是可扩展的）。
+给定一个文件，它们返回元数据（作者，标签，分类等）和内容（以HTML格式）。</li>
+<li><strong>Generators</strong> 生成不同的输出。例如，Pelican附带 <code class="docutils literal notranslate"><span class="pre">ArticlesGenerator</span></code> 和 <code class="docutils literal notranslate"><span class="pre">PageGenerator</span></code> 。
+给定配置，它们可以做任何它们想做的事情。大多数情况下，它们是根据输入的内容生成文件。</li>
+<li>Pelican也使用模板，因此你可以轻易地编写自己的主题，语法是 <a class="reference external" href="http://jinja.pocoo.org/">Jinja2</a>
+而且非常容易学会，所以不要犹豫，学习上手构建自己的主题吧。</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>如何实现一个新的文件格式读取器?<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>你是不是想给Pelican添加支持一种非常棒的标记语言？那么，你唯一要做的就是创建一个带有 <code class="docutils literal notranslate"><span class="pre">read</span></code> 方法的类，
+返回HTML内容和一些元数据。</p>
+<p>这里来看看Markdown阅读器的内容:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MarkdownReader</span><span class="p">(</span><span class="n">BaseReader</span><span class="p">):</span>
+    <span class="n">enabled</span> <span class="o">=</span> <span class="nb">bool</span><span class="p">(</span><span class="n">Markdown</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">source_path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Parse content and metadata of markdown files&quot;&quot;&quot;</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">pelican_open</span><span class="p">(</span><span class="n">source_path</span><span class="p">)</span>
+        <span class="n">md_extensions</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;markdown.extensions.meta&#39;</span><span class="p">:</span> <span class="p">{},</span>
+                         <span class="s1">&#39;markdown.extensions.codehilite&#39;</span><span class="p">:</span> <span class="p">{}}</span>
+        <span class="n">md</span> <span class="o">=</span> <span class="n">Markdown</span><span class="p">(</span><span class="n">extensions</span><span class="o">=</span><span class="n">md_extensions</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span>
+                      <span class="n">extension_configs</span><span class="o">=</span><span class="n">md_extensions</span><span class="p">)</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+        <span class="n">metadata</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">md</span><span class="o">.</span><span class="n">Meta</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+            <span class="n">meta</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_metadata</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="n">metadata</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">meta</span>
+        <span class="k">return</span> <span class="n">content</span><span class="p">,</span> <span class="n">metadata</span>
+</pre></div>
+</div>
+<p>很简单吧?</p>
+<p>如果你新创建的这个读取器需要额外的Python依赖项，那么你应该用一个 <code class="docutils literal notranslate"><span class="pre">try...except</span></code> 语句
+块将 <code class="docutils literal notranslate"><span class="pre">import</span></code> 语句包裹起来。 然后在读取器的类中，设置 <code class="docutils literal notranslate"><span class="pre">enabled</span></code> 类的属性以标记导入是成功还是失败。
+这样用户可以继续使用他们喜欢的标记语言，而无需为他们不使用的语言格式安装模块。</p>
+</div>
+<div class="section" id="generator">
+<h2>如何实现一个新的生成器generator?<a class="headerlink" href="#generator" title="永久链接至标题">¶</a></h2>
+<p>生成器的代码中有两个重要的方法。你不用非得两种方法的代码都写好，系统根据现有的来进行调用。</p>
+<ul class="simple">
+<li>对于所有生成器，首先调用 <code class="docutils literal notranslate"><span class="pre">generate_context</span></code>。
+做你需要做的任何事，并在有需要时更新全局上下文。
+这个上下文会在所有生成器之间共享，并将传递给模板。例如对于 <code class="docutils literal notranslate"><span class="pre">PageGenerator</span></code> ， <code class="docutils literal notranslate"><span class="pre">generate_context</span></code> 方法
+查找所有page页，将它们转换为对象，并用它们填充上下文。
+小心 <em>不要</em> 在此阶段使用此上下文输出任何内容，因为它可能会因其他生成器的效果而改变。</li>
+<li>然后调用 <code class="docutils literal notranslate"><span class="pre">generate_output</span></code> 。它用来干嘛？对啦，用来生成输出。
+在这里你可能想要查看上下文，想要调用作为此函数的第一个参数传递的 <code class="docutils literal notranslate"><span class="pre">writer</span></code> 对象方法。
+在 <code class="docutils literal notranslate"><span class="pre">PageGenerator</span></code> 示例中， 这个方法将查看全局上下文中记录的所有page页，
+并将遇到的每个page页都在磁盘上输出一件文件（使用writer方法的 <code class="docutils literal notranslate"><span class="pre">write_file</span></code> ）。</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="report.html" class="btn btn-neutral float-right" title="Pelican的一些历史" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="contribute.html" class="btn btn-neutral float-left" title="贡献和反馈指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Elvyn
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

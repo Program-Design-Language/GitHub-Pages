@@ -1,0 +1,13 @@
+升级
+1、全局升级hexo-cli，先hexo version查看当前版本，然后npm i hexo-cli -g，再次hexo version查看是否升级成功。
+
+2、使用npm install -g npm-check和npm-check，检查系统中的插件是否有升级的，可以看到自己前面都安装了那些插件
+
+3、使用npm install -g npm-upgrade和npm-upgrade，升级系统中的插件
+
+4、使用npm update -g和npm update --save
+
+作者：LANVNAL
+链接：https://www.jianshu.com/p/802182c01b59
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
